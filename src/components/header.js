@@ -1,12 +1,11 @@
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 import logo from '../images/icon-72x72.png';
 import colorOfCode from '../images/color-of-code.png';
 
 import { FaHome, FaTags, FaInfoCircle } from 'react-icons/fa';
 
-const Header = ({ _siteTitle }) => (
+const Header = () => (
   <div
     style={{
       background: 'darkslategray',
@@ -104,13 +103,5 @@ const Header = ({ _siteTitle }) => (
     </div>
   </div>
 );
-
-Header.propTypes = {
-  _siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  _siteTitle: '',
-};
 
 export default Header;
