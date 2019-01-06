@@ -1,0 +1,27 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true 
+    },
+    "rules": {
+        "strict": 0,
+        "no-console": "warn",
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "prettier/prettier": "warn",
+        "react/jsx-no-literals": 0
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": [
+        "prettier",
+        "jsx-a11y"
+    ]
+}
