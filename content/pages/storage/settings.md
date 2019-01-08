@@ -12,8 +12,8 @@ tags: ["storage", "synology", "nas", "settings", "raid", "TODO_cleanup"]
 
 ### Calculators
 
-* [Synology RAID calculator](https///www.synology.com/en-us/support/RAID_calculator)
-* [Data loss RAID calculator](https///www.memset.com/tools/raid-calculator/)
+* [Synology RAID calculator](https://www.synology.com/en-us/support/RAID_calculator)
+* [Data loss RAID calculator](https://www.memset.com/tools/raid-calculator/)
 
 ### RAID 5 vs RAID 6
 
@@ -33,8 +33,8 @@ With an error probability of $1 < 10^{14} bits$ that leads into a probability of
 
 ### Information
 
-* [BackBlaze statistics about HDD failure](https///www.backblaze.com/blog/3tb-hard-drive-failure/)
-* [The math on HDD failure](https///forums.freenas.org/index.php?threads/the-math-on-hard-drive-failure.21110/)
+* [BackBlaze statistics about HDD failure](https://www.backblaze.com/blog/3tb-hard-drive-failure/)
+* [The math on HDD failure](https://forums.freenas.org/index.php?threads/the-math-on-hard-drive-failure.21110/)
 
 ## Network
 
@@ -136,7 +136,7 @@ rsync is used in a client/server mode better suited for security relevant transf
 * Create a rsync RSA key pair (without pass): `ssh-keygen -t rsa -b 2048 -f rsync-key`
 * Copy key to NAS: `ssh-copy-id -p 22123 -i rsync-key rsyncuser@hostname`
 
-You need to edit the file `/etc/rsyncd.conf`. ([Help](https///www.samba.org/ftp/rsync/rsyncd.conf.html))
+You need to edit the file `/etc/rsyncd.conf`. ([Help](https://www.samba.org/ftp/rsync/rsyncd.conf.html))
 
 [Help](http://www.linuxquestions.org/questions/linux-server-73/rsync-password-asked-even-after-generating-key-while-ssh-works-passwordless-4175464076/page3.html)
 

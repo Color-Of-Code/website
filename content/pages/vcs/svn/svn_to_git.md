@@ -13,9 +13,9 @@ Interesting additional tools
 * [Understanding git](http://de.slideshare.net/JeffKunkle/understanding-git)
 * https://rtyley.github.io/bfg-repo-cleaner/
 * git-filter-branch
-* git subtree split [https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/](https///developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/)
-* Conversion of some properties (.gitignore) [https://github.com/JohnAlbin/git-svn-migrate](https///github.com/JohnAlbin/git-svn-migrate)
-* [https://de.atlassian.com/git/tutorials/migrating-convert/](https///de.atlassian.com/git/tutorials/migrating-convert/) has some crappy magic
+* git subtree split [https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/](https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/)
+* Conversion of some properties (.gitignore) [https://github.com/JohnAlbin/git-svn-migrate](https://github.com/JohnAlbin/git-svn-migrate)
+* [https://de.atlassian.com/git/tutorials/migrating-convert/](https://de.atlassian.com/git/tutorials/migrating-convert/) has some crappy magic
 * [http://www.sailmaker.co.uk/blog/2013/05/05/migrating-from-svn-to-git-preserving-branches-and-tags-3/](http://www.sailmaker.co.uk/blog/2013/05/05/migrating-from-svn-to-git-preserving-branches-and-tags-3/)
 
 ## 1 use git-svn

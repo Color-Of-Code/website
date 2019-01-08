@@ -8,10 +8,10 @@ tags: ["virtualization", "linux", "lxc", "container", "TODO_cleanup"]
 # LXC - Linux containers
 
 * [Wikipedia: LXC](https://en.wikipedia.org/wiki/LXC)
-* [LXC tutorial step by step](https///www.stgraber.org/2013/12/20/lxc-1-0-blog-post-series/)
-* [LXC Overview](https///blogs.oracle.com/OTNGarage/entry/linux_containers_part_1_overview)
+* [LXC tutorial step by step](https://www.stgraber.org/2013/12/20/lxc-1-0-blog-post-series/)
+* [LXC Overview](https://blogs.oracle.com/OTNGarage/entry/linux_containers_part_1_overview)
 * [Exploring LXC networking](http://containerops.org/2013/11/19/lxc-networking/)
-* [Getting started](https///www.digitalocean.com/community/tutorials/getting-started-with-lxc-on-an-ubuntu-13-04-vps)
+* [Getting started](https://www.digitalocean.com/community/tutorials/getting-started-with-lxc-on-an-ubuntu-13-04-vps)
 * [LXCs](https://blogs.oracle.com/OTNGarage/entry/linux_container_lxc_part_2)
 * [System containers to isolate servives](http://www.techrepublic.com/blog/linux-and-open-source/how-to-create-lxc-system-containers-to-isolate-services/)
 * [LAMP in an LXC](http://www.zyisrad.com/linux-apache-mysql-php-in-an-lxc-container/)

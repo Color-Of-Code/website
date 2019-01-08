@@ -51,13 +51,13 @@ print(hasher.hexdigest())
 
 * ZFS filesystem [ZFS and ECC](http://jrs-s.net/2015/02/03/will-zfs-and-non-ecc-ram-kill-your-data), [ZFS linux support](http://zfsonlinux.org/faq.html)
 * Use raw disk access in case of virtualization [See one of the answers](http://superuser.com/questions/289189/access-a-zfs-volume-in-windows)
-* Distributed Filesystem: [ceph](https///en.wikipedia.org/wiki/Ceph_(software))
+* Distributed Filesystem: [ceph](https://en.wikipedia.org/wiki/Ceph_(software))
 * [Open Archive](http://www.openarchive.net/product)
 
 ### Libraries
 
-* Cassette under APL v2 [Casette](https///github.com/drewnoakes/cassette) (C#)
-* Keep inside Arvados under AGPL v2 [Keep](https///github.com/curoverse/arvados) (Go)
-* Vault under Public Domain [Vault](https///github.com/greglook/vault) (Clojure)
-* Camlistore under APL v2 [Camlistore](https///camlistore.org/docs/overview) (Go)
-* IPFS under MIT [IPFS](https///github.com/ipfs/go-ipfs) (Go)
+* Cassette under APL v2 [Casette](https://github.com/drewnoakes/cassette) (C#)
+* Keep inside Arvados under AGPL v2 [Keep](https://github.com/curoverse/arvados) (Go)
+* Vault under Public Domain [Vault](https://github.com/greglook/vault) (Clojure)
+* Camlistore under APL v2 [Camlistore](https://camlistore.org/docs/overview) (Go)
+* IPFS under MIT [IPFS](https://github.com/ipfs/go-ipfs) (Go)
