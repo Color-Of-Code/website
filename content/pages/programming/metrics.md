@@ -1,3 +1,10 @@
+---
+published: true
+path: "/programming/metrics"
+date: "2019-01-09"
+title: "Software metrics"
+tags: ["programming", "metrics", "code", "software", "TODO_cleanup"]
+---
 # Moving away from the old fashioned source code metrics
 
 Thanks to modern source code management, we are now able to collect not only **spatial** metrics on source code, but also **temporal** metrics. By **spatial** metrics, I mean the metrics measuring the software constitution at given date. These metrics include the traditional number of lines of code, comments, the complexity metrics, the cohesion metrics and so on. They quantify what the system is like but not how it evolved. With modern configuration management we are also able to compute metrics about the development steps over time themselves, what I call **temporal** metrics. Example of such metrics are the frequency of modifications for a file, number of modified lines of code per week, ...

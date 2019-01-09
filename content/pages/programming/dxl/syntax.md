@@ -3,7 +3,7 @@ published: true
 path: "/programming/dxl/syntax"
 date: "2019-01-07"
 title: "DOORS DXL"
-tags: ["programming", "DOORS", "DXL", "TODO_cleanup"]
+tags: ["programming", "doors", "dxl", "TODO_cleanup"]
 ---
 
 # DOORS DXL
@@ -12,9 +12,9 @@ tags: ["programming", "DOORS", "DXL", "TODO_cleanup"]
 
 Deactivation of (dangerous) the auto-declaration feature (put it for example in startup.dxl)
 
-<code>
+```c
 XFLAGS_ &= ~AutoDeclare_
-</code>
+```
 
 ## Pitfalls
 
@@ -40,7 +40,7 @@ instead of what was intended:
 "UPPER lower"
 ```
 
-workaround, use paranthesis:
+workaround, use parenthesis:
 
 ```c
 print (upper(sA)) " " sB
