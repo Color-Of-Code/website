@@ -1,3 +1,7 @@
+# content to not manage yet
+content/data/
+content/images/
+
 # Logs
 logs
 *.log
