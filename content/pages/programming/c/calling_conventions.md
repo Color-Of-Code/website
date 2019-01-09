@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/programming/c/calling-convention"
-date: "2019-02-02"
+date: "2019-01-02"
 title: "Calling Conventions"
 tags: ["programming", "calling convention", "TODO_cleanup"]
 ---
