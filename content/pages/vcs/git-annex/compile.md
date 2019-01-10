@@ -1,6 +1,6 @@
 ---
 published: true
-path: "/vcs/git/giannex"
+path: "/vcs/git/git-annex/compile"
 date: "2019-01-02"
 title: "Git-Annex: Compile"
 tags: ["vcs", "git-annex", "git", "compile", "TODO_cleanup"]

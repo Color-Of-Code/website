@@ -1,3 +1,11 @@
+---
+published: true
+path: "/programming/c-sharp/extending-classes"
+date: "2019-01-10"
+title: "C# Extending classes"
+tags: ["programming", "csharp", "class", "extension", "TODO_cleanup"]
+---
+
 # Possible ways to extend a class
 
 *Meaning providing additional methods to a class* 
@@ -27,21 +35,16 @@
 ## Extension methods:
 
 - extending closed source 3rd party
-
 - extension of iEnumerable for LINQ
-
 - keeps the original class code clean
-
 - good readability
-
 - pitfall: if a method with the same name as the extension gets added to the extended class then this method is called instead of the extension without the compiler warning about it.
 
-## Subclass/Derivation:
+## Subclass/Derivation
 
 - impossible if class is sealed
-
 - must implement an "is-a" relationship
 
-## Static class method:
+## Static class method
 
 - functionally the same as an extension method (only a syntactical difference)

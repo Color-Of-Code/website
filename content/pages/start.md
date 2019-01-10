@@ -1,3 +1,10 @@
+---
+published: true
+path: "/index/start"
+date: "2019-01-01"
+title: "Index page"
+tags: ["index", "project", "TODO_cleanup"]
+---
 
 # Projects
 
@@ -33,28 +40,28 @@
 
 # Miscellaneous
 
-*  [Quotes](misc;quotes) that are worth remembering
-*  [Great FOSS](misc;foss) I use and can recommend
-*  [Windows tips](misc;windows_tips)
-*  [Calling conventions](misc;calling_conventions)
-*  [Subversion repositories backup](scm;svn_backup)
-*  [Subversion to Git migration](scm;svn_to_git)
-*  [Properly create a bare copy of another repository](scm;git_bare)
-*  [Haskell programming language](haskell;start)
+* [Quotes](misc;quotes) that are worth remembering
+* [Great FOSS](misc;foss) I use and can recommend
+* [Windows tips](misc;windows_tips)
+* [Calling conventions](misc;calling_conventions)
+* [Subversion repositories backup](scm;svn_backup)
+* [Subversion to Git migration](scm;svn_to_git)
+* [Properly create a bare copy of another repository](scm;git_bare)
+* [Haskell programming language](haskell;start)
 
 # Linux
 
-*  [Linux photo management applications](linux/picture_management)
-*  [Ubuntu Tweaks](linux/ubuntu_tweaks)
-*  [Ubuntu data rescue](linux/ubuntu_data_rescue)
-*  [Set Top Boxes, linux based](linux/stb)
+* [Linux photo management applications](linux/picture_management)
+* [Ubuntu Tweaks](linux/ubuntu_tweaks)
+* [Ubuntu data rescue](linux/ubuntu_data_rescue)
+* [Set Top Boxes, linux based](linux/stb)
 
 # Storage
 
-*  [Synology topics](synology/start)
-*  [Btrfs topics](btrfs/start)
-*  [Raspberry PI](raspi/start)
-*  [True Crypt/Vera Crypt](truecrypt/start)
+* [Synology topics](synology/start)
+* [Btrfs topics](btrfs/start)
+* [Raspberry PI](raspi/start)
+* [True Crypt/Vera Crypt](truecrypt/start)
 
 # Virtualization
 
@@ -63,4 +70,4 @@
 
 # Version control
 
-* [git tipps](vc/git)
+* [git tips](vc/git)

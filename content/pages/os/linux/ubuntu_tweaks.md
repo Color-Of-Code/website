@@ -1,9 +1,9 @@
 ---
 published: true
-path: "/linux/ubuntu/tweaks"
+path: "/os/linux/ubuntu/tweaks"
 date: "2018-12-24"
 title: "Ubuntu Tweaks"
-tags: ["ubuntu", "tweaks", "linux", "TODO_cleanup"]
+tags: ["os", "ubuntu", "tweaks", "linux", "TODO_cleanup"]
 ---
 
 # Ubuntu Tweaks
