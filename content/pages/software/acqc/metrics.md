@@ -68,7 +68,7 @@ Metrics are computed for C and C++ files. Support for other languages will be ad
 
 Give it a try and send your comments tofeedback to [[jaap.dehaan@color-of-code.de|jaap.dehaan@color-of-code.de]]
 
-### Available versions:
+### Available versions
 
 * {{:product:acqc_metrics:acqc_metrics-1.0.7.zip|ACQC_Metrics-1.0.7.zip}} [154KB, 2013-08-14], Fixed crash on closing Kiviat window using the upright cross and trying to show it again.
 * ACQC-Metrics-1.0.6.zip [78KB, 2012-12-01], Kiviat diagram, editor support, added recursive directory parsing and basic wildcard support.
@@ -78,7 +78,7 @@ Give it a try and send your comments tofeedback to [[jaap.dehaan@color-of-code.
 * ACQC-Metrics-1.0.1.zip [60KB, 2009-08-29], now displays also function metrics
 * ACQC-Metrics-1.0.0.zip [59KB, 2009-08-27]
 
-### Prerequisities:
+### Prerequisities
 
 * Windows XP, Vista, 7 or later
 * Microsoft .NET Framework 3.5 [http://www.microsoft.com/downloads/details.aspx?...](http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&amp;displaylang=en)

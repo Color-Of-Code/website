@@ -32,7 +32,7 @@ tags: ["programming", "csharp", "class", "extension", "TODO_cleanup"]
 
 # Properties
 
-## Extension methods:
+## Extension methods
 
 - extending closed source 3rd party
 - extension of iEnumerable for LINQ

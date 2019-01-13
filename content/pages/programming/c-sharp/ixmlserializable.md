@@ -349,6 +349,6 @@ Feel free to ask questions and add comments, your feedback is precious to me. :-
 * 2009-10-24 Added code samples and more details
 * 2009-10-22 First version released
 
-## External publication:
+## External publication
 
 On code project [https://www.codeproject.com/KB/XML/ImplementIXmlSerializable.aspx](https://www.codeproject.com/KB/XML/ImplementIXmlSerializable.aspx)
