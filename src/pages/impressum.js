@@ -32,7 +32,7 @@ const TermsAndConditions = () => (
         <tr>
           <td>Stack Exchange</td>
           <td>
-            <a href="ttps://stackexchange.com/users/56909/jdehaan">
+            <a href="https://stackexchange.com/users/56909/jdehaan">
               <img
                 src="https://stackexchange.com/users/flair/56909.png?theme=dark"
                 width="208"
