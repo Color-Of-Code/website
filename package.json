@@ -22,7 +22,7 @@
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-mathjax": "^1.0.0",
     "gatsby-remark-prismjs": "^3.2.0",
-    "gatsby-source-filesystem": "^2.0.13",
+    "gatsby-source-filesystem": "^2.0.16",
     "gatsby-transformer-remark": "^2.2.0",
     "gatsby-transformer-sharp": "^2.1.10",
     "lodash": "^4.17.11",
