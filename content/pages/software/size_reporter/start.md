@@ -98,9 +98,9 @@ At the time of writing, junctions are skipped as we are interested in the physic
 
 Example: Generate a report of all junctions on C: to "junctions.csv"
 
-<code>
+```
 SizeReporter.exe --list-junctions --junctions-file "junctions.csv" "C:" 1
-</code>
+```
 
 ## Installation
 

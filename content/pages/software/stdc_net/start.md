@@ -33,13 +33,16 @@ Even a tool to convert (in a sloppy mode) C files to C# files to start porting w
 ==== Hello world ====
 
 |C|C#|
-|<code c>
+|
+```c
     #include <stdio.h>
     
     void main(void) {
         printf("Hello World!\n");
     }
-</code>|<code csharp>
+```
+|
+```csharp
 namespace Example {      // a namespace to contain the code
     using stdc;          // instead of #include ...
 
@@ -49,7 +52,8 @@ namespace Example {      // a namespace to contain the code
         }
     }
 }
-</code>|
+```
+|
 |The main difference is that the code must be embedded in a class and a namespace. The functions turn consequently into public static methods (equivalent in .NET to C functions). In further examples we will omit this necessary code parts to keep the focus on the real code changes. Includes are replaced by a using statement and the C functions are part of a static class with called C. Therefore C.printf is used instead of a bare printf statement without C. as prefix. This first example is simplistic but it is there just to get a feeling for the basic principles in porting C to .NET.||
 
 ----
@@ -57,7 +61,8 @@ namespace Example {      // a namespace to contain the code
 ==== Printing powers of 2 - printf() ====
 
 |C|C#|
-|<code c>
+|
+```c
     #include <stdio.h>
 
     #define N 16
@@ -73,7 +78,9 @@ namespace Example {      // a namespace to contain the code
             val = 2*val;
         }
     }
-</code>|<code csharp>
+```
+|
+```csharp
     using stdc; // ... code to embed in class/namespace omitted
     
     private const int N = 16;
@@ -89,13 +96,15 @@ namespace Example {      // a namespace to contain the code
             val = 2 * val;
         }
     }
-</code>|
+```
+|
 |Note that absolutely no change was needed to be made to the formatting strings.||
 
 \\ ==== Generating a file - FILE, fopen(), fclose(), putc() ====
 
 |C|C#|
-|<code c>
+|
+```c
     #include <stdio.h>
 
     void main () {
@@ -108,7 +117,9 @@ namespace Example {      // a namespace to contain the code
         }
         fclose (pFile);
     }
-</code>|<code csharp>
+```
+|
+```csharp
     using stdc; // ... code to embed in class/namespace omitted
 
     public static void main () {
@@ -121,13 +132,15 @@ namespace Example {      // a namespace to contain the code
         }
         C.fclose (pFile);
     }
-</code>|
+```
+|
 |The fopen, fclose can be used exactly like in C, only the pointer symbol %%(*%%) disappears.||
 
 \\ ==== A small guessing game - rand(), scanf() ====
 
 |C|C#|
-|<code c>
+|
+```c
     #include <stdio.h>
     #include <stdlib.h>
     #include <time.h>
@@ -149,7 +162,9 @@ namespace Example {      // a namespace to contain the code
 
         puts ("Congratulations!");
     }
-</code>|<code csharp>
+```
+|
+```csharp
     using stdc; // ... code to embed in class/namespace omitted
 
     public static void main () {
@@ -170,14 +185,16 @@ namespace Example {      // a namespace to contain the code
 
         C.puts ("Congratulations!");
     }
-</code>|
+```
+|
 |In the C# port, the scanf implementation is making use of generics to handle different types accordingly.||
 
 \\ 
 ==== Quick Sort an array of ints, step by step refactoring - qsort() ====
 
 |C|C#|
-|<code c>
+|
+```c
     #include <stdio.h>
     #include <stdlib.h>
 
@@ -193,7 +210,9 @@ namespace Example {      // a namespace to contain the code
         for (n=0; n<6; n++)
             printf ("%d ",values[n]);
     }
-</code>|<code csharp>
+```
+|
+```csharp
     using stdc; // ... code to embed in class/namespace omitted
 
     public static int[] values = new int[] { 40, 10, 100, 90, 20, 25 };
@@ -208,8 +227,10 @@ namespace Example {      // a namespace to contain the code
         for (n = 0; n < 6; n++)
             C.printf ("%d ", values[n]);
     }
-</code>|
-|Second step, refactoring, getting rid of the C-like syntax and use .NET strengths. We transformed the "for" loop into a "foreach" loop, making the use of the magic number '6' superfluous.|<code csharp>
+```
+|
+|Second step, refactoring, getting rid of the C-like syntax and use .NET strengths. We transformed the "for" loop into a "foreach" loop, making the use of the magic number '6' superfluous.|
+```csharp
     using stdc; // ... code to embed in class/namespace omitted
 
     public static int[] values = new int[] { 40, 10, 100, 90, 20, 25 };
@@ -223,8 +244,10 @@ namespace Example {      // a namespace to contain the code
         foreach (int v in values)
             C.printf ("%d ", v);
     }
-</code>|
-|Third step: get rid of all C functions and replace them with their .NET equivalents|<code csharp>
+```
+|
+|Third step: get rid of all C functions and replace them with their .NET equivalents|
+```csharp
     using stdc; // ... code to embed in class/namespace omitted
 
     public static int[] values = new int[] { 40, 10, 100, 90, 20, 25 };
@@ -238,7 +261,8 @@ namespace Example {      // a namespace to contain the code
         foreach (int v in values)
             Console.Write ("{0} ", v);
     }
-</code>|
+```
+|
 |Did you notice? From the first step on, the C# compare method didn't need any casts unlike the C version. Thanks to the use of generics, the code readability is greaty improved. This also shows the basic steps in refactoring the C code. Stdc just helps you to keep a testable running version between successive steps of refactoring.||
 
 \\
@@ -248,7 +272,7 @@ In order to provide the advanced emulation functionality (like signals and atexi
 
 This should be used like this:
 
-<code csharp>
+```csharp
 namespace examples {
     using stdc;
     class Program {
@@ -260,16 +284,16 @@ namespace examples {
         }
     }
 }
-</code>
+```
 
 The signature of the main function is one of:
 
-<code csharp>
+```csharp
 - int main(int argc, string[] argv)
 - int main()
 - void main(int argc, string[] argv)
 - void main()
-</code>
+```
 
 The .NET arguments do not contain the program name unlike in C where argv[0] contains the name of the executable. To enable to reuse code from C that expects this behaviour, you must use the C.RunI/VMain() function. The RunMain() function also provides an environment where the signal() and raise() C functions can be used.
 
@@ -278,7 +302,8 @@ The .NET arguments do not contain the program name unlike in C where argv[0] con
 \\ ==== Using atexit - atexit() ====
 
 |C|C#|
-|<code c>
+|
+```c
     #include <stdio.h>
     #include <stdlib.h>
 
@@ -296,7 +321,9 @@ The .NET arguments do not contain the program name unlike in C where argv[0] con
         puts ("atexit handlers should be " +
             "called in reverse order 2 and then 1!");
     }
-</code>|<code csharp>
+```
+|
+```csharp
 namespace example {
     using stdc;
 
@@ -321,7 +348,8 @@ namespace example {
         }
     }
 }
-</code>|
+```
+|
 |The full code is provided for this example, to demonstrate how to let the RunMain() method call the ported main() function. RunMain() calls main() after initializing an environment where the signals can work properly. The behaviour expected from C regarding the order in which the handlers are called is implemented correctly: the handlers are called in reverse order or registration.||
 
 ## Contact

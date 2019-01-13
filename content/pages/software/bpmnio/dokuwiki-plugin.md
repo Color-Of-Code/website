@@ -3,7 +3,7 @@ published: true
 path: "/software/bpmnio/dokuwiki-plugin"
 date: "2019-01-07"
 title: "BPMN plugin dokuwiki"
-tags: ["software", "foss", "dokuwiki", "bpmn", "TODO_cleanup"]
+tags: ["software", "plugin", "dokuwiki", "bpmn", "dmn", "cmmn", "TODO_cleanup"]
 ---
 
 # BPMN IO plugin for Dokuwiki

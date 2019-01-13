@@ -44,21 +44,21 @@ Alternatively since version 1.0.2 it is possible to run it as a command line too
 
 Analysis of a single file using the command line:
 
-<code>
+```
 acqc-metrics -o results.xml fullpath\file_to_analyze.cpp
-</code>
+```
 
 Recursive analysis of all files under a given directory:
 
-<code>
+```
 acqc-metrics -o results.xml path\to\base\directory
-</code>
+```
 
 Selective recursive analysis of files matching a pattern under a given directory:
 
-<code>
+```
 acqc-metrics -o results.xml directory\*.c
-</code>
+```
 
 ## Feedback
 

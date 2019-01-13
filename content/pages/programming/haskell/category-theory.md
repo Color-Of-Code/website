@@ -221,23 +221,23 @@ Universal constructions:
 
 The canonical implementation of a product of two types in a programming language is a pair
 
-<code haskell>
+```haskell
 data Pair a b = Pair a b
-</code>
+```
 
 ==== Records ====
 
 Better than just a tuple:
 
-<code haskell>
+```haskell
 data Element = Element { name         :: String
                        , symbol       :: String
                        , atomicNumber :: Int }
-</code>
+```
 
 Isomorphisms:
 
-<code haskell>
+```haskell
 tupleToElem :: (String, String, Int) -> Element
 tupleToElem (n, s, a) = Element { name = n
                                 , symbol = s
@@ -245,25 +245,25 @@ tupleToElem (n, s, a) = Element { name = n
 
 elemToTuple :: Element -> (String, String, Int)
 elemToTuple e = (name e, symbol e, atomicNumber e)
-</code>
+```
 
                        
 ==== Sum Types ====
 
-<code haskell>
+```haskell
 data Either a b = Left a | Right b
-</code>
+```
 
 ==== Algebra of types ====
 
 
 ^  Logic  ^  Numbers  ^  Types  ^
-| <code cpp>true</code>     | 0         | <code haskell>Void</code> |
-| <code cpp>false</code>    | 1         | <code haskell>()</code> |
-| <code cpp>a||b</code>     | a + b 	| <code haskell>Either a b = Left a | Right b</code> |
-| <code cpp>a&&b</code>     | a * b 	| <code haskell>(a, b) or Pair a b = Pair a b</code> |
-|                           | 2 = 1 + 1 | <code haskell>data Bool = True | False</code> |
-| <code cpp>false||a</code> | 1 + a 	| <code haskell>data Maybe = Nothing | Just a</code> |
+| ```cpptrue```     | 0         | ```haskellVoid``` |
+| ```cppfalse```    | 1         | ```haskell()``` |
+| ```cppa||b```     | a + b 	| ```haskellEither a b = Left a | Right b``` |
+| ```cppa&&b```     | a * b 	| ```haskell(a, b) or Pair a b = Pair a b``` |
+|                           | 2 = 1 + 1 | ```haskelldata Bool = True | False``` |
+| ```cppfalse||a``` | 1 + a 	| ```haskelldata Maybe = Nothing | Just a``` |
 
 
 This analogy goes deeper, and is the basis of the Curry-Howard isomorphism between logic and type theory. 
