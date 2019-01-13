@@ -24,13 +24,13 @@ See also [Software Anti-Patterns](anti-patterns).
  | -----
 [View] `<-down->` [Presenter]
 [Presenter] `<-down->` [Model]
-`</uml>` [MVP](wp>Model–view–presenter)    | Model View Presenter: all presentation logic is pushed to the presenter, mainly used for GUI development |
+`</uml>` [MVP](https://en.wikipedia.org/wiki/Model–view–presenter)    | Model View Presenter: all presentation logic is pushed to the presenter, mainly used for GUI development |
 | `<uml>`
 | -----
 [View] `<-down->` [Data Binding]
 [Data Binding] `<-down->` [ViewModel]
 [ViewModel] `<-down->` [Model]
-`</uml>` [MVVM](wp>Model_View_ViewModel)      | Model View ViewModel: The view model handles the view's display logic, is responsible for exposing the data objects from the model in such a way that the objects are easily managed and consumed |
+`</uml>` [MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)      | Model View ViewModel: The view model handles the view's display logic, is responsible for exposing the data objects from the model in such a way that the objects are easily managed and consumed |
 | Multitier architecture                         | The presentation, the application processing, and the data management are logically separate processes |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------
 | Pipeline                                       | Chain of processing elements |

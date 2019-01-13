@@ -44,7 +44,7 @@ print(hasher.hexdigest())
 
 ## Open Source ideas
 
-* Content Addressable Storage [CAS](wp>Content-addressable_storage)
+* Content Addressable Storage [CAS](https://en.wikipedia.org/wiki/Content-addressable_storage)
 * XAM Initiative: http://www.snia.org/forums/xam
 
 ### Filesystems
