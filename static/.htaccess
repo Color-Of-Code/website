@@ -1,14 +1,5 @@
 ErrorDocument 404 /404.html
 
-Redirect /wiki/database:terms /glossary/programming-terms
-Redirect /wiki/shortcuts:visio /shortcuts/visio
-Redirect /wiki/shortcuts:gimp /shortcuts/gimp
-Redirect /wiki/snippets:smtp /programming/c-sharp/smtp
-Redirect /wiki/snippets:xml_serialization /programming/c-sharp/xml-serialization
-
-# /wiki/coding:dxl:syntax
-# /cheat-sheets/programming
-
 RewriteEngine On 
 RewriteCond %{SERVER_PORT} 80 
 RewriteRule ^(.*)$ https://color-of-code.de/$1 [R,L]
