@@ -15,22 +15,32 @@ See also [Software Anti-Patterns](anti-patterns).
 | Architectural patterns  | Choice: How is the software system (as a whole) organized?  |
 | ----------------------- | ----------------------------------------------------------- |
 | Layers                                         | Separation of the system in layers, each layer knowing only of the layer above and under itself |
-| `<uml>`
+|
+
+```uml
 [View] -down-> [Controller]
 [Controller] -down-> [Model]
 [Model] -> [View]
-`</uml>` MVC   | Separation of the view (user interface) from the model (underlying data) and the controller (user interaction) |
- | `<uml>`
- | -----
+```
+
+ MVC   | Separation of the view (user interface) from the model (underlying data) and the controller (user interaction) |
+ |
+
+```uml
 [View] `<-down->` [Presenter]
 [Presenter] `<-down->` [Model]
-`</uml>` [MVP](https://en.wikipedia.org/wiki/Model–view–presenter)    | Model View Presenter: all presentation logic is pushed to the presenter, mainly used for GUI development |
-| `<uml>`
-| -----
+```
+
+[MVP](https://en.wikipedia.org/wiki/Model–view–presenter)    | Model View Presenter: all presentation logic is pushed to the presenter, mainly used for GUI development |
+|
+
+```uml
 [View] `<-down->` [Data Binding]
 [Data Binding] `<-down->` [ViewModel]
 [ViewModel] `<-down->` [Model]
-`</uml>` [MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)      | Model View ViewModel: The view model handles the view's display logic, is responsible for exposing the data objects from the model in such a way that the objects are easily managed and consumed |
+```
+
+[MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)      | Model View ViewModel: The view model handles the view's display logic, is responsible for exposing the data objects from the model in such a way that the objects are easily managed and consumed |
 | Multitier architecture                         | The presentation, the application processing, and the data management are logically separate processes |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------
 | Pipeline                                       | Chain of processing elements |
@@ -38,7 +48,7 @@ See also [Software Anti-Patterns](anti-patterns).
 | Blackboard system                              | A common knowledge base, is iteratively updated by a diverse subsystems |
 | Peer-to-peer                                   | No central server, each peer is supplier and consumer |
 | Service-oriented architecture                  | Loose coupling of services within the system |
-| Naked objects                                  | Objects and their representation are not biased by adapters or proxys |
+| Naked objects                                  | Objects and their representation are not biased by adapters or proxies |
 
 | Creational patterns | Choice: How to create the objects?  |
 | -------------------- | -------------------------------------------- |
@@ -66,7 +76,7 @@ See also [Software Anti-Patterns](anti-patterns).
 | Behavioral patterns  | Choice: How are the objects communicating?  |
 | -------------------- | -------------------------------------------- |
 | Chain of responsibility                        | Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it |
-| Command                                        | Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations |
+| Command                                        | Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undo-able operations |
 | Interpreter                                    | Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language |
 | Iterator                                       | Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation |
 | Mediator                                       | Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently |
