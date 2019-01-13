@@ -10,7 +10,7 @@ tags: ["software", "foss", "acqc", "metrics", "TODO_cleanup"]
 
 ## ACQC-Metrics
 
-[[:license|[License Agreement]]]
+[License Agreement](legal/license).
 
 **Quantify the quality of your code and develop higher quality code!\\ **
 

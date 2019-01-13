@@ -356,4 +356,4 @@ namespace example {
 
 If you would like to get a beta version of the library let me know: jaap.dehaan@color-of-code.de.
 
-The library is provided under this [[[[:license|Freeware License Agreement]].
+The library is provided under this [Freeware License Agreement](legal/license).

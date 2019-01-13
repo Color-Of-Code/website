@@ -8,7 +8,7 @@ tags: ["software", "product", "size", "reporter", "TODO_cleanup"]
 
 # SizeReporter
 
-[[:license|LICENSE AGREEMENT]]
+[License Agreement](legal/license).
 
 ## Introduction
 
