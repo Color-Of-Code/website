@@ -1,6 +1,6 @@
 ---
 published: true
-path: "/stdc/start"
+path: "/software/stdc-net/start"
 date: "2019-01-09"
 title: "Stdc.NET"
 tags: ["software", "product", "stdc", ".NET", "TODO_cleanup"]

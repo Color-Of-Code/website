@@ -2,7 +2,7 @@
 published: true
 path: "/software/acqc/metrics"
 date: "2019-01-07"
-title: "BPMN plugin dokuwiki"
+title: "ACQC.Metrics"
 tags: ["software", "foss", "acqc", "metrics", "TODO_cleanup"]
 ---
 

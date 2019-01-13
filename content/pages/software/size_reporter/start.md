@@ -1,6 +1,6 @@
 ---
 published: true
-path: "/size_reporter/start"
+path: "/software/size_reporter/start"
 date: "2019-01-09"
 title: "Size Reporter"
 tags: ["software", "product", "size", "reporter", "TODO_cleanup"]
