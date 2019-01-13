@@ -81,4 +81,4 @@ Give it a try and send your comments tofeedback to [[jaap.dehaan@color-of-code.
 ===== Prerequisities: =====
 
 * Windows XP, Vista, 7 or later
-* Microsoft .NET Framework 3.5 [[http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&amp;displaylang=en|http://www.microsoft.com/downloads/details.aspx?...]]
+* Microsoft .NET Framework 3.5 [http://www.microsoft.com/downloads/details.aspx?...](http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&amp;displaylang=en)

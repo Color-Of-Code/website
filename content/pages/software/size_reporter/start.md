@@ -113,4 +113,4 @@ The tool does not come with an installer, just download the zip and unpack it wh
 ## Prerequisities
 
 * Windows XP, Vista, 7 or later
-* Microsoft .NET Framework [[http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&amp;displaylang=en|http://www.microsoft.com/downloads/details.aspx?...]]
+* Microsoft .NET Framework [http://www.microsoft.com/downloads/details.aspx?...](http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&amp;displaylang=en)

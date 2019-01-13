@@ -46,7 +46,7 @@ FUNANI is also more than a tool. It is also a framework designed for extensibili
 * [[license|license]]: BSD
 * [[state|state]]: Currently in design phase, Proof of concept in development
 * [[rationale|rationale]]: Why another media management system?
-* [[hosting|hosting]]: [[https://launchpad.net/funani|LaunchPad]]
+* [[hosting|hosting]]: [LaunchPad](https://launchpad.net/funani)
 
 ### Blueprints
 

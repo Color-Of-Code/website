@@ -53,22 +53,22 @@ A foreign key requires that values must be present in the parent entity before l
 ## Normal Form
 
 - First normal form (1NF): very basic rules:
-  - Eliminate duplicative [[http://databases.about.com/library/glossary/bldef-column.htm|columns]] from the same table.
-  - Create separate tables for each group of related data and identify each [[http://databases.about.com/library/glossary/bldef-row.htm|row]] with a unique column or set of columns (the [[http://databases.about.com/library/glossary/bldef-primarykey.htm|primary key]]).
+  - Eliminate duplicative [columns](http://databases.about.com/library/glossary/bldef-column.htm) from the same table.
+  - Create separate tables for each group of related data and identify each [row](http://databases.about.com/library/glossary/bldef-row.htm) with a unique column or set of columns (the [primary key](http://databases.about.com/library/glossary/bldef-primarykey.htm)).
 - Second normal form (2NF): remove duplicative data:
   - Meet all the requirements of 1NF.
   - Remove subsets of data that apply to multiple rows of a table and place them in separate tables.
-  - Create relationships between these new tables and their predecessors through the use of [[http://databases.about.com/library/glossary/bldef-foreignkey.htm|foreign keys]].
+  - Create relationships between these new tables and their predecessors through the use of [foreign keys](http://databases.about.com/library/glossary/bldef-foreignkey.htm).
 - Third normal form (3NF):
   - Meet all the requirements of the second normal form.
-  - Remove columns that are not [[http://databases.about.com/od/specificproducts/a/Database-Dependency.htm|dependent]] upon the primary key.
+  - Remove columns that are not [dependent](http://databases.about.com/od/specificproducts/a/Database-Dependency.htm) upon the primary key.
 - Boyce-Codd NormalForm (BCNF or 3.5NF):
   - Meet all the requirements of the 3NF.
-  - Every determinant must be a [[http://databases.about.com/cs/specificproducts/g/candidate.htm|candidate key.]]
+  - Every determinant must be a [candidate key.](http://databases.about.com/cs/specificproducts/g/candidate.htm)
 - Fourth NormalForm (4NF):
   - Meet all the requirements of the 3NF.
-  - Relationships have no [[http://databases.about.com/od/specificproducts/g/multivalued-dependency.htm|multi-valued dependencies]].
-- Fifth normal form (5NF), Project-join normal form (PJ/NF) designed to reduce redundancy in relational databases recording multi-valued facts by isolating [[http://en.wikipedia.org/wiki/Semantically|semantically]] related multiple relationships.
+  - Relationships have no [multi-valued dependencies](http://databases.about.com/od/specificproducts/g/multivalued-dependency.htm).
+- Fifth normal form (5NF), Project-join normal form (PJ/NF) designed to reduce redundancy in relational databases recording multi-valued facts by isolating [semantically](http://en.wikipedia.org/wiki/Semantically) related multiple relationships.
   - Meet all the requirements of the 4NF.
-  - Every [[http://en.wikipedia.org/wiki/Join_dependency|join dependency]] is implied by the [[http://en.wikipedia.org/wiki/Candidate_key|candidate keys]].
+  - Every [join dependency](http://en.wikipedia.org/wiki/Join_dependency) is implied by the [candidate keys](http://en.wikipedia.org/wiki/Candidate_key).
 Null & 3VL (Three value Logic)
