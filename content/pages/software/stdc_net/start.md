@@ -30,7 +30,7 @@ Even a tool to convert (in a sloppy mode) C files to C# files to start porting w
 
 ----
 
-==== Hello world ====
+#### Hello world
 
 |C|C#|
 |
@@ -58,7 +58,7 @@ namespace Example {      // a namespace to contain the code
 
 ----
 
-==== Printing powers of 2 - printf() ====
+#### Printing powers of 2 - printf()
 
 |C|C#|
 |
@@ -190,7 +190,7 @@ namespace Example {      // a namespace to contain the code
 |In the C# port, the scanf implementation is making use of generics to handle different types accordingly.||
 
 \\ 
-==== Quick Sort an array of ints, step by step refactoring - qsort() ====
+#### Quick Sort an array of ints, step by step refactoring - qsort()
 
 |C|C#|
 |
@@ -297,7 +297,7 @@ The signature of the main function is one of:
 
 The .NET arguments do not contain the program name unlike in C where argv[0] contains the name of the executable. To enable to reuse code from C that expects this behaviour, you must use the C.RunI/VMain() function. The RunMain() function also provides an environment where the signal() and raise() C functions can be used.
 
-===== Further examples =====
+### Further examples
 
 \\ ==== Using atexit - atexit() ====
 

@@ -103,7 +103,7 @@ Notes:
 
 Idea: embellishing return types of a bunch of functions in order to piggyback some additional information 
 
-==== Writer In C++ ====
+#### Writer In C++
 
 ```cpp
 pair<bool, string> isEven(int n) {
@@ -225,7 +225,7 @@ The canonical implementation of a product of two types in a programming language
 data Pair a b = Pair a b
 ```
 
-==== Records ====
+#### Records
 
 Better than just a tuple:
 
@@ -248,13 +248,13 @@ elemToTuple e = (name e, symbol e, atomicNumber e)
 ```
 
                        
-==== Sum Types ====
+#### Sum Types
 
 ```haskell
 data Either a b = Left a | Right b
 ```
 
-==== Algebra of types ====
+#### Algebra of types
 
 
 ^  Logic  ^  Numbers  ^  Types  ^
@@ -268,7 +268,7 @@ data Either a b = Left a | Right b
 
 This analogy goes deeper, and is the basis of the Curry-Howard isomorphism between logic and type theory. 
 
-===== 7) Functors =====
+### 7) Functors
 
 A functor is a mapping between categories. Given two categories, C and D, a functor F maps objects in C to objects in D and also maps morphisms.
 
@@ -277,7 +277,7 @@ A functor is a mapping between categories. Given two categories, C and D, a func
   * A functor may smash objects together, it may glue multiple morphisms into one, but it may never break things apart.
 
 Functor laws: fmap preserves identity and composition
-==== Functors in programming ====
+#### Functors in programming
 
   * Maybe functor
   * List functor
@@ -297,40 +297,40 @@ Functor laws: fmap preserves identity and composition
 
 ### 3) Free Monoids
 
-===== 4) Representable Functors =====
+### 4) Representable Functors
 
-===== 5) The Yoneda Lemma =====
+### 5) The Yoneda Lemma
 
-===== 6) Yoneda Embedding =====
+### 6) Yoneda Embedding
 
 ## Part Three
 
-===== 1) It’s All About Morphisms =====
+### 1) It’s All About Morphisms
 
-===== 2) Adjunctions =====
+### 2) Adjunctions
 
-===== 3) Free/Forgetful Adjunctions =====
+### 3) Free/Forgetful Adjunctions
 
-===== 4) Monads: Programmer’s Definition =====
+### 4) Monads: Programmer’s Definition
 
-===== 5) Monads and Effects =====
+### 5) Monads and Effects
 
-===== 6) Monads Categorically =====
+### 6) Monads Categorically
 
-===== 7) Comonads =====
+### 7) Comonads
 
-===== 8) F-Algebras =====
+### 8) F-Algebras
 
-===== 9) Algebras for Monads =====
+### 9) Algebras for Monads
 
-===== 10) Ends and Coends =====
+### 10) Ends and Coends
 
-===== 11) Kan Extensions =====
+### 11) Kan Extensions
 
-===== 12) Enriched Categories =====
+### 12) Enriched Categories
 
-===== 13) Topoi =====
+### 13) Topoi
 
-===== 14) Lawvere Theories =====
+### 14) Lawvere Theories
 
-===== 15) Monads, Monoids, and Categories =====
+### 15) Monads, Monoids, and Categories

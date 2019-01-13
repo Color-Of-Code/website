@@ -16,7 +16,7 @@ tags: ["software", "foss", "acqc", "metrics", "TODO_cleanup"]
 
 ACQC Metrics computes typical **source code file and function metrics**. What are metrics good for? Well, it **measures the software** in terms of complexity for example. Very long or complex functions can be identified in order to break them down in smaller pieces (for better **maintainability**). Maybe you are also just interested in knowing how big the software currently is. Then ACQC metrics is also good for you.
 
-===== Main features =====
+### Main features
 
 * Computation of function and file metrics for C and C++ (see details below)
 * Display of a nice Kiviat diagram for the selected functions
@@ -24,7 +24,7 @@ ACQC Metrics computes typical **source code file and function metrics**. What ar
 
 **Screenshot: analysis of liboil (left), display of kiviat diagram (right) and open Notepad++ (bottom)**
 
-{{:product:acqc_metrics:acqc_metrics.png|ACQC metrics}}
+[ACQC metrics](acqc_metrics.png)
 
 **Simply drop source files on the window and it'll compute metrics for you.**
 
@@ -34,7 +34,7 @@ ACQC Metrics computes typical **source code file and function metrics**. What ar
 
 > You can also use it to track down some [[patterns:anti-patterns|Software Anti-Patterns]], for example: Spaghetti code: High LINES and CC Loop-switch sequence: Big difference between DC and CC (high imbrication) 
 
-===== Setup and usage =====
+### Setup and usage
 
 ACQC Metrics is easy to use, download, unpack and run it (Make sure the prerequisities are installed like .NET 3.5).
 
@@ -68,7 +68,7 @@ Metrics are computed for C and C++ files. Support for other languages will be ad
 
 Give it a try and send your comments tofeedback to [[jaap.dehaan@color-of-code.de|jaap.dehaan@color-of-code.de]]
 
-===== Available versions: =====
+### Available versions:
 
 * {{:product:acqc_metrics:acqc_metrics-1.0.7.zip|ACQC_Metrics-1.0.7.zip}} [154KB, 2013-08-14], Fixed crash on closing Kiviat window using the upright cross and trying to show it again.
 * ACQC-Metrics-1.0.6.zip [78KB, 2012-12-01], Kiviat diagram, editor support, added recursive directory parsing and basic wildcard support.
@@ -78,7 +78,7 @@ Give it a try and send your comments tofeedback to [[jaap.dehaan@color-of-code.
 * ACQC-Metrics-1.0.1.zip [60KB, 2009-08-29], now displays also function metrics
 * ACQC-Metrics-1.0.0.zip [59KB, 2009-08-27]
 
-===== Prerequisities: =====
+### Prerequisities:
 
 * Windows XP, Vista, 7 or later
 * Microsoft .NET Framework 3.5 [http://www.microsoft.com/downloads/details.aspx?...](http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&amp;displaylang=en)

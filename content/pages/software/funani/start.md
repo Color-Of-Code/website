@@ -73,15 +73,15 @@ Such a wide project needs a lot of helping hands to be driven to completion rapi
 
 If you would like to contribute contact us (See the [[:impressum|Impressum / Legal notice]])
 
-=====  Documentation  =====
+### Documentation
 
-====  Architecture  ====
+#### Architecture
 
 The high level design of the system that helps to organize the development of loosely connected components.
 
 * [Architecture](./architecture)
 
-====  Implementation  ====
+#### Implementation
 
 [[Development|process]]
 
