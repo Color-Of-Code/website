@@ -8,7 +8,7 @@ import { FaHome, FaTags, FaInfoCircle } from 'react-icons/fa';
 const Header = () => (
   <div
     style={{
-      background: 'darkslategray',
+      background: '#2d2d2d',
       marginBottom: '0.5rem',
     }}
   >
