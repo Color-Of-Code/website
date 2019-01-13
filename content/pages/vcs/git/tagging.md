@@ -3,7 +3,7 @@ published: true
 path: "/vcs/git/tagging"
 date: "2018-12-28"
 title: "Git: Tagging"
-tags: ["vcs", "git", "tagging", "TODO_cleanup"]
+tags: ["vcs", "git", "tag"]
 ---
 
 # Git

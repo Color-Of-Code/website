@@ -3,14 +3,14 @@ published: true
 path: "/programming/dxl/syntax"
 date: "2019-01-07"
 title: "DOORS DXL"
-tags: ["programming", "doors", "dxl", "TODO_cleanup"]
+tags: ["programming", "doors", "dxl"]
 ---
 
 # DOORS DXL
 
 ## Tips
 
-Deactivation of (dangerous) the auto-declaration feature (put it for example in startup.dxl)
+Deactivation of (dangerous) the auto-declaration feature (put it for example in `startup.dxl`)
 
 ```c
 XFLAGS_ &= ~AutoDeclare_
@@ -18,9 +18,11 @@ XFLAGS_ &= ~AutoDeclare_
 
 ## Pitfalls
 
-* Functions that have only one string as parameter IGNORE the parenthesis. This often leads to unwanted and unexpected side effects.
+### Beware of functions with string parameter
 
-a famous example of this behavior:
+Functions that have only one string as parameter **IGNORE** the parenthesis. This often leads to unwanted and unexpected side effects.
+
+A famous example of this behavior:
 
 ```c
 string sA = "upper"
@@ -46,4 +48,14 @@ workaround, use parenthesis:
 print (upper(sA)) " " sB
 ```
 
-* Avoid string concatenation (like "stra" " strb"): it adds entries to the global string table which keeps increasing in size. There is no way to free entries from the global string table. Only closing a DOORS session will end up in freeing the memory.
+### Memory footprint (string table)
+
+Avoid string concatenation, like:
+
+```c
+"stra" " strb"
+```
+
+it adds entries to the global string table which keeps increasing in size. There is no way to free entries from the global string table. Only closing a DOORS session will end up in freeing the memory.
+
+
