@@ -16,6 +16,7 @@
     "gatsby-plugin-robots-txt": "^1.3.0",
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-sitemap": "^2.0.4",
+    "gatsby-remark-color-of-code": "0.0.1",
     "gatsby-remark-copy-linked-files": "^2.0.8",
     "gatsby-remark-draw": "^1.0.15",
     "gatsby-remark-flowchart": "0.0.1",
