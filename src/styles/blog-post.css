@@ -5,6 +5,10 @@ div.blog-post-preview {
     margin-bottom: 1rem;
 }
 
+div.blog-tags {
+    margin-bottom: 1rem;
+}
+
 h1 > * {
     font-size: 1.2rem;
     text-decoration-line: none;

@@ -8,6 +8,7 @@ import '../styles/blog-post.css';
 import rehypeReact from 'rehype-react';
 import Counter from '../components/counter';
 import Hotkey from '../components/hotkey';
+import Tag from '../components/tag';
 
 function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -29,6 +30,11 @@ function Template({
           <div className="blog-post-header">
             <h1>{frontmatter.title}</h1>
             <h2>{frontmatter.date}</h2>
+            <div className="blog-tags">
+              {frontmatter.tags.map(tag => {
+                return <Tag tag={tag} key={tag} />;
+              })}
+            </div>
           </div>
           <div className="blog-post-content">{renderAst(htmlAst)}</div>
         </div>
@@ -51,6 +57,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
       }
     }
   }
