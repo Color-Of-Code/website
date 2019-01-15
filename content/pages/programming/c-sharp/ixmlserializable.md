@@ -6,6 +6,8 @@ title: "IXmlSerializable"
 tags: ["programming", "csharp", "xml", "serialization", "TODO_cleanup"]
 ---
 
+# IXmlSerializable
+
 ## Introduction
 
 Yeah, I know, this is yet another article about XML serialization... After having seen several issues in code using or demonstrating XML serialization on CodeProject (and having struggled with these issues myself!), I thought telling the community about the findings would be a good deed. After having seen the interest of people, I added some more examples in the form of source code.
@@ -23,7 +25,7 @@ There are many confusing things regarding the implementation of the `IXmlSeriali
 
 The serializer created from the XML serialization attributes first has a look at if the type to be serialized implements this interface. If it is not implemented, then the `public` members and properties are analyzed and considered (or not thanks `XmlIgnoreAttribute`) for serialization.
 
-[This](http://www.codeproject.com/KB/dotnet/CustomSerializationPart2.aspx) is a good starter. The article is clear and nicely written and introduces the main differences between attribute based serialization and implementing `IXmlSerializable`. [IXmlSerializable.aspx](IXmlSerializable) is also worth reading.
+[This](http://www.codeproject.com/KB/dotnet/CustomSerializationPart2.aspx) is a good starter. The article is clear and nicely written and introduces the main differences between attribute based serialization and implementing `IXmlSerializable`.
 
 After having read this article, by getting back to the other articles mentioned above, I hope you will be able to see the implementation mistakes made therein. The code works well as long as the classes do not get extended and as long as you do not mix serialization procedures. I made it all wrong too from the beginning until I dug into the problems...
 

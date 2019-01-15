@@ -24,13 +24,13 @@ ACQC Metrics computes typical **source code file and function metrics**. What ar
 
 **Screenshot: analysis of liboil (left), display of kiviat diagram (right) and open Notepad++ (bottom)**
 
-[ACQC metrics](acqc_metrics.png)
+![ACQC metrics](acqc_metrics.png)
 
 **Simply drop source files on the window and it'll compute metrics for you.**
 
 ## Supported metrics
 
-> **LINES**: the number of **physical lines** in your file **LLOC**: the logical **lines of code** (without comments, without spaces) **LLOCi**: the logical **lines of comments** (lines caontaining only comments) **LLOW**: the logical **whitespace lines** (lines without any other content than whitespace characters) **PROCS**: the number of **procedures/functions** inside the file **CARGS**: the total **number of arguments** used by the function or functions in the file **CC**: the **cyclomatic complexity** known also under McCabe complexity, represents the number of decisions taken by the code **DC**: the **"depth" complexity**. If you imbricate a lot (if's inside if's or while's inside switches for example) this will get high. 
+> **LINES**: the number of **physical lines** in your file **LLOC**: the logical **lines of code** (without comments, without spaces) **LLOCi**: the logical **lines of comments** (lines containing only comments) **LLOW**: the logical **whitespace lines** (lines without any other content than white-space characters) **PROCS**: the number of **procedures/functions** inside the file **CARGS**: the total **number of arguments** used by the function or functions in the file **CC**: the **cyclomatic complexity** known also under McCabe complexity, represents the number of decisions taken by the code **DC**: the **"depth" complexity**. If you imbricate a lot (if's inside if's or while's inside switches for example) this will get high. 
 
 > You can also use it to track down some [[patterns:anti-patterns|Software Anti-Patterns]], for example: Spaghetti code: High LINES and CC Loop-switch sequence: Big difference between DC and CC (high imbrication) 
 

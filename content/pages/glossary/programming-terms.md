@@ -53,7 +53,7 @@ A derived class shall behave in the same way than the base class (keeping same s
 
 ### Mc Cabe complexity
 
-A code metric representing the amount of decisions taken by a piece of code. Having complex code makes the maintenance and testing of that code harder and costly. Here is a small drop-in tool that computes metrics for you: [ACQC metrics](index).
+A code metric representing the amount of decisions taken by a piece of code. Having complex code makes the maintenance and testing of that code harder and costly. Here is a small drop-in tool that computes metrics for you: [ACQC metrics](/software/acqc/metrics).
 
 ### OCP: open/closed principle
 

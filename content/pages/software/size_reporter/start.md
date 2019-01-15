@@ -26,7 +26,7 @@ The CSV file can be read by **MS excel** directly or imported into Open office c
 
 The executable only has two parameters: the directory to parse (may be a network path) and the depth of reporting.
 
-[Screenshot SizeReporter](size_reporter.png)
+![Screenshot SizeReporter](size_reporter.png)
 
 During a run, the tool displays the current state in the console and reports the current directory being parsed as well as intermediate results.\\ \\ After running, the tool generates at least two files:
 
