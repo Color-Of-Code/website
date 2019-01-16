@@ -255,6 +255,7 @@ body {
 
 img {
     max-width: 100%;
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -262,7 +263,6 @@ img {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 h1 {
@@ -368,6 +368,7 @@ h6 {
 }
 
 hgroup {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -375,10 +376,10 @@ hgroup {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 ul {
+    margin-bottom: 1.45rem;
     margin-left: 1.45rem;
     margin-right: 0;
     margin-top: 0;
@@ -386,12 +387,12 @@ ul {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
     list-style-position: outside;
     list-style-image: none;
 }
 
 ol {
+    margin-bottom: 1.45rem;
     margin-left: 1.45rem;
     margin-right: 0;
     margin-top: 0;
@@ -399,12 +400,12 @@ ol {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
     list-style-position: outside;
     list-style-image: none;
 }
 
 dl {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -412,10 +413,10 @@ dl {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 dd {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -423,10 +424,10 @@ dd {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 p {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -434,10 +435,10 @@ p {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 figure {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -445,10 +446,10 @@ figure {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 pre {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -456,7 +457,6 @@ pre {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
     font-size: 0.85rem;
     line-height: 1.42;
     background: hsla(0, 0%, 100%, 0.04);
@@ -467,6 +467,7 @@ pre {
 }
 
 table {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -474,7 +475,6 @@ table {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
     font-size: 1rem;
     line-height: 1.45rem;
     border-collapse: collapse;
@@ -482,6 +482,7 @@ table {
 }
 
 fieldset {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -489,10 +490,10 @@ fieldset {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 blockquote {
+    margin-bottom: 1.45rem;
     margin-left: 1.45rem;
     margin-right: 1.45rem;
     margin-top: 0;
@@ -500,10 +501,10 @@ blockquote {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 form {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -511,10 +512,10 @@ form {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 noscript {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -522,10 +523,10 @@ noscript {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 iframe {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -533,10 +534,10 @@ iframe {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 hr {
+    margin-bottom: calc(1.45rem - 1px);
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -544,13 +545,13 @@ hr {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: calc(1.45rem - 1px);
     background: hsla(0, 0%, 100%, 0.2);
     border: none;
     height: 1px;
 }
 
 address {
+    margin-bottom: 1.45rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -558,7 +559,6 @@ address {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
 }
 
 b {
