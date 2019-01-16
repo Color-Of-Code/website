@@ -9,7 +9,7 @@ div.blog-tags {
     margin-bottom: 1rem;
 }
 
-h1 > * {
+h1>* {
     font-size: 1.2rem;
     text-decoration-line: none;
 }
