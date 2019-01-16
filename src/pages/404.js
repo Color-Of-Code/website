@@ -11,7 +11,7 @@ const NotFoundPage = ({ data }) => (
     <SEO title="404: Not found" />
     <h1>404 - NOT FOUND</h1>
 
-    <Img fixed={data.file.childImageSharp.fixed} />
+    <Img fluid={data.file.childImageSharp.fluid} />
     <div
       style={{
         float: 'right',
@@ -31,10 +31,8 @@ export const query = graphql`
   query {
     file(relativePath: { eq: "wallpaper-skull.jpg" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 640, height: 480) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 640) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
