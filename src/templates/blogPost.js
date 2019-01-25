@@ -9,6 +9,7 @@ import rehypeReact from 'rehype-react';
 import Counter from '../components/counter';
 import Hotkey from '../components/hotkey';
 import Tag from '../components/tag';
+import SEO from '../components/seo';
 
 function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -25,6 +26,7 @@ function Template({
 
   return (
     <Layout>
+      <SEO title={frontmatter.title} keywords={frontmatter.tags} />
       <div className="blog-post-container">
         <div className="blog-post">
           <div className="blog-post-header">
