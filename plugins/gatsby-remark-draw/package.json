@@ -1,0 +1,65 @@
+{
+  "name": "gatsby-remark-draw",
+  "version": "1.0.15",
+  "description": "A wrapper around popular graphing tools (GraphViz, SvgBobRus, Mermaid) to convert text based diagrams in Markdown to SVG.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "npm run lint:js && npm run lint:md",
+    "lint:js": "eslint --ext .js .",
+    "lint:md": "remark .",
+    "qa": "npm run test && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhanekom/gatsby-remark-draw.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "remark",
+    "svgbob",
+    "svgbobrus",
+    "drawing",
+    "ascii",
+    "plugin",
+    "graphviz",
+    "mermaid",
+    "graph",
+    "flowchart"
+  ],
+  "author": "Riaan Hanekom",
+  "license": "MIT",
+  "dependencies": {
+    "skyrta": "^0.1.8",
+    "unist-util-visit": "^1.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/rhanekom/gatsby-remark-draw/issues"
+  },
+  "homepage": "https://github.com/rhanekom/gatsby-remark-draw#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.4.3",
+    "mermaid": "^8.0.0-rc.6",
+    "mermaid.cli": "^0.4.4",
+    "remark": "^9.0.0",
+    "remark-preset-lint-recommended": "^3.0.1",
+    "remark-validate-links": "^7.0.0"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended",
+      "remark-validate-links"
+    ]
+  }
+
+,"_resolved": "https://registry.npmjs.org/gatsby-remark-draw/-/gatsby-remark-draw-1.0.15.tgz"
+,"_integrity": "sha512-FSemVxWaV0CcTCEYhP5wfKkS8sNh2Om13pjpBPsdm27Zu89/nh9uQ0Q47BWV10xpt0tcXDd9Zo7qBdc/1sAUeQ=="
+,"_from": "gatsby-remark-draw@1.0.15"
+}

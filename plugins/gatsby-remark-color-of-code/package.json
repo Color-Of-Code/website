@@ -1,0 +1,57 @@
+{
+  "_from": "gatsby-remark-color-of-code",
+  "_id": "gatsby-remark-color-of-code@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-JAa7NyCn0TzDnB/YS+SW0GPmBbKGKMpuAkZEBgVoSImPqRfkIN5lgeG+JaX5Pv+Y5iCk3HGB367PTv/RVU5agA==",
+  "_location": "/gatsby-remark-color-of-code",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "gatsby-remark-color-of-code",
+    "name": "gatsby-remark-color-of-code",
+    "escapedName": "gatsby-remark-color-of-code",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gatsby-remark-color-of-code/-/gatsby-remark-color-of-code-0.0.1.tgz",
+  "_shasum": "bf1edbae30ebe635b5ca14ef6973bc940adbaa10",
+  "_spec": "gatsby-remark-color-of-code",
+  "_where": "/home/jdehaan/Documents/projects/coc/website",
+  "author": {
+    "name": "Jaap de Haan"
+  },
+  "bugs": {
+    "url": "https://github.com/Color-Of-Code/gatsby-remark-color-of-code/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Remark plugin collection used to generate graphs and diagrams from text not using external CDNs",
+  "homepage": "https://github.com/Color-Of-Code/gatsby-remark-color-of-code#readme",
+  "keywords": [
+    "gatsby",
+    "remark",
+    "plugin",
+    "mathjax",
+    "mermaid",
+    "plantuml",
+    "flowchart",
+    "graphviz"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "gatsby-remark-color-of-code",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Color-Of-Code/gatsby-remark-color-of-code.git"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "version": "0.0.1"
+}

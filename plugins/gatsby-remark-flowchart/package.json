@@ -1,0 +1,30 @@
+{
+  "name": "gatsby-remark-flowchart",
+  "version": "0.0.1",
+  "description": "Make nice graphs in your markdown files in gatsbyjs, using flowchart",
+  "author": "Donghua Liu <liudonghua123@gmail.com> (http://liudonghua.com)",
+  "license": "MIT",
+  "dependencies": {
+    "unist-util-visit": "^1.1.3"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "graph",
+    "flowchart.js",
+    "remark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liudonghua123/gatsby-remark-flowchart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liudonghua123/gatsby-remark-flowchart/issues"
+  },
+  "homepage": "https://github.com/liudonghua123/gatsby-remark-flowchart#readme"
+
+,"_resolved": "https://registry.npmjs.org/gatsby-remark-flowchart/-/gatsby-remark-flowchart-0.0.1.tgz"
+,"_integrity": "sha512-ekbexEABMPbHzi8llCG/Reg34oPedo2SMh9SDSutpp1R1VDypkVWV7b8+tJWeWAcJx5S5XtoWwCt7ZgzbCIAPg=="
+,"_from": "gatsby-remark-flowchart@0.0.1"
+}
