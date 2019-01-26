@@ -56,7 +56,7 @@ Small and efficient and secure template [lxc-alpine](http://www.alpinelinux.org/
 
 There is a nice python3 api that can be used to automate the setup of LXC.
 
-* https://github.com/lxc/lxc/tree/master/src/python-lxc
+* https://github.com/lxc/python3-lxc
 
 It is actually a wrapper for the C api.
 

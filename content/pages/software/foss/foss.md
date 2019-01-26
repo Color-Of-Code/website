@@ -28,7 +28,7 @@ tags: ["software", "foss", "TODO_cleanup"]
 
 | Name   | Description |
 | ------ | :------- |
-| audacity | ![Alt text](icons/audacity.png) https://www.audacityteam.org |
+| audacity | ![Alt text](icons/audacity.png) https://www.audacityteam.org/ |
 |          | Great tool to record and edit sound files. It is fast and extensible. It supports a lot of formats and allows to filter or apply effects on sound tracks. Here is a list of features from the audacity wiki: http://wiki.audacityteam.org/index.php?title=Current_Features. |
 | VLC      |   https://www.videolan.org/vlc/    | 
 |          | A very nice, versatile and powerful video player.      |
