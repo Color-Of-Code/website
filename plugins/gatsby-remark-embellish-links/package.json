@@ -1,0 +1,18 @@
+{
+  "name": "gatsby-remark-embellish-links",
+  "version": "0.0.1",
+  "description": "Make links look nicer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "link",
+    "icon",
+    "nicer",
+    "remark",
+    "gatsby"
+  ],
+  "author": "Jaap de Haan",
+  "license": "MIT"
+}

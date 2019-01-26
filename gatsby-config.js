@@ -154,9 +154,9 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          //{
-          //  resolve: 'gatsby-remark-embellish-links',
-          //},
+          {
+            resolve: 'gatsby-remark-embellish-links',
+          },
         ],
       },
     },
