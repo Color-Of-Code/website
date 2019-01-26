@@ -100,7 +100,9 @@ module.exports = {
               },
             },
           },
-          'gatsby-remark-mathjax',
+          {
+            resolve: 'gatsby-remark-mathjax',
+          },
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
@@ -152,6 +154,9 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
+          //{
+          //  resolve: 'gatsby-remark-embellish-links',
+          //},
         ],
       },
     },
