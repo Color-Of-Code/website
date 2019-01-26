@@ -7,7 +7,7 @@ tags: ["programming", "haskell", "category theory", "math", "TODO_cleanup"]
 ---
 # Category Theory & Haskell programming language
 
-* http://www.seas.upenn.edu/~cis194/lectures.html
+* https://www.seas.upenn.edu/~cis194/spring15/lectures.html
 * https://wiki.haskell.org/Learning_Haskell
 * http://yogsototh.github.io/Category-Theory-Presentation
 * https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/

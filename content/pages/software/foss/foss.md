@@ -43,7 +43,7 @@ VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterp
 
 ## Internet
 
-Firefox logo Firefox, http://www.mozilla-europe.org/en/firefox
+Firefox logo Firefox, https://www.mozilla.org/firefox/
 
 Firefox is the greatest browser. Why? Are you kidding! Have a look at the large set of extensions and plug-ins, it is fully skinnable, fast and aims at standard compliance. The acidtests are stress tests to see how well your browser understands and handles CSS. Maybe it is not the fastest (Opera is actually faster) nor the most standard compliant, but it is widely used, fast enough, extensions are easy to manage and is robust.
 
