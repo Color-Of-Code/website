@@ -143,7 +143,7 @@ Quite a few actually:
  2. Do not write the wrapper element in `WriteXml` but read it inside `ReadXml`!
  3. Handle empty elements correctly during deserialization.
 
-Gotcha number 1 triggers in the case of dates, floating point values, .. that are written differently depending on the culture. In English speaking countries, it would probably display something like 10/22/2009 for Rex´s birthday. If you save that file like that and open it on another machine with a different locale, you'll get into trouble. I prefer always to specify a fixed format with the Date Time format specification for example. (A short C# Format specification Cheat Sheet I use is located [here](http://color-of-code.de/index.php?option=com_content&amp;view=article&amp;id=58:c-format-strings&amp;catid=38:programming&amp;Itemid=66).)
+Gotcha number 1 triggers in the case of dates, floating point values, .. that are written differently depending on the culture. In English speaking countries, it would probably display something like 10/22/2009 for Rex´s birthday. If you save that file like that and open it on another machine with a different locale, you'll get into trouble. I prefer always to specify a fixed format with the Date Time format specification for example. (A short C# Format specification Cheat Sheet I use is located [here](./format_strings).)
 
 Gotcha number 2 triggers if you mix both attribute driven serialization with `IXmlSerializable` implementation for some classes.
 
@@ -153,13 +153,13 @@ Gotcha number 3 triggers if elements are empty or omitted (such a surprise!).
 
 The implementation choice is good and justified because:
 
- 1.  The caller code must foresee what is the element name to create a new object of the appropriate type to be filled in during deserialization.
- 2.  You must be able to handle attributes in `ReadXml`, so the wrapping tag must not be consumed yet.
- 3.  You must be able to define the name of the wrapping tag from outside to allow the same type to be serialized into different container tags.
+1. The caller code must foresee what is the element name to create a new object of the appropriate type to be filled in during deserialization.
+2. You must be able to handle attributes in `ReadXml`, so the wrapping tag must not be consumed yet.
+3. You must be able to define the name of the wrapping tag from outside to allow the same type to be serialized into different container tags.
 
 The second point is similar to saying that the rubbish does not need to know into which bin it gets into. It must only know how to describe itself and to sort itself you after you see the bin. The only counter-intuitive item is that in the case of `ReadXml` the rubbish opens the bin itself! But it doesn't need to know how the bin called: no argument is used for the name in `ReadStartElement()`.
 
-## How to Handle Empty Elements?
+## How to Handle Empty Elements
 
 I must say I did not find any elegant way of handling the deserialization of empty elements. No matter what I tried, I always had to perform an additional test. I found no method in the API that could help me. A suggestion to Microsoft would be to add a Boolean return value to `ReadStartElement()` that returns `false` if the element is empty. If you have an empty element, you can detect it before reading it. If you have one, then DO NOT call `ReadEndElement()`.
 
