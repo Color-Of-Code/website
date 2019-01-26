@@ -6,6 +6,7 @@ module.exports = {
   'fab fa-twitter': /twitter\.com/,
   // fallback external link
   'fas fa-external-link-alt': /https?:/,
+  'fas fa-envelope': /mailto:/,
   // final fallback
   'fas fa-link': /\./,
 };

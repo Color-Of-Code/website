@@ -2,7 +2,7 @@
 
 const visit = require('unist-util-visit');
 const defaultSites = require('./sites');
-var urlExists = require('url-exists');
+//var urlExists = require('url-exists');
 
 module.exports = ({ markdownAST }, { sites } = {}) => {
   visit(markdownAST, 'link', node => {
@@ -15,11 +15,12 @@ module.exports = ({ markdownAST }, { sites } = {}) => {
           value: `<i class="${icon}"></i>`,
         });
         // TODO: allow this check via a npm task somehow
-        urlExists(node.url, function(err, exists) {
-          if (!exists) {
-            console.log('URL ERROR: ' + node.url);
-          }
-        });
+        //urlExists(node.url, function(err, exists) {
+        //  if (!exists) {
+        //    console.log('URL ERROR: ' + node.url);
+        //  }
+        //});
+
         // first hit wins
         return;
       }
