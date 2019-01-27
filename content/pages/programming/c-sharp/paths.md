@@ -57,7 +57,9 @@ public static String ToRelativePath(String basePath, String path) {
 	{
 		Uri uri2 = new Uri(basePath + "/", UriKind.Absolute);
 		Uri relativeUri = uri2.MakeRelativeUri(uri1);
-		return Uri.UnescapeDataString(relativeUri.ToString()).Replace('/', Path.DirectorySeparatorChar);
+		return Uri
+			.UnescapeDataString(relativeUri.ToString())
+			.Replace('/', Path.DirectorySeparatorChar);
 	}
 	// else it is already a relative path
 	return path;
