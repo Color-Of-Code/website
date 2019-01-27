@@ -22,7 +22,7 @@ export function onInitialClientRender() {
   importScript(
     'https://cdn.bootcss.com/raphael/2.2.7/raphael.min.js',
     function() {
-      importScript('http://flowchart.js.org/flowchart-latest.js', function() {
+      importScript('https://flowchart.js.org/flowchart-latest.js', function() {
         importScript(
           'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js',
           function() {

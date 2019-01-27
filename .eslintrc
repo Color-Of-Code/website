@@ -21,7 +21,13 @@
         "plugin:jsx-a11y/recommended"
     ],
     "plugins": [
+        "react",
         "prettier",
         "jsx-a11y"
-    ]
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
 }

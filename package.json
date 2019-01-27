@@ -51,8 +51,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "clean": "rm -rf .cache public",
-    "lint": "eslint ./src",
-    "lint-fix": "eslint --fix ./src",
+    "lint": "eslint ./src ./plugins",
+    "lint-fix": "eslint --fix ./src ./plugins",
     "format": "prettier --config ./.prettierrc --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
