@@ -55,7 +55,8 @@
     "lint": "eslint ./src ./plugins",
     "lint-fix": "eslint --fix ./src ./plugins",
     "format": "prettier --config ./.prettierrc --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "md:link-check": "find ./content -name \\*.md -exec markdown-link-check -c .markdown-link-check.json {} \\;"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.3.1",
@@ -68,6 +69,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "gatsby-plugin-eslint": "^2.0.4",
+    "markdown-link-check": "^3.7.2",
     "prettier": "^1.16.1"
   },
   "repository": {
