@@ -6,7 +6,7 @@ module.exports = ({ markdownAST }, { language = 'flowchart' } = {}) => {
     // console.info(`lang is ${lang}`)
     if (lang === language) {
       node.type = 'html';
-      node.value = `<div class="flowchart">${node.value}</div>`;
+      node.value = `<div class="coc-flowchart">${node.value}</div>`;
     }
   });
 };

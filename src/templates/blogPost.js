@@ -5,6 +5,8 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 import '../styles/blog-post.css';
+import '../styles/blog-charts.css';
+
 import rehypeReact from 'rehype-react';
 import Counter from '../components/counter';
 import Hotkey from '../components/hotkey';
