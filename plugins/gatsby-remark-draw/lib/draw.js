@@ -22,9 +22,8 @@ module.exports = class Draw {
     let svg = this.render(language, input, pluginOptions);
 
     let lang = this.languages.get(language);
-    return `<div class="${this.className} ${
-      this.className
-    }-${lang}">${svg.toEmbed()}</div>`;
+    return `<div class="coc-${this.className}
+      ${this.className}-${lang}">${svg.toEmbed()}</div>`;
   }
 
   render(language, input, pluginOptions = {}) {

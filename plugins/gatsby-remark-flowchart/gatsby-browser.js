@@ -19,7 +19,9 @@ export function onInitialClientRender() {
 
   importScript('/vendor/raphael/raphael.min.js', function() {
     importScript('/vendor/flowchart/flowchart.min.js', function() {
-      var flowchartElements = document.getElementsByClassName('coc-flowchart');
+      var flowchartElements = document.getElementsByClassName(
+        'coc-remark-flowchart'
+      );
       var flowchartElementsCount = flowchartElements.length;
       var elements = new Array();
       for (var i = 0; i < flowchartElementsCount; i++) {

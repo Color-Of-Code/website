@@ -1,4 +1,8 @@
 
-div.coc-flowchart {
+div.coc-remark-flowchart {
     background: antiquewhite;
+}
+
+div.coc-remark-draw {
+    background: white;
 }
