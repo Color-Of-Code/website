@@ -33,3 +33,8 @@ div.blog-post-content h3 {
     font-size: 1.3rem;
     font-weight: 300;
 }
+
+a i {
+    color: cadetblue;
+    margin-right: 4px;
+}
