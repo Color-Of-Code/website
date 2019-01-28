@@ -44,11 +44,15 @@ export function onInitialClientRender() {
             for (var i = 0; i < flowchartElementsCount; i++) {
               // https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
               // use childNodes[0].nodeValue instead of text() of jquery
-              var diagram = this.window.flowchart.parse(
-                flowchartElements[i].childNodes[0].nodeValue
-              );
-              flowchartElements[i].childNodes[0].nodeValue = '';
-              diagram.drawSVG(flowchartElements[i]);
+              try {
+                var diagram = window.flowchart.parse(
+                  flowchartElements[i].childNodes[0].nodeValue
+                );
+                flowchartElements[i].childNodes[0].nodeValue = '';
+                diagram.drawSVG(flowchartElements[i]);
+              } catch (e) {
+                console.error(e, e.stack);
+              }
             }
           }
         );
