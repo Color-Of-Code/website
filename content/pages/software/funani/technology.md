@@ -55,26 +55,25 @@ A collection of the most interesting links I found on the topic.
 
 General
 
+* [Amazing article about storing trees in SQL databases](http://techportal.ibuildings.com/2009/09/07/graphs-in-the-database-sql-meets-social-networks)
 
-*  [http://techportal.ibuildings.com/2009/09/07/graphs-in-the-database-sql-meets-social-networks Amazing article about storing trees in SQL databases]
+* [Choosing a non relational database](http://blog.boxedice.com/2009/07/25/choosing-a-non-relational-database-why-we-migrated-from-mysql-to-mongodb)
 
-*  [http://blog.boxedice.com/2009/07/25/choosing-a-non-relational-database-why-we-migrated-from-mysql-to-mongodb Choosing a non relational database]
+* [NoSQL if only it were that easy](http://bjclark.me/2009/08/04/nosql-if-only-it-was-that-easy)
 
-*  [http://bjclark.me/2009/08/04/nosql-if-only-it-was-that-easy NoSQL if only it were that easy]
+* [25-alternative-open-source-databases-engines](http://www.stumbleupon.com/su/2VtZem/www.webresourcesdepot.com/25-alternative-open-source-databases-engines)
 
-*  [http://www.stumbleupon.com/su/2VtZem/www.webresourcesdepot.com/25-alternative-open-source-databases-engines 25-alternative-open-source-databases-engines]
+* [Comparison  Document Oriented Data Stores](http://jayant7k.blogspot.com/2009/08/document-oriented-data-stores.html)
 
-*  [http://jayant7k.blogspot.com/2009/08/document-oriented-data-stores.html  Comparison  Document Oriented Data Stores]
-
-*  [http://poorbuthappy.com/ease/archives/2007/04/29/3616/the-top-10-presentation-on-scaling-websites-twitter-flickr-bloglines-vox-and-more Scaling websites] (I really liked the 14 rules in the Yahoo presentation)
+* [Scaling websites](http://poorbuthappy.com/ease/archives/2007/04/29/3616/the-top-10-presentation-on-scaling-websites-twitter-flickr-bloglines-vox-and-more) (I really liked the 14 rules in the Yahoo presentation)
 
 HBase Vs Cassandra
 
-*  [http://www.roadtofailure.com/2009/10/29/hbase-vs-cassandra-nosql-battle http://www.roadtofailure.com/2009/10/29/hbase-vs-cassandra-nosql-battle]
+* [http://www.roadtofailure.com/2009/10/29/hbase-vs-cassandra-nosql-battle](http://www.roadtofailure.com/2009/10/29/hbase-vs-cassandra-nosql-battle)
 
 HBase Vs CouchDB
 
-*  [http://www.larsgeorge.com/2009/03/hbase-vs-couchdb-in-berlin.html http://www.larsgeorge.com/2009/03/hbase-vs-couchdb-in-berlin.html]
+* [http://www.larsgeorge.com/2009/03/hbase-vs-couchdb-in-berlin.html](http://www.larsgeorge.com/2009/03/hbase-vs-couchdb-in-berlin.html)
 
 MongoDB Vs CouchDB
 
@@ -88,12 +87,9 @@ Graph Database
 
 Architecture of famous websites
 
-
-*  [http://hurvitz.org/blog/2008/06/linkedin-architecture LinkedIn]
-
-*  [http://perspectives.mvdirona.com/2009/02/07/FacebookCassandraArchitectureAndDesign.aspx Facebook]
-
-*  [http://www.microsoft.com/casestudies/Case_Study_Detail.aspx?casestudyid=4000004532 MySpace case study]
+* [LinkedIn](http://hurvitz.org/blog/2008/06/linkedin-architecture)
+* [Facebook](http://perspectives.mvdirona.com/2009/02/07/FacebookCassandraArchitectureAndDesign.aspx)
+* [MySpace case study](http://www.microsoft.com/casestudies/Case_Study_Detail.aspx?casestudyid=4000004532)
 
 ##### ORM
 
@@ -101,25 +97,22 @@ By using a NoSQL solution there is no need of an ORM.
 
 [http://en.wikipedia.org/wiki/Object-Relational_mapping http://en.wikipedia.org/wiki/Object-Relational_mapping]
 
-[http://en.wikipedia.org/wiki/List_of_object-relational_mapping_software#.NET http://en.wikipedia.org/wiki/List_of_object-relational_mapping_software#.NET]
+[http://en.wikipedia.org/wiki/List_of_object-relational_mapping_software#.NET](http://en.wikipedia.org/wiki/List_of_object-relational_mapping_software#.NET)
 
 The only ones I know well are NHibernate and Castle ActiveRecord. Therefore I would tend to use them. But it may not be the best solution. I removed the non open source tools.
 
 #### Microsoft
 
-
-*  ADO.NET Entity Framework, Microsoft's ORM (released with .NET 3.5 SP1)
-
-*  Language Integrated Query#LINQ_to_SQL|LINQ to SQL, Free, .Net framework component
-
-*  SubSonic, free ORM and code generation tool backed by Microsoft
+* ADO.NET Entity Framework, Microsoft's ORM (released with .NET 3.5 SP1)
+* Language Integrated Query#LINQ_to_SQL|LINQ to SQL, Free, .Net framework component
+* SubSonic, free ORM and code generation tool backed by Microsoft
 
 #### My favorites
 
-*  NHibernate, open source
+* NHibernate, open source
 * * Castle ActiveRecord, ActiveRecord for .NET, open source
 * * Fluent NHibernate, open source and free
-*  DataObjects.Net, open source, commercial 
+* DataObjects.Net, open source, commercial 
 
 #### Others
 
