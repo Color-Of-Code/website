@@ -44,13 +44,12 @@ This shall be realized as modules:
 
 store big binaries outside git
 
+* git-annex: [https://git-annex.branchable.com/](https://git-annex.branchable.com/) [https://docs.gitlab.com/ee/workflow/git_annex.html](https://docs.gitlab.com/ee/workflow/git_annex.html) [GitMinutes #16: Joey Hess on git-annex](https://www.youtube.com/watch?v=ubRtA9dnolM)
 
-*  git-annex: [https://git-annex.branchable.com/](https://git-annex.branchable.com/) [http://doc.gitlab.com/ee/workflow/git_annex.html](http://doc.gitlab.com/ee/workflow/git_annex.html) [GitMinutes #16: Joey Hess on git-annex](https://www.youtube.com/watch?v=ubRtA9dnolM)
+* git-media: [https://github.com/alebedev/git-media](https://github.com/alebedev/git-media)
 
-*  git-media: [https://github.com/alebedev/git-media](https://github.com/alebedev/git-media)
+* bup [http://git-annex.branchable.com/special_remotes/bup/](http://git-annex.branchable.com/special_remotes/bup/) (makes also optionaly use of PAR2 sums for correction)
 
-*  bup [http://git-annex.branchable.com/special_remotes/bup/](http://git-annex.branchable.com/special_remotes/bup/) (makes also optionaly use of PAR2 sums for correction)
-
-*  [Metadata in media, German](https://wiki.ubuntuusers.de/Metadaten)
+* [Metadata in media, German](https://wiki.ubuntuusers.de/Metadaten)
 
 See [:git_annex;start](/git_annex;start) page for details

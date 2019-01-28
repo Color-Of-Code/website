@@ -17,9 +17,9 @@ tags: ["vcs", "git-annex", "git", "compile", "TODO_cleanup"]
 ## Get the source
 
 
-*  clone git-annex (https://github.com/joeyh/git-annex.git) from cygwin (special chars in dirs)
-*  cd to git-annex
-*  patch the code to use git 64 bit
+* clone git-annex (git://git-annex.branchable.com/) git-annex
+* cd to git-annex
+* patch the code to use git 64 bit
 
 ```patch
 	Build/NullSoftInstaller.hs | 2 +-
