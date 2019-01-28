@@ -1,3 +1,13 @@
 {
-    "presets": ["@babel/preset-env"]
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"]
+        },
+        "useBuiltIns": "entry"
+      }
+    ]
+  ]
 }
