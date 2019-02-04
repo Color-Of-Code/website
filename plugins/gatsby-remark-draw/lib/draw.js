@@ -2,13 +2,19 @@
 
 module.exports = class Draw {
   constructor(className) {
-    this.languages = new Map();
-    this.languages.set('bob-svg', 'bob');
-    this.languages.set('dot-svg', 'dot');
-    this.languages.set('mermaid-svg', 'mermaid');
-
     const skyrta = require('skyrta');
-    this.generator = skyrta;
+
+    this.languages = new Map();
+    this.languages.set('bob-svg', { language: 'bob', generator: skyrta });
+    this.languages.set('dot-svg', { language: 'dot', generator: skyrta });
+    this.languages.set('mermaid-svg', {
+      language: 'mermaid',
+      generator: skyrta,
+    });
+    this.languages.set('plantuml-svg', {
+      language: 'plantuml',
+      generator: null,
+    }); // TODO: add generator
 
     this.className = className || this.defaultClassName;
   }
@@ -23,7 +29,7 @@ module.exports = class Draw {
 
     let lang = this.languages.get(language);
     return `<div class="coc-${this.className}
-      ${this.className}-${lang}">${svg.toEmbed()}</div>`;
+      ${this.className}-${lang.language}">${svg.toEmbed()}</div>`;
   }
 
   render(language, input, pluginOptions = {}) {
@@ -34,14 +40,10 @@ module.exports = class Draw {
     }
 
     let langOptions = pluginOptions[lang] || {};
-    return this.generator.generate(lang, input, langOptions);
+    return lang.generator.generate(lang.language, input, langOptions);
   }
 
   get defaultClassName() {
     return 'remark-draw';
-  }
-
-  setGenerator(generator) {
-    this.generator = generator;
   }
 };
