@@ -3,28 +3,36 @@ published: true
 path: "/glossary/database-terms"
 date: "2019-01-08"
 title: "Database Terms"
-tags: ["glossary", "database", "terms", "TODO_cleanup"]
+tags: ["glossary", "database", "terms", "normalized"]
 ---
 
 # Database terms
 
 ## Definitions / Rules
 
-- Entity <--> Database Table.\\ Naming convention: singular, uppercase
+- Entity <--> Database Table
+  - Naming convention: singular, uppercase
 - Instance of an entity <--> Database Row (or Tuple or Record)
-- Attribute <--> Database Column (or Field).\\ Naming convention: singular, lowercase
+- Attribute <--> Database Column (or Field).
+  - Naming convention: singular, lowercase
 - Relationship = Link between two entities, represents a business rule and can be expressed as a verb phrase.
 - Primary key = an attribute that uniquely identify each instance of an entity.
 
 ## Relationship
 
 - "one-to-many" relationship: one instance of the parent entity relates to many instances of the child entity.
-- "many-to-many" relationship: many instances of one entity relate to many instances of the other entity.\\ Need to be resolved (to avoid data redundancy): create an intermediate entity known as a cross-reference (or XREF) entity. The XREF entity is made up of the primary keys from both of the two original entities. Both of the two original entities become parent entities of the XREF entity. Thus, the "many-to-many" relationship becomes resolved as two "one-to-many" relationships.
+- "many-to-many" relationship: many instances of one entity relate to many instances of the other entity.
+  - Need to be resolved (to avoid data redundancy): create an intermediate entity known as a cross-reference (or XREF) entity. The XREF entity is made up of the primary keys from both of the two original entities. Both of the two original entities become parent entities of the XREF entity. Thus, the "many-to-many" relationship becomes resolved as two "one-to-many" relationships.
 - Relationships are either "**identifying**" or "**non-identifying**". Identifying relationships exist when the primary key of the parent entity is included in the primary key of the child entity. On the other hand, a non-identifying relationship exists when the primary key of the parent entity is included in the child entity but not as part of the child entity's primary key. In addition, non-identifying relationships may be further classified as being either "**mandatory**" or "**non-mandatory**". A mandatory non-identifying relationship exists when the value in the child table cannot be null. On the other hand, a non-mandatory non-identifying relationship exists when the value in the child table can be null.
 
 ## Keys
 
-- Primary key = an attribute that uniquely identifies each instance of an entity.\\ - cannot be null\\ - immutable: cannot be changed\\ - shall contain no semantic meaning\\ Note: efficiency (INT vs CHAR)
+- Primary key = an attribute that uniquely identifies each instance of an entity.
+  - cannot be null
+  - immutable: cannot be changed
+  - shall contain no semantic meaning
+  - shall not be re-used/recycled
+  - Note: efficiency (INT vs CHAR)
 - Super key = Combination of attributes leading to a primary key
 - Foreign key = primary key of a parent entity in a child entity (reference)
 - Surrogate key
@@ -53,9 +61,9 @@ A foreign key requires that values must be present in the parent entity before l
 ## Normal Form
 
 - First normal form (1NF): very basic rules:
-  - Eliminate duplicative [columns](http://databases.about.com/library/glossary/bldef-column.htm) from the same table.
+  - Eliminate duplicate [columns](http://databases.about.com/library/glossary/bldef-column.htm) from the same table.
   - Create separate tables for each group of related data and identify each [row](http://databases.about.com/library/glossary/bldef-row.htm) with a unique column or set of columns (the [primary key](http://databases.about.com/library/glossary/bldef-primarykey.htm)).
-- Second normal form (2NF): remove duplicative data:
+- Second normal form (2NF): remove duplicate data:
   - Meet all the requirements of 1NF.
   - Remove subsets of data that apply to multiple rows of a table and place them in separate tables.
   - Create relationships between these new tables and their predecessors through the use of [foreign keys](http://databases.about.com/library/glossary/bldef-foreignkey.htm).
