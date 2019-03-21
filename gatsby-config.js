@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: 'https://color-of-code.de',
   },
   plugins: [
+    'gatsby-mdx',
     'gatsby-plugin-eslint',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
