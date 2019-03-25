@@ -20,3 +20,14 @@ FROM information_schema.TABLES
 WHERE table_schema = "$DB_NAME"
 ORDER BY (data_length + index_length) DESC;
 ```
+
+## Find columns
+
+Replace `$DB_NAME`, `$COLUMN_NAMEi` with appropriate values.
+
+```sql
+SELECT DISTINCT TABLE_NAME
+    FROM INFORMATION_SCHEMA.COLUMNS
+    WHERE COLUMN_NAME IN ('$COLUMN_NAME1', '$COLUMN_NAME2')
+        AND TABLE_SCHEMA='$DB_NAME';
+```
