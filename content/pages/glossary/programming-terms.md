@@ -75,7 +75,6 @@ An architecture that is resource oriented (accessible over an URL for example) a
 
 [http://semver.org/](http://semver.org/), how to create/update versions according to these rules
 
-
 ### TOCTTOU
 
 **T**ime **O**f **C**heck **T**o **T**ime **O**f **U**se: Security issue or bug caused by a change to a system between the check (where the conditions were ok) and the time at which a resource is used. Usually the solution consist into locking the resource before the check and while the resource is used. [More](https://en.wikipedia.org/wiki/Time-of-check-to-time-of-use)
