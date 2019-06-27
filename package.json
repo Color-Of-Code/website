@@ -61,7 +61,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.4.5",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.2",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-css-modules": "^2.11.0",
