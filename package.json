@@ -59,7 +59,7 @@
     "md:link-check": "find ./content -name \\*.md -exec markdown-link-check -c .markdown-link-check.json {} \\;"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-env": "^7.5.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.2",
     "eslint": "^5.16.0",
