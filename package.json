@@ -25,7 +25,7 @@
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-transformer-remark": "^2.6.1",
     "gatsby-transformer-sharp": "^2.2.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "lodash.kebabcase": "^4.1.1",
     "mermaid": "^8.1.0",
     "mermaid.cli": "^0.5.1",
