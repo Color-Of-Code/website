@@ -9,7 +9,7 @@ import '../styles/tags.css';
 function Tag({ tag, count }) {
   const showCount = count !== 0;
   return (
-    <span className="tag">
+    <span className="search-tag">
       <FaTag />
       &nbsp;
       {showCount ? (

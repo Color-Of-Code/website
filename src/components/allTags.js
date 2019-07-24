@@ -6,7 +6,7 @@ import { FaTags } from 'react-icons/fa';
 import '../styles/tags.css';
 
 const AllTags = ({ text }) => (
-  <span className="tag">
+  <span className="search-tag">
     <FaTags />
     &nbsp;
     <Link to={'/tags'}>{text}</Link>
