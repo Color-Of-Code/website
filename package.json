@@ -36,7 +36,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "rehype-react": "^4.0.1",
-    "remark": "^11.0.0",
+    "remark": "^11.0.1",
     "remark-math": "^1.0.6",
     "skyrta": "^0.1.8",
     "unist-util-visit": "^2.0.0",
