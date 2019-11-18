@@ -39,7 +39,7 @@
     "remark": "^11.0.2",
     "remark-math": "^2.0.0",
     "skyrta": "^0.1.8",
-    "unist-util-visit": "^2.0.0",
+    "unist-util-visit": "^2.0.1",
     "url-exists": "^1.0.3"
   },
   "keywords": [
