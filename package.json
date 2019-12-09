@@ -27,7 +27,7 @@
     "gatsby-transformer-sharp": "^2.3.5",
     "lodash": "^4.17.15",
     "lodash.kebabcase": "^4.1.1",
-    "mermaid": "^8.4.2",
+    "mermaid": "^8.4.3",
     "mermaid.cli": "^0.5.1",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
