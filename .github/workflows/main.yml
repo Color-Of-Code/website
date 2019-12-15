@@ -31,8 +31,5 @@ jobs:
       - name: Setup packages
         run: npm ci --prefer-offline
 
-      - name: Build
-        run: npm run build
-
       - name: Lint
         run: npm run lint
