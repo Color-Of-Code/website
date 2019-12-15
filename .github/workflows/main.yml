@@ -28,6 +28,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Setup packages
+        run: npm ci --prefer-offline
+
       - name: Build
         run: npm run build
 
