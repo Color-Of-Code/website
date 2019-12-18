@@ -52,4 +52,4 @@ jobs:
           LOCAL_DIR: public
           REMOTE_DIR: httpdocs
           METHOD: ftp
-          ARGS: -v --delete --dry-run
+          ARGS: -v --delete --parallel=20
