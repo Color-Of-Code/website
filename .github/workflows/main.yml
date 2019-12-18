@@ -15,21 +15,18 @@ jobs:
         with:
           node-version: 10.x
 
-      - name: Get npm cache directory
-        id: npm-cache
-        run: |
-          echo "::set-output name=dir::$(npm config get cache)"
-
       - name: Setup Node Package Cache
         uses: actions/cache@v1
         with:
-          path: ${{ steps.npm-cache.outputs.dir }}
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - name: Setup packages
-        run: npm ci --prefer-offline
+        run: npm ci --prefer-offline --no-audit
+        env:
+          HUSKY_SKIP_INSTALL: 1
 
       - name: Lint
         run: npm run lint
