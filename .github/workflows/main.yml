@@ -17,7 +17,7 @@ jobs:
 
       - name: Install Graphviz
         run: |
-          sudo dpkg -i --no-triggers graphviz
+          sudo apt install graphviz
 
       - name: Setup Node Package Cache
         uses: actions/cache@v1
