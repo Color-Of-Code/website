@@ -15,6 +15,10 @@ jobs:
         with:
           node-version: 10.x
 
+      - name: Install Graphviz
+        run: |
+          sudo dpkg -i --no-triggers graphviz
+
       - name: Setup Node Package Cache
         uses: actions/cache@v1
         with:
@@ -34,10 +38,12 @@ jobs:
       - name: Build
         if: github.ref == 'refs/heads/master'
         run: npm run build
+        env:
+          GATSBY_TELEMETRY_DISABLED: 1
 
       - name: Upload
         if: github.ref == 'refs/heads/master'
-        uses: Color-Of-Code/FTP-Deploy-Action@2.0.0
+        uses: Color-Of-Code/FTP-Deploy-Action@2.1.0
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USER }}
@@ -46,4 +52,4 @@ jobs:
           LOCAL_DIR: public
           REMOTE_DIR: httpdocs
           METHOD: ftp
-          ARGS: --delete --dry-run
+          ARGS: -v --delete --dry-run
