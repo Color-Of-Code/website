@@ -32,4 +32,18 @@ jobs:
         run: npm run lint
 
       - name: Build
+        if: github.ref == 'refs/heads/master'
         run: npm run build
+
+      - name: Upload
+        if: github.ref == 'refs/heads/master'
+        uses: Color-Of-Code/FTP-Deploy-Action@2.0.0
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          PORT: ${{ secrets.FTP_PORT }}
+          LOCAL_DIR: public
+          REMOTE_DIR: httpdocs
+          METHOD: ftp
+          ARGS: --delete --dry-run
