@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload
         if: github.ref == 'refs/heads/master'
-        uses: Color-Of-Code/FTP-Deploy-Action@2.1.0
+        uses: Color-Of-Code/FTP-Deploy-Action@2.1.1
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USER }}
