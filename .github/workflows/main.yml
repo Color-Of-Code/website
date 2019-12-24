@@ -19,6 +19,10 @@ jobs:
         run: |
           sudo apt install graphviz
 
+      - name: Install SvgBob
+        run: |
+          sudo cargo install svgbob_cli
+
       - name: Setup Node Package Cache
         uses: actions/cache@v1
         with:
