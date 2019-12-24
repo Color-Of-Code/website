@@ -32,7 +32,7 @@ Analogy: surface area has to increase slower than their volume for chucks to be 
 
 Haskell:
 
-* Double colon means “has the type of…” 
+* Double colon means “has the type of…”
 * Standard library is called Prelude
 * Types begin with capital letter, variables with lower-case
 
@@ -53,7 +53,7 @@ Types:
 
 * for ∅: type without values, e.g. Void in Haskell((void in C++ is a singleton, not the same)) absurd :: Void → a
 * singleton: type that has only one value, () = unit in Haskell, void in C++
-* function a → Bool is called a predicate
+* function `a → Bool` is called a predicate
 
 Haskell:
 
@@ -101,7 +101,7 @@ Notes:
 
 ### 4) Kleisli Categories
 
-Idea: embellishing return types of a bunch of functions in order to piggyback some additional information 
+Idea: embellishing return types of a bunch of functions in order to piggyback some additional information
 
 #### Writer In C++
 
@@ -129,7 +129,7 @@ template<class A>
 using Writer = pair<A, string>;
 
 template<class A, class B, class C>
-function<Writer<C>(A)> compose(function<Writer<B>(A)> m1, 
+function<Writer<C>(A)> compose(function<Writer<B>(A)> m1,
                                function<Writer<C>(B)> m2)
 {
     return [m1, m2](A x) {
@@ -165,7 +165,7 @@ The composition is a funny infix operator, sometimes called the “fish”:
 ```
 
 ```haskell
-m1 >=> m2 = \x -> 
+m1 >=> m2 = \x ->
     let (y, s1) = m1 x
         (z, s2) = m2 y
     in (z, s1 ++ s2)
@@ -178,8 +178,8 @@ isOdd = isEven >=> negate
 
 #### Kleisli category
 
-Kleisli category — a category based on a monad
-    
+Kleisli category is a category based on a monad.
+
 A Kleisli category((For our limited purposes)): objects = types of programming language, morphisms from A -> B to A -> type derived from B using a particular embellishment
 
 Each Kleisli category defines: own way of composing these morphisms + identity morphisms((with respect to that composition)).
@@ -192,28 +192,27 @@ You’ve seen previously that we could model programming-language types and func
 
 ### 5) Products and Coproducts
 
-  * There is a common construction in category theory called the **universal construction** for defining objects in terms of their relationships.
-  * The **initial object** is the object that has one and only one morphism going to any object in the category
-  * The **terminal object** is the object with one and only one morphism coming to it from any object in the category.
-  * initial object and final object if they exist are unique up to one (also unique) isomorphism
-  * Duality: for any category C we can define the opposite category Cop just by reversing all the arrows
-  * Product: A product of two objects a and b is the object c equipped with two projections such that for any other object c’ equipped with two projections there is a unique morphism m from c’ to c that factorizes those projections.
-  * Coproduct: A coproduct of two objects a and b is the object c equipped with two injections such that for any other object c’ equipped with two injections there is a unique morphism m from c to c’ that factorizes those injections.
+* There is a common construction in category theory called the **universal construction** for defining objects in terms of their relationships.
+* The **initial object** is the object that has one and only one morphism going to any object in the category
+* The **terminal object** is the object with one and only one morphism coming to it from any object in the category.
+* initial object and final object if they exist are unique up to one (also unique) isomorphism
+* Duality: for any category C we can define the opposite category Cop just by reversing all the arrows
+* Product: A product of two objects a and b is the object c equipped with two projections such that for any other object c’ equipped with two projections there is a unique morphism m from c’ to c that factorizes those projections.
+* Coproduct: A coproduct of two objects a and b is the object c equipped with two injections such that for any other object c’ equipped with two injections there is a unique morphism m from c to c’ that factorizes those injections.
 
 Examples:
 
-  * In a poset, the initial object, if it exists, is its least object. The terminal object, if it exists, is its biggest object.
-  * In the category of sets and functions, the initial object is the empty set. The terminal object is a singleton.
+* In a poset, the initial object, if it exists, is its least object. The terminal object, if it exists, is its biggest object.
+* In the category of sets and functions, the initial object is the empty set. The terminal object is a singleton.
 
 Universal constructions:
 
-  * initial object
-  * terminal object
-  * product
-  * coproduct
+* initial object
+* terminal object
+* product
+* coproduct
 
-  * This “uniqueness up to unique isomorphism” is the important property of all universal constructions.
-
+* This “uniqueness up to unique isomorphism” is the important property of all universal constructions.
 
 ### 6) Simple Algebraic Data Types
 
@@ -247,7 +246,7 @@ elemToTuple :: Element -> (String, String, Int)
 elemToTuple e = (name e, symbol e, atomicNumber e)
 ```
 
-                       
+
 #### Sum Types
 
 ```haskell
@@ -266,7 +265,7 @@ data Either a b = Left a | Right b
 | ```cppfalse||a``` | 1 + a 	| ```haskelldata Maybe = Nothing | Just a``` |
 
 
-This analogy goes deeper, and is the basis of the Curry-Howard isomorphism between logic and type theory. 
+This analogy goes deeper, and is the basis of the Curry-Howard isomorphism between logic and type theory.
 
 ### 7) Functors
 

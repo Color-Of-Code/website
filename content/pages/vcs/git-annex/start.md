@@ -3,12 +3,12 @@ published: true
 path: "/vcs/git/git-annex/start"
 date: "2019-01-05"
 title: "Git-Annex"
-tags: ["vcs", "git-annex", "git", "TODO_cleanup"]
+tags: ["vcs", "git-annex", "git"]
 ---
 
-# Git Annex
+## Git Annex
 
-## Introduction
+### Introduction
 
 * [git-annex main project page](https://git-annex.branchable.com/)
 * [GitMinutes #16: Joey Hess on git-annex](https://www.youtube.com/watch?v=ubRtA9dnolM)
@@ -17,12 +17,12 @@ tags: ["vcs", "git-annex", "git", "TODO_cleanup"]
 
 NOTE: gitlab migrated from git-annex to git-lfs: https://docs.gitlab.com/ee/workflow/lfs/migrate_from_git_annex_to_git_lfs.html
 
-## Tutorials
+### Tutorials
 
 * [Thomas Krenn page: article from Georg Schönberger](https://www.thomas-krenn.com/de/wiki/Git-annex)
 * [Getting started with git-annex](http://writequit.org/articles/getting-started-with-git-annex.html)
 
-## Building
+### Building
 
 * [Source code](https://github.com/joeyh/git-annex)
 * [[compile|How to compile 64 bit version for windows]]
