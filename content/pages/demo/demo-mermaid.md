@@ -81,4 +81,3 @@ commit
 commit
 merge newbranch
 ```
-

@@ -3,7 +3,7 @@ published: true
 path: "/shortcuts/common"
 date: "2019-01-01"
 title: "Common shortcuts"
-tags: ["keyboard", "shortcuts", "TODO_cleanup"]
+tags: ["keyboard", "shortcuts"]
 ---
 # Common shortcut
 
@@ -20,13 +20,22 @@ How to bring back a window out of screen: right click in the task bar, in the co
 
 ## Usual application shortcuts
 
-* <hk keys="Ctrl + C"></hk>   copy               <hk keys="Ctrl + V"></hk>   paste              <hk keys="Ctrl + X"></hk>   cut
-* <hk keys="Ctrl + A"></hk>   select all         <hk keys="Ctrl + P"></hk>   print dialog
-* <hk keys="Ctrl + N"></hk>   new window         <hk keys="Ctrl + T"></hk>   new tab
-* <hk keys="Ctrl + Z"></hk>   undo               <hk keys="Ctrl + Y"></hk>   redo
-* <hk keys="Ctrl + O"></hk>   open, load         <hk keys="Ctrl + S"></hk>   save, store
-* <hk keys="Ctrl + +"></hk>   zoom in            <hk keys="Ctrl + -"></hk>   zoom out
-* <hk keys="F1"></hk>         help               <hk keys="F2"></hk>         rename             <hk keys="F2">F3"></hk>         search
+* <hk keys="Ctrl + C"></hk>   copy
+* <hk keys="Ctrl + V"></hk>   paste
+* <hk keys="Ctrl + X"></hk>   cut
+* <hk keys="Ctrl + A"></hk>   select all
+* <hk keys="Ctrl + P"></hk>   print dialog
+* <hk keys="Ctrl + N"></hk>   new window
+* <hk keys="Ctrl + T"></hk>   new tab
+* <hk keys="Ctrl + Z"></hk>   undo
+* <hk keys="Ctrl + Y"></hk>   redo
+* <hk keys="Ctrl + O"></hk>   open, load
+* <hk keys="Ctrl + S"></hk>   save, store
+* <hk keys="Ctrl + +"></hk>   zoom in
+* <hk keys="Ctrl + -"></hk>   zoom out
+* <hk keys="F1"></hk>         help
+* <hk keys="F2"></hk>         rename
+* <hk keys="F2">F3"></hk>     search
 * <hk keys="F5"></hk>         refresh
 
 ## Operating system

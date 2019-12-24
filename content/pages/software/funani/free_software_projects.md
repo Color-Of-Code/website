@@ -3,9 +3,9 @@ published: true
 path: "/funani/other-software-projects"
 date: "2019-01-01"
 title: "Funani: Other software projects"
-tags: ["funani", "software", "media", "TODO_cleanup"]
+tags: ["funani", "software", "media"]
 ---
-# Other Projects
+## Other Projects
 
 Free projects dealing with media management:
 
@@ -26,11 +26,11 @@ Free projects dealing with media management:
 * [http://coppermine-gallery.net/](http://coppermine-gallery.net/) (GPL)
     : multi-purpose fully-featured and integrated web picture gallery script written in PHP
 
-## Licensing
+### Licensing
 
 If something proves to be a really interesting base for our needs, we have to rethink about the licensing model. For example if we take GPL code as a base, then we must also release under a GPL compatible license (BSD is not compatible with it in that direction).
 
-## Other non free projects
+### Other non free projects
 
 http://www.photools.com/
 

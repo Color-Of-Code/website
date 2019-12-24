@@ -3,18 +3,18 @@ published: true
 path: "/programming/c-sharp/numeric-promotions"
 date: "2019-01-01"
 title: "C# numeric promotions"
-tags: ["programming", "csharp", "numeric", "promotion", "TODO_cleanup"]
+tags: ["programming", "csharp", "numeric", "promotion"]
 ---
 
 Promotion rules are in some situations quite tricky to understand. Here is the list of applied rules so the situations where an explicit cast is needed get clarified.
 
-# From ECMA-334
+## From ECMA-334
 
-## 14.2.6.1 Unary numeric promotions
+### 14.2.6.1 Unary numeric promotions
 
 Unary numeric promotion occurs for the operands of the predefined `+`, `--`, and `~` unary operators. Unary numeric promotion simply consists of converting operands of type `sbyte`, `byte`, `short`, `ushort`, or `char` to type `int`. Additionally, for the unary `--` operator, unary numeric promotion converts operands of type`uint` to type `long`.
 
-## 14.2.6.2 Binary numeric promotions
+### 14.2.6.2 Binary numeric promotions
 
 Binary numeric promotion occurs for the operands of the predefined `+`, `--`, `*`, `/`, `%`, `&`, `|`, `^`, `==`, `!=`, `>`, `<`, `>=`, and `<=` binary operators. Binary numeric promotion implicitly converts both operands to a common type which, in case of the non-relational operators, also becomes the result type of the operation. Binary numeric promotion consists of applying the following rules, in the order they appear here:
 

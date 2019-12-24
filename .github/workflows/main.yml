@@ -15,9 +15,13 @@ jobs:
         with:
           node-version: 10.x
 
-      - name: Install Graphviz
+      - name: Install via APT - Graphviz, Cargo
         run: |
-          sudo apt install graphviz
+          sudo apt-get install -y graphviz cargo
+
+      - name: Install via Cargo - SvgBob
+        run: |
+          sudo cargo install svgbob_cli
 
       - name: Setup Node Package Cache
         uses: actions/cache@v1

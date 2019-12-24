@@ -3,24 +3,27 @@ published: true
 path: "/programming/c-sharp/stopwatch"
 date: "2018-12-30"
 title: "Stopwatch"
-tags: ["programming", "csharp", "stopwatch", "TODO_cleanup"]
+tags: ["programming", "csharp", "stopwatch"]
 ---
-## Assembly (reference)
 
-	
-	System
+## C# Stopwatch
 
+### Assembly (reference)
 
-## Using directive
+```csharp
+System
+```
+
+### Using directive
 
 ```csharp
 using System.Diagostics;
 ```
 
-## Code
+### Code
 
 ```csharp
-Stopwatch watch = new Stopwatch();
+var watch = new Stopwatch();
 // ...
 watch.Start();
 // ... execute the first task to be timed
@@ -36,15 +39,15 @@ Console.WriteLine("In milliseconds: {0}", watch.ElapsedMilliseconds);
 Console.WriteLine("In timer ticks: {0}",  watch.ElapsedTicks);
 ```
 
-## Note
+### Note
 
 ```csharp
-Stopwatch watch = new Stopwatch();
+var watch = new Stopwatch();
 watch.Start();
 ```
 
 is equivalent to
 
 ```csharp
-Stopwatch watch = Stopwatch.StartNew();
+var watch = Stopwatch.StartNew();
 ```
