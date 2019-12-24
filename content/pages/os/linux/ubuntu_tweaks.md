@@ -3,7 +3,7 @@ published: true
 path: "/os/linux/ubuntu/tweaks"
 date: "2018-12-24"
 title: "Ubuntu Tweaks"
-tags: ["os", "ubuntu", "tweaks", "linux", "TODO_cleanup"]
+tags: ["os", "ubuntu", "tweaks", "linux"]
 ---
 
 # Ubuntu Tweaks
@@ -12,121 +12,118 @@ tags: ["os", "ubuntu", "tweaks", "linux", "TODO_cleanup"]
 
 https://wiki.archlinux.org/index.php/snapper
 
-
-*  snapperd is managing the snapshots
-
-*  there are a couple of systemd services to trigger snapshots
+* `snapperd` is managing the snapshots
+* there are a couple of systemd services to trigger snapshots
 
 Disable snapshot on boot:
 
-	
-	systemctl disable snapper-boot.service
-	#systemctl enable snapper-boot.service # to undo that
-
+```bash
+systemctl disable snapper-boot.service
+#systemctl enable snapper-boot.service # to undo that
+```
 
 Edit `/etc/snapper/configs/root` to reduce snapshot pressure on the system:
 
 Comparison of pre/post
 
-	
-	# start comparing pre- and post-snapshot in background after creating
-	# post-snapshot
-	BACKGROUND_COMPARISON="no"
+```bash
+# start comparing pre- and post-snapshot in background after creating
+# post-snapshot
+BACKGROUND_COMPARISON="no"
+```
 
 This can be computationally very annoying on big filesystems if set to `yes`
 
 Timeline based snapshots can be deactivated
 
-	
-	# create hourly snapshots
-	TIMELINE_CREATE="no"
-
+```bash
+# create hourly snapshots
+TIMELINE_CREATE="no"
+```
 
 Of course you would have to perform these manually if wanted
 
-	
-	# create a snapshot that will be cleaned up by the timeline algo according to the retention settings
-	snapper -c root create -c timeline
-
-
+```bash
+# create a snapshot that will be cleaned up by the timeline algo according to the retention settings
+snapper -c root create -c timeline
+```
 
 ## Check updatedb settings
 
 `/etc/updatedb.conf`
 
-This should not include .svn folders, .git folders or btrfs snapshots
+This should not include `.svn` folders, .git folders or btrfs snapshots
 
 You can even completely remove the package if you do not make use of its features
 
-	:::bash
-	apt remove mlocate
-
+```bash
+apt remove mlocate
+```
 
 ## Midnight Commander - Color scheme
 
 Add this to the `~/.config/mc/ini` file:
 
-	
-	[Colors]
-	base_color=lightgray,default:\
-	normal=lightgray,default:\
-	selected=black,green:\
-	marked=yellow,default:\
-	markselect=white,green:\
-	errors=white,red:\
-	menu=lightgray,default:\
-	reverse=black,lightgray:\
-	dnormal=white,default:\
-	dfocus=black,green:\
-	dhotnormal=brightgreen,default:\
-	dhotfocus=brightgreen,green:\
-	viewunderline=brightred,default:\
-	menuhot=yellow,default:\
-	menusel=white,black:\
-	menuhotsel=yellow,black:\
-	helpnormal=black,lightgray:\
-	helpitalic=red,lightgray:\
-	helpbold=blue,lightgray:\
-	helplink=black,cyan:\
-	helpslink=yellow,default:\
-	gauge=white,black:\
-	input=black,green:\
-	directory=white,default:\
-	executable=brightgreen,default:\
-	link=brightcyan,default:\
-	stalelink=brightred,default:\
-	device=brightmagenta,default:\
-	core=red,default:\
-	special=black,default:\
-	editnormal=lightgray,default:\
-	editbold=yellow,default:\
-	editmarked=black,cyan:\
-	errdhotnormal=yellow,red:\
-	errdhotfocus=yellow,lightgray
-
+```ini
+[Colors]
+base_color=lightgray,default:\
+normal=lightgray,default:\
+selected=black,green:\
+marked=yellow,default:\
+markselect=white,green:\
+errors=white,red:\
+menu=lightgray,default:\
+reverse=black,lightgray:\
+dnormal=white,default:\
+dfocus=black,green:\
+dhotnormal=brightgreen,default:\
+dhotfocus=brightgreen,green:\
+viewunderline=brightred,default:\
+menuhot=yellow,default:\
+menusel=white,black:\
+menuhotsel=yellow,black:\
+helpnormal=black,lightgray:\
+helpitalic=red,lightgray:\
+helpbold=blue,lightgray:\
+helplink=black,cyan:\
+helpslink=yellow,default:\
+gauge=white,black:\
+input=black,green:\
+directory=white,default:\
+executable=brightgreen,default:\
+link=brightcyan,default:\
+stalelink=brightred,default:\
+device=brightmagenta,default:\
+core=red,default:\
+special=black,default:\
+editnormal=lightgray,default:\
+editbold=yellow,default:\
+editmarked=black,cyan:\
+errdhotnormal=yellow,red:\
+errdhotfocus=yellow,lightgray
+```
 
 Do not put newlines between the color definitions! Write them as a single line! I only did it for readability.
 
-	
-	[Colors]
-	base_color=lightgray,default:normal=lightgray,default:selected=black,green:marked=yellow,default:markselect=white,green:errors=white,red:menu=lightgray,default:reverse=black,lightgray:dnormal=white,default:dfocus=black,green:dhotnormal=brightgreen,default:dhotfocus=brightgreen,green:viewunderline=brightred,default:menuhot=yellow,default:menusel=white,black:menuhotsel=yellow,black:helpnormal=black,lightgray:helpitalic=red,lightgray:helpbold=blue,lightgray:helplink=black,cyan:helpslink=yellow,default:gauge=white,black:input=black,green:directory=white,default:executable=brightgreen,default:link=brightcyan,default:stalelink=brightred,default:device=brightmagenta,default:core=red,default:special=black,default:editnormal=lightgray,default:editbold=yellow,default:editmarked=black,cyan:errdhotnormal=yellow,red:errdhotfocus=yellow,lightgray
-
-
+```ini
+[Colors]
+base_color=lightgray,default:normal=lightgray,default:selected=black,green:marked=yellow,default:markselect=white,green:errors=white,red:menu=lightgray,default:reverse=black,lightgray:dnormal=white,default:dfocus=black,green:dhotnormal=brightgreen,default:dhotfocus=brightgreen,green:viewunderline=brightred,default:menuhot=yellow,default:menusel=white,black:menuhotsel=yellow,black:helpnormal=black,lightgray:helpitalic=red,lightgray:helpbold=blue,lightgray:helplink=black,cyan:helpslink=yellow,default:gauge=white,black:input=black,green:directory=white,default:executable=brightgreen,default:link=brightcyan,default:stalelink=brightred,default:device=brightmagenta,default:core=red,default:special=black,default:editnormal=lightgray,default:editbold=yellow,default:editmarked=black,cyan:errdhotnormal=yellow,red:errdhotfocus=yellow,lightgray
+```
 
 ## Hide user from login screen
 
 Reconfigure AccountsService. To hide a user named XXX, create a file named
 
-	
+```bash
 	/var/lib/AccountsService/users/XXX
-
+```
 
 containing two lines:
 
-	
-	[User]
-	SystemAccount=true
-
+```ini
+[User]
+SystemAccount=true
+```
 
 If the file already exists, make sure you append the `SystemAccount=true` line to the `[User]` section.
 
@@ -134,17 +131,17 @@ If the file already exists, make sure you append the `SystemAccount=true` line t
 
 To add border to windows in Ubuntu 18.04:
 
-	
-	gedit ~/.config/gtk-3.0/gtk.css
-
+```bash
+gedit ~/.config/gtk-3.0/gtk.css
+```
 
 Then add the following:
 
 ```css
-	decoration {
-		border: 2px solid #333333;
-		background: gray;
-	}
+  decoration {
+    border: 2px solid #333333;
+    background: gray;
+  }
 ```
 
 After saving the file, remember refresh gnome using this command:
@@ -153,23 +150,22 @@ After saving the file, remember refresh gnome using this command:
     setsid gnome-shell --replace
 ```
 
-
 To customize the active title bar background colors. (use :backdrop for inactive windows)
 
 ```css
-	.titlebar {
-		background: #404040;
-	}
+  .titlebar {
+    background: #404040;
+  }
 
-	.titlebar:backdrop  {
-		background: #000000;
-		color:white;
-	}
+  .titlebar:backdrop  {
+    background: #000000;
+    color:white;
+  }
 ```
 
 ## CPU stalls on boot
 
-```
+```txt
 INFO: rcu_sched self-detected stall on CPU
 ```
 
@@ -179,11 +175,13 @@ The culprit was, a setting in BIOS, AMD C1E Support was set to Enabled and setti
 
 Edit `/etc/sysctl.conf` or create a new file inside `/etc/sysctl.d`, for example `/etc/sysctl.d/10-ipv6-disable.conf`
 
-	net.ipv6.conf.all.disable_ipv6 = 1
-	net.ipv6.conf.default.disable_ipv6 = 1
-	net.ipv6.conf.lo.disable_ipv6 = 1
+```conf
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+```
 
-Run 
+Run
 
 ```bash
 sysctl -p
@@ -195,11 +193,11 @@ to refresh with the new configuration.
 
 Removes the kernel driver for floppy drive detection
 
-	:::bash
-	echo "blacklist floppy" | sudo tee /etc/modprobe.d/blacklist-floppy.conf
-	sudo rmmod floppy
-	sudo update-initramfs -u
-
+```bash
+echo "blacklist floppy" | sudo tee /etc/modprobe.d/blacklist-floppy.conf
+sudo rmmod floppy
+sudo update-initramfs -u
+```
 
 ## Preview jpegs and videos over USB
 
@@ -209,20 +207,22 @@ Switch the phone into USB Mass Storage mode
 
 ## Oracle Java
 
-    sudo add-apt-repository ppa:webupd8team/java 
+```bash
+    sudo add-apt-repository ppa:webupd8team/java
     sudo apt-get update
     sudo apt-get install oracle-java8-installer
+```
 
 ## Firefox activate pipelining
 
-	
-	about:config
-	
-	network.http.pipelining -> true
-	network.http.pipelining.maxrequests -> 32
-	network.http.pipelining.ssl -> true
-	network.http.proxy.pipelining -> true
+```bash
+about:config
 
+network.http.pipelining -> true
+network.http.pipelining.maxrequests -> 32
+network.http.pipelining.ssl -> true
+network.http.proxy.pipelining -> true
+```
 
 http://www.techfragments.com/481/the-12-best-firefox-aboutconfig-performance-tweaks/
 
@@ -263,9 +263,9 @@ I set these values as shown:
 
 ```xml
 <defaults>
-	<allow_any>yes</allow_any>
-	<allow_inactive>yes</allow_inactive>
-	<allow_active>yes</allow_active>
+  <allow_any>yes</allow_any>
+  <allow_inactive>yes</allow_inactive>
+  <allow_active>yes</allow_active>
 </defaults>
 ```
 
@@ -294,15 +294,14 @@ xbindkeys -k
 
 File: `~/.xbindkeysrc`
 
+```conf
+# disable ctrl + scroll wheel by binding it to /bin/true
+"/bin/true"
+  Control + b:5 + release
 
-	# disable ctrl + scroll wheel by binding it to /bin/true
-	"/bin/true"
-	  Control + b:5 + release
-	 
-	"/bin/true"
-	  Control + b:4 + release
-
-
+"/bin/true"
+  Control + b:4 + release
+```
 
 ```bash
 killall xbindkeys && xbindkeys
@@ -345,15 +344,13 @@ https://help.ubuntu.com/community/UpdatingADeb
 
 ## Setting up environment
 
-
 http://packaging.ubuntu.com/html/fixing-a-bug.html
 
-	
-	sudo apt-get install packaging-dev
-
+```bash
+sudo apt-get install packaging-dev
+```
 
 ## CD Rip Morituri
-
 
 https://blog.mdosch.de/2015/03/25/empfehlung-cd-ripper-morituri/
 
@@ -361,5 +358,6 @@ https://blog.mdosch.de/2015/03/25/empfehlung-cd-ripper-morituri/
 
 To restore proper thumbnail generation:
 
-    pkill tumblerd
-
+```bash
+pkill tumblerd
+```

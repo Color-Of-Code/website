@@ -19,7 +19,7 @@ Automatic:
 
 Booted Ubuntu 16.04 LTS with a LAN connection active. The LVM was setup properly and recognized perfectly. This was not the case without network access.
 
-In this case it's easy to backup the data and proceed with a reinstallation.
+In this case it's easy to backup the data and proceed with a re-installation.
 
     Select do something else
     Setup /, swap and /boot partitions
@@ -65,8 +65,6 @@ After booting in the new system check that the data is now all ok and call
 
 Maybe several times until no error comes (some packages might be incompatible external ones or remain on the system and not get cleaned up correctly).
 
-
-
 ## Example 2
 
 References:
@@ -88,14 +86,15 @@ ddrescue -n /dev/sdb disk-image-file.img rescue.log
 
 After this first run there might be problematic sectors which can be retried using re-reads, following command tries to reread max 3 times:
 
-	:::bash
-	ddrescue -d -r 3 /dev/sdb disk-image-file.img rescue.log
-
+```bash
+ddrescue -d -r 3 /dev/sdb disk-image-file.img rescue.log
+```
 
 If that fails you can try again but retrimmed, so it tries to reread full sectors:
 
-	:::bash
-	ddrescue -d --retrim -r 3 /dev/sdb disk-image-file.img rescue.log
+```bash
+ddrescue -d --retrim -r 3 /dev/sdb disk-image-file.img rescue.log
+```
 
 How to mount and use the disk image ((use the offset option if you made a full image and want a given partition)):
 

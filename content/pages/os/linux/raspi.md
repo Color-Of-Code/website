@@ -3,7 +3,7 @@ published: true
 path: "/linux/raspi/tweaks"
 date: "2019-01-09"
 title: "Raspberry tweaks"
-tags: ["raspi", "linux", "TODO_cleanup"]
+tags: ["raspi", "linux"]
 ---
 
 # Raspi
@@ -16,7 +16,7 @@ tags: ["raspi", "linux", "TODO_cleanup"]
 
 Enable WIFI:
 
-```
+```bash
   connmanctl
   technologies
   enable wifi
@@ -28,15 +28,14 @@ Enable WIFI:
 
 Internet radio:
 
-```
+```bash
   apt-get install mpd mpc
 ```
 
-Added webinterface.chorus
+Added web-interface.chorus
 
-```
+```bash
   apt-get install smb-app-osmc
 ```
 
 to have netbios resolution
-

@@ -3,7 +3,7 @@ published: true
 path: "/hardware/stb/linux"
 date: "2019-01-07"
 title: "Set Top Box"
-tags: ["hardware", "stb", "linux", "TODO_cleanup"]
+tags: ["hardware", "stb", "linux"]
 ---
 
 # STB Linux
