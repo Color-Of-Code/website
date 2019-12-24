@@ -1,9 +1,9 @@
 ---
 published: true
 path: "/virtualization/lxc"
-date: "2019-01-01"
+date: "2019-12-10"
 title: "Linux Containers"
-tags: ["virtualization", "linux", "lxc", "container", "TODO_cleanup"]
+tags: ["virtualization", "linux", "lxc", "container"]
 ---
 # LXC - Linux containers
 
@@ -44,13 +44,15 @@ lxc-console
 
 Templates can be found under:
 
-```
+```txt
 /usr/share/lxc/templates
 ```
 
 Small and efficient and secure template [lxc-alpine](http://www.alpinelinux.org/):
 
-    alpine
+```txt
+alpine
+```
 
 ## Python3 api
 

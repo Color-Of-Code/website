@@ -114,8 +114,8 @@ base_color=lightgray,default:normal=lightgray,default:selected=black,green:marke
 
 Reconfigure AccountsService. To hide a user named XXX, create a file named
 
-```bash
-	/var/lib/AccountsService/users/XXX
+```txt
+/var/lib/AccountsService/users/XXX
 ```
 
 containing two lines:
@@ -171,7 +171,7 @@ INFO: rcu_sched self-detected stall on CPU
 
 The culprit was, a setting in BIOS, AMD C1E Support was set to Enabled and setting it to Auto or Disabled fixed the issue for me! No more stalls/hangs!
 
-## Disable IPv6
+## Disable IP v6
 
 Edit `/etc/sysctl.conf` or create a new file inside `/etc/sysctl.d`, for example `/etc/sysctl.d/10-ipv6-disable.conf`
 
@@ -199,7 +199,7 @@ sudo rmmod floppy
 sudo update-initramfs -u
 ```
 
-## Preview jpegs and videos over USB
+## Preview JPEG and videos over USB
 
 Smartphones are sometimes mounted as MTP (default for Sony XPERIA) and not Mass Storage. This impacts on preview.
 
@@ -208,9 +208,9 @@ Switch the phone into USB Mass Storage mode
 ## Oracle Java
 
 ```bash
-    sudo add-apt-repository ppa:webupd8team/java
-    sudo apt-get update
-    sudo apt-get install oracle-java8-installer
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
 ```
 
 ## Firefox activate pipelining
@@ -238,7 +238,9 @@ sudo sysctl vm.swappiness=25
 
 ## Find process from window
 
-    xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps `cat`
+```bash
+xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps `cat`
+```
 
 This will make your cursor a cross with which you can click on an open window. It will report the PID and command in the terminal you ran it in.
 
@@ -279,7 +281,7 @@ sudo killall polkit-gnome-authentication-agent-1
 
 * https://wiki.ubuntu.com/Keybindings
 
-Nothing built in even dconf-editor seems to provide control about the mouse behaviour
+Nothing built in even `dconf-editor` seems to provide control about the mouse behavior
 
 ```bash
 apt-get install xbindkeys
@@ -310,7 +312,7 @@ killall xbindkeys && xbindkeys
 ((Source1: http://raymondmoul.com/disable-ctrl-scroll-zooming-ubuntu/))
 ((Source2: http://blog.hanschen.org/2009/10/13/mouse-shortcuts-with-xbindkeys/))
 
-xbindkeys works somewhat but not reliably.
+`xbindkeys` works somewhat but not reliably.
 
 Finally I think the only way is to modify nautilus's source code:
 
@@ -334,7 +336,7 @@ In order to download the source and re-build it, do this:
 
 * `debcommit` or `dpkg-source --commit`
 
-* Install the package(s) using sudo dpkg -i /path/to/binary-package1.deb /path/to/binary-package2.deb [...].
+* Install the package(s) using `sudo dpkg -i /path/to/binary-package1.deb /path/to/binary-package2.deb [...]`.
 
 * Make changes to the source, and rebuild/install as many times as you like.
 

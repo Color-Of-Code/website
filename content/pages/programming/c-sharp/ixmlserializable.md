@@ -18,7 +18,6 @@ There are many confusing things regarding the implementation of the `IXmlSeriali
 
 `IXmlSerializable` is composed of three methods:
 
-
 * `GetSchema`
 * `ReadXml`
 * `WriteXml`
@@ -29,7 +28,7 @@ The serializer created from the XML serialization attributes first has a look at
 
 After having read this article, by getting back to the other articles mentioned above, I hope you will be able to see the implementation mistakes made therein. The code works well as long as the classes do not get extended and as long as you do not mix serialization procedures. I made it all wrong too from the beginning until I dug into the problems...
 
-This article is more or less written like a FAQ to serve as a quick reference. It should answer the most important questions one might have (or should have, hehe) asked himself regarding the implementation of `IXmlSerializable`. If you have more questions, please don't hesitate to contact me. I use C# as programming language. I did my best to avoid mentioning the language too much, actually this information is good for all .NET targeted languages.
+This article is more or less written like a FAQ to serve as a quick reference. It should answer the most important questions one might have (or should have) asked himself regarding the implementation of `IXmlSerializable`. If you have more questions, please don't hesitate to contact me. I use C# as programming language. I did my best to avoid mentioning the language too much, actually this information is good for all .NET targeted languages.
 
 ## Sample
 
@@ -37,51 +36,51 @@ To better support explanations, I introduce an example that contains many of the
 
 Following aspects are present:
 
- 1.  Empty element in XML
- 2.  Collection interface to be serialized
- 3.  The collection contains elements of different types derived from a base class
+ 1. Empty element in XML
+ 2. Collection interface to be serialized
+ 3. The collection contains elements of different types derived from a base class
 
 ### Classes
 
 ```csharp
-	public abstract class Animal
-	{
-	  public Animal() { }
-	  public String Name { get; set; }
-	  public DateTime Birthday { get; set; }
-	}
-	public class Dog : Animal
-	{
-	  public Dog() { }
-	}
-	public class Cat : Animal
-	{
-	  public Cat() { }
-	}
-	public class Mouse : Animal
-	{
-	  public Mouse() { }
-	}
-	public class Farm
-	{
-	  public Farm() { Animals = new List`<Animal>`(); }
-	  public IList`<Animal>` Animals { get; private set; }
-	}
+public abstract class Animal
+{
+  public Animal() { }
+  public String Name { get; set; }
+  public DateTime Birthday { get; set; }
+}
+public class Dog : Animal
+{
+  public Dog() { }
+}
+public class Cat : Animal
+{
+  public Cat() { }
+}
+public class Mouse : Animal
+{
+  public Mouse() { }
+}
+public class Farm
+{
+  public Farm() { Animals = new List`<Animal>`(); }
+  public IList`<Animal>` Animals { get; private set; }
+}
 ```
 
 ### XML Snippet
 
 ```xml
-	<Farm>
-	  <Dog Name="Rex">
-	    <Birthday>`2009-10-22`</Birthday>
-	  </Dog>
-	
-	  <Cat Name="Tom">
-	    <Birthday>`1940-06-15`</Birthday>
-	  </Cat>
-	  <Mouse Name="Jerry" />
-	</Farm>
+<Farm>
+  <Dog Name="Rex">
+    <Birthday>`2009-10-22`</Birthday>
+  </Dog>
+
+  <Cat Name="Tom">
+    <Birthday>`1940-06-15`</Birthday>
+  </Cat>
+  <Mouse Name="Jerry" />
+</Farm>
 ```
 
 ## Shall GetSchema() Really Always Return Null?
@@ -102,13 +101,13 @@ For our example, it means that the `Dog` class shall write the attribute "`Name`
 This code shows how to correctly handle all animals during `WriteXml`:
 
 ```csharp
-	public void WriteXml(System.Xml.XmlWriter writer)
-	{
-	  writer.WriteAttributeString("Name", Name);
-	  if (Birthday != DateTime.MinValue)
-	    writer.WriteElementString("Birthday",
-	      Birthday.ToString("yyyy-MM-dd"));
-	}
+public void WriteXml(System.Xml.XmlWriter writer)
+{
+  writer.WriteAttributeString("Name", Name);
+  if (Birthday != DateTime.MinValue)
+    writer.WriteElementString("Birthday",
+      Birthday.ToString("yyyy-MM-dd"));
+}
 ```
 
 ## How to Implement ReadXml?
@@ -120,19 +119,19 @@ For our example, it means that the `Dog` class shall move to the content and rea
 This code shows how to correctly handle all animals during `ReadXml`:
 
 ```csharp
-	public void ReadXml(System.Xml.XmlReader reader)
-	{
-	  reader.MoveToContent();
-	  Name = reader.GetAttribute("Name");
-	  Boolean isEmptyElement = reader.IsEmptyElement; // (1)
-	  reader.ReadStartElement();
-	  if (!isEmptyElement) // (1)
-	  {
-	    Birthday = DateTime.ParseExact(reader.
-	      ReadElementString("Birthday"), "yyyy-MM-dd", null);
-	    reader.ReadEndElement();
-	  }
-	}
+public void ReadXml(System.Xml.XmlReader reader)
+{
+  reader.MoveToContent();
+  Name = reader.GetAttribute("Name");
+  Boolean isEmptyElement = reader.IsEmptyElement; // (1)
+  reader.ReadStartElement();
+  if (!isEmptyElement) // (1)
+  {
+    Birthday = DateTime.ParseExact(reader.
+      ReadElementString("Birthday"), "yyyy-MM-dd", null);
+    reader.ReadEndElement();
+  }
+}
 ```
 
 ## Are There Any Gotchas for the Implementations?
@@ -167,16 +166,15 @@ For our example, it means that the `Dog` class shall move to the content and rea
 
 ## What are the Limitations of the XML Serialization Attributes?
 
+* Mixed mode is not supported: all text attributes get merged into a single part and you lose positional information during deserialization.
 
-*  Mixed mode is not supported: all text attributes get merged into a single part and you lose positional information during deserialization.
+* Serialization of interfaces is not possible, there is no declaration allowing to choose a concrete implementation for the interface.
 
-*  Serialization of interfaces is not possible, there is no declaration allowing to choose a concrete implementation for the interface.
+* Requirements on the objects have to be met (`public` fields and properties, default constructor, ... see [this link](http://msdn.microsoft.com/en-us/library/182eeyhh%28VS.85%29.aspx)).
 
-*  Requirements on the objects have to be met (`public` fields and properties, default constructor, ... see [this link](http://msdn.microsoft.com/en-us/library/182eeyhh%28VS.85%29.aspx)).
+* Many .NET data structures cannot be serialized (only `ICollection` and `IEnumerable` implementations, not `Dictionary` for example).
 
-*  Many .NET data structures cannot be serialized (only `ICollection` and `IEnumerable` implementations, not `Dictionary` for example).
-
-*  Dynamic behaviour is not possible, it is type oriented and you cannot change the serialization depending on dynamic constraints. What if, for example, you are not interested in deserializing everything in some cases? Then `IXmlSerializable` saves you.
+* Dynamic behaviour is not possible, it is type oriented and you cannot change the serialization depending on dynamic constraints. What if, for example, you are not interested in deserializing everything in some cases? Then `IXmlSerializable` saves you.
 
 ## How to Realize the Same with XML Attributes?
 
@@ -191,37 +189,37 @@ using System.Xml.Serialization;
 
 namespace XmlWithAttributes
 {
-		public class Animal
-		{
-				public Animal() { }
+  public class Animal
+  {
+      public Animal() { }
 
-				[XmlAttribute]
-				public String Name { get; set; }
+      [XmlAttribute]
+      public String Name { get; set; }
 
-				[DefaultValue(typeof(DateTime), "0001-01-01T00:00:00")]
-				public DateTime Birthday { get; set; }
-		}
-		public class Dog : Animal
-		{
-				public Dog() { }
-		}
-		public class Cat : Animal
-		{
-				public Cat() { }
-		}
-		public class Mouse : Animal
-		{
-				public Mouse() { }
-		}
-		public class Farm
-		{
-				public Farm() { Animals = new List`<Animal>`(); }
+      [DefaultValue(typeof(DateTime), "0001-01-01T00:00:00")]
+      public DateTime Birthday { get; set; }
+  }
+  public class Dog : Animal
+  {
+      public Dog() { }
+  }
+  public class Cat : Animal
+  {
+      public Cat() { }
+  }
+  public class Mouse : Animal
+  {
+      public Mouse() { }
+  }
+  public class Farm
+  {
+      public Farm() { Animals = new List`<Animal>`(); }
 
-				[XmlElement("Dog", typeof(Dog))]
-				[XmlElement("Cat", typeof(Cat))]
-				[XmlElement("Mouse", typeof(Mouse))]
-				public List`<Animal>` Animals { get; set; }
-		}
+      [XmlElement("Dog", typeof(Dog))]
+      [XmlElement("Cat", typeof(Cat))]
+      [XmlElement("Mouse", typeof(Mouse))]
+      public List`<Animal>` Animals { get; set; }
+  }
 }
 ```
 
@@ -229,17 +227,16 @@ The generated XML looks like this:
 
 ```xml
 <?xml version="1.0"?>
-<Farm xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance 
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<Dog Name="Rex">
-		<Birthday>`2009-10-22T00:00:00`</Birthday>
+<Farm xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Dog Name="Rex">
+    <Birthday>`2009-10-22T00:00:00`</Birthday>
 
-	</Dog>
-	<Cat Name="Tom">
-		<Birthday>`1940-06-15T00:00:00`</Birthday>
-	</Cat>
-	<Mouse Name="Jerry" />
-
+  </Dog>
+  <Cat Name="Tom">
+    <Birthday>`1940-06-15T00:00:00`</Birthday>
+  </Cat>
+  <Mouse Name="Jerry" />
 </Farm>
 ```
 
@@ -250,54 +247,54 @@ A mixed attribute and `IXmlSerializable` implementation looks like this:
 ```csharp
 public class Animal : IXmlSerializable
 {
-	public Animal() { }
-	public String Name { get; set; }
-	public DateTime Birthday { get; set; }
+  public Animal() { }
+  public String Name { get; set; }
+  public DateTime Birthday { get; set; }
 
-	public System.Xml.Schema.XmlSchema GetSchema() { return null; }
+  public System.Xml.Schema.XmlSchema GetSchema() { return null; }
 
-	public void ReadXml(System.Xml.XmlReader reader)
-	{
-		reader.MoveToContent();
-		Name = reader.GetAttribute("Name");
-		Boolean isEmptyElement = reader.IsEmptyElement; // (1)
-		reader.ReadStartElement();
-		if (!isEmptyElement) // (1)
-		{
-			Birthday = DateTime.ParseExact(reader.
-				ReadElementString("Birthday"), "yyyy-MM-dd", null);
-			reader.ReadEndElement();
-		}
-	}
+  public void ReadXml(System.Xml.XmlReader reader)
+  {
+    reader.MoveToContent();
+    Name = reader.GetAttribute("Name");
+    Boolean isEmptyElement = reader.IsEmptyElement; // (1)
+    reader.ReadStartElement();
+    if (!isEmptyElement) // (1)
+    {
+      Birthday = DateTime.ParseExact(reader.
+        ReadElementString("Birthday"), "yyyy-MM-dd", null);
+      reader.ReadEndElement();
+    }
+  }
 
-	public void WriteXml(System.Xml.XmlWriter writer)
-	{
-		writer.WriteAttributeString("Name", Name);
-		if (Birthday != DateTime.MinValue)
-			writer.WriteElementString("Birthday",
-				Birthday.ToString("yyyy-MM-dd"));
-	}
+  public void WriteXml(System.Xml.XmlWriter writer)
+  {
+    writer.WriteAttributeString("Name", Name);
+    if (Birthday != DateTime.MinValue)
+      writer.WriteElementString("Birthday",
+        Birthday.ToString("yyyy-MM-dd"));
+  }
 }
 public class Dog : Animal
 {
-	public Dog() { }
+  public Dog() { }
 }
 public class Cat : Animal
 {
-	public Cat() { }
+  public Cat() { }
 }
 public class Mouse : Animal
 {
-	public Mouse() { }
+  public Mouse() { }
 }
 public class Farm
 {
-	public Farm() { Animals = new List`<Animal>`(); }
+  public Farm() { Animals = new List`<Animal>`(); }
 
-	[XmlElement("Dog", typeof(Dog))]
-	[XmlElement("Cat", typeof(Cat))]
-	[XmlElement("Mouse", typeof(Mouse))]
-	public List`<Animal>` Animals { get; set; }
+  [XmlElement("Dog", typeof(Dog))]
+  [XmlElement("Cat", typeof(Cat))]
+  [XmlElement("Mouse", typeof(Mouse))]
+  public List`<Animal>` Animals { get; set; }
 }
 ```
 
@@ -314,26 +311,26 @@ Here an example for rewriting the Read/WriteXml from the Animal class. As DateTi
 ```csharp
 public void ReadXml(System.Xml.XmlReader reader)
 {
-	reader.MoveToContent();
-	Name = reader.GetAttribute("Name");
-	Boolean isEmptyElement = reader.IsEmptyElement;
-	reader.ReadStartElement();
-	if (!isEmptyElement)
-	{
-			XmlSerializer s = new XmlSerializer(typeof(DateTime));
-			Birthday = (DateTime)s.Deserialize(reader);
-			reader.ReadEndElement();
-	}
+  reader.MoveToContent();
+  Name = reader.GetAttribute("Name");
+  Boolean isEmptyElement = reader.IsEmptyElement;
+  reader.ReadStartElement();
+  if (!isEmptyElement)
+  {
+      XmlSerializer s = new XmlSerializer(typeof(DateTime));
+      Birthday = (DateTime)s.Deserialize(reader);
+      reader.ReadEndElement();
+  }
 }
 
 public void WriteXml(System.Xml.XmlWriter writer)
 {
-	writer.WriteAttributeString("Name", Name);
-	if (Birthday != DateTime.MinValue)
-	{
-			XmlSerializer s = new XmlSerializer(typeof(DateTime));
-			s.Serialize(writer, Birthday);
-	}
+  writer.WriteAttributeString("Name", Name);
+  if (Birthday != DateTime.MinValue)
+  {
+      XmlSerializer s = new XmlSerializer(typeof(DateTime));
+      s.Serialize(writer, Birthday);
+  }
 }
 ```
 
