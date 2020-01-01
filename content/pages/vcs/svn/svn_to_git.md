@@ -3,7 +3,7 @@ published: true
 path: "/vcs/svn/svn-to-git"
 date: "2018-12-28"
 title: "Svn to Git"
-tags: ["vcs", "git", "svn", "convert", "TODO_cleanup"]
+tags: ["vcs", "git", "svn", "convert"]
 ---
 
 # SVN to GIT
@@ -20,16 +20,16 @@ Interesting additional tools
 
 ## 1 use git-svn
 
-* to clone, a users.txt is used to map users and avoid metadata if you do not intend anymore to use svn
+* to clone, a `users.txt` file is used to map users and avoid metadata if you do not intend anymore to use svn
 
 ```bash
 git svn clone http://my-project.googlecode.com/svn/ \
-		--authors-file=users.txt --no-metadata -s my_project
+  --authors-file=users.txt --no-metadata -s my_project
 ```
 
 ## 2 Get rid of git-svn-id metadata
 
-*  If you still had git-svn-id metadata inside the commit messages, you can get rid of them using:
+* If you still had git-svn-id metadata inside the commit messages, you can get rid of them using:
 
 ```bash
 git filter-branch -f --msg-filter 'sed -e "/git-svn-id:/d"'
@@ -43,8 +43,8 @@ git filter-branch -f --msg-filter 'sed -e "/git-svn-id:/d"'
 git filter-branch -f --msg-filter '
 read msg
 if [ -n "$msg" ] ; then
-	echo "$msg"
+  echo "$msg"
 else
-	echo "`<empty commit message>`"
+  echo "`<empty commit message>`"
 fi'
 ```

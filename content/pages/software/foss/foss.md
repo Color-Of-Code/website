@@ -3,7 +3,7 @@ published: true
 path: "/software/list-foss"
 date: "2019-01-01"
 title: "List of FOSS"
-tags: ["software", "foss", "TODO_cleanup"]
+tags: ["software", "foss"]
 ---
 # Greatest Free and Open Source Software
 
@@ -30,9 +30,9 @@ tags: ["software", "foss", "TODO_cleanup"]
 | ------ | :------- |
 | audacity | ![Alt text](icons/audacity.png) https://www.audacityteam.org/ |
 |          | Great tool to record and edit sound files. It is fast and extensible. It supports a lot of formats and allows to filter or apply effects on sound tracks. Here is a list of features from the audacity wiki: http://wiki.audacityteam.org/index.php?title=Current_Features. |
-| VLC      |   https://www.videolan.org/vlc/    | 
+| VLC      |   https://www.videolan.org/vlc/    |
 |          | A very nice, versatile and powerful video player.      |
-| UltraVNC |        https://www.uvnc.com             | 
+| UltraVNC |        https://www.uvnc.com             |
 |          | A remote desktop utility that also works fine over slower connections.                        |
 
 ## Virtualization
@@ -53,7 +53,7 @@ Thunderbird is an EMail client. It has made incredible improvements since versio
 
 Pidgin logo Pidgin, http://pidgin.im
 
-Pidgin is a chat program which lets you log in to accounts on multiple chat networks simultaneously. This means that you can be chatting with friends on MSN, talking to a friend on Google Talk, and sitting in a Yahoo chat room all at the same time. 
+Pidgin is a chat program which lets you log in to accounts on multiple chat networks simultaneously. This means that you can be chatting with friends on MSN, talking to a friend on Google Talk, and sitting in a Yahoo chat room all at the same time.
 
 ## Office
 
@@ -69,8 +69,8 @@ Freemind -> Freeplane
 
 ## Utilities
 
-| Name   | Description |
-| ------ | :------- |
+| Name      | Description |
+| ------    | :------- |
 | 7zip      | ![Alt text](icons/7zip.png) https://www.7-zip.org        |
 |           | 7-zip handles all usual compression formats and makes it a central tool if you need to handle many different formats.  |
 | Wireshark | ![Alt text](icons/wireshark.png) https://www.wireshark.org    |
@@ -80,8 +80,8 @@ Freemind -> Freeplane
 
 ## Cryptography & Security software
 
-| Name   | Description |
-| ------ | :------- |
+| Name      | Description |
+| ------    | :------- |
 | KeePass   |  https://keepass.info      |
 |           | A nice and feature rich password safe tool. Helps to organize passwords and associated data as well as to transfer safely the data into web formulars    |
 
