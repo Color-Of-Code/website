@@ -1,9 +1,9 @@
 ---
 published: true
 path: "/programming/haskell/category-theory"
-date: "2018-12-22"
+date: "2020-01-07"
 title: "Haskell: category theory"
-tags: ["programming", "haskell", "category theory", "math", "TODO_cleanup"]
+tags: ["programming", "haskell", "category theory", "math"]
 ---
 # Category Theory & Haskell programming language
 
@@ -57,12 +57,12 @@ Types:
 
 Haskell:
 
-* Types: Void, (), Bool, Char, String, Integer
+* Types: `Void`, `()`, `Bool`, `Char`, `String`, `Integer`
 * Bottom: _|_, ⊥, undefined
 * Hask: Category of Haskell types
 * all functions are pure
-* () is the type for singleton, is a constructor, is sometimes also value
-* function returning () discards argument
+* `()` is the type for singleton, is a constructor, is sometimes also value
+* a function returning `()` discards argument
 
 Checks:
 
@@ -246,7 +246,6 @@ elemToTuple :: Element -> (String, String, Int)
 elemToTuple e = (name e, symbol e, atomicNumber e)
 ```
 
-
 #### Sum Types
 
 ```haskell
@@ -255,15 +254,14 @@ data Either a b = Left a | Right b
 
 #### Algebra of types
 
-
-^  Logic  ^  Numbers  ^  Types  ^
-| ```cpptrue```     | 0         | ```haskellVoid``` |
-| ```cppfalse```    | 1         | ```haskell()``` |
-| ```cppa||b```     | a + b 	| ```haskellEither a b = Left a | Right b``` |
-| ```cppa&&b```     | a * b 	| ```haskell(a, b) or Pair a b = Pair a b``` |
-|                           | 2 = 1 + 1 | ```haskelldata Bool = True | False``` |
-| ```cppfalse||a``` | 1 + a 	| ```haskelldata Maybe = Nothing | Just a``` |
-
+|  Logic  |  Numbers  |  Types (haskell)  |
+| ---     | ---       | ---     |
+| `true`     |  0     | `Void` |
+| `false`    |  1     | `()` |
+| `a || b`   |  a + b   | `Either a b = Left a | Right b` |
+| `a && b`   |  a * b   | `(a, b) or Pair a b = Pair a b` |
+|            | 2 = 1 + 1  | `data Bool = True | False` |
+| `false || a` | 1 + a  | `data Maybe = Nothing | Just a` |
 
 This analogy goes deeper, and is the basis of the Curry-Howard isomorphism between logic and type theory.
 
@@ -271,16 +269,61 @@ This analogy goes deeper, and is the basis of the Curry-Howard isomorphism betwe
 
 A functor is a mapping between categories. Given two categories, C and D, a functor F maps objects in C to objects in D and also maps morphisms.
 
-  * A functor preserves the structure of a category: what’s connected in one category will be connected in the other category.
-  * A functor preserves composition
-  * A functor may smash objects together, it may glue multiple morphisms into one, but it may never break things apart.
+A functor:
 
-Functor laws: fmap preserves identity and composition
+* preserves the structure of a category: what’s connected in one category will be connected in the other category.
+* preserves composition
+* may smash objects together, it may glue multiple morphisms into one, but it may never break things apart.
+
+Functor laws: `fmap` preserves identity and composition
+
 #### Functors in programming
 
-  * Maybe functor
-  * List functor
-  * Reader functor
+Definition in Haskell:
+
+```haskell
+class Functor f where
+  fmap :: (a -> b) -> f a -> f b
+```
+
+* Maybe functor
+
+```haskell
+data Maybe a = Nothing | Just a
+instance Functor Maybe where
+  fmap _ Nothing = Nothing
+  fmap f ( Just x) = Just (f x)
+```
+
+* List functor
+
+```haskell
+data List a = Nil | Cons a ( List a)
+instance Functor List where
+  fmap _ Nil = Nil
+  fmap f ( Cons x t) = Cons (f x) (fmap f t)
+```
+
+* Reader functor
+
+```haskell
+( -> ) a b
+instance Functor (( -> ) r) where
+  fmap f g = f . g
+```
+
+* Const c functor (ignores its type parameter)
+
+```haskell
+data Const c a = Const c
+instance Functor ( Const c) where
+  fmap _ ( Const v) = Const v
+```
+
+#### Composition
+
+Factors between categories compose like functions between sets compose.
+Endofunctors are particularly "composition-friendly"
 
 ### 8) Functoriality
 
