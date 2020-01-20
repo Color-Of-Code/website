@@ -29,7 +29,7 @@
     "lodash.kebabcase": "^4.1.1",
     "mermaid": "^8.4.5",
     "mermaid.cli": "^0.5.1",
-    "prismjs": "^1.18.0",
+    "prismjs": "^1.19.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
