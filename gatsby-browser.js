@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using it
 require('prismjs/themes/prism-tomorrow.css');
+require('src/styles/prismjs-custom.css');
 
 // MathJax will process all math equations when the location changed.
 exports.onRouteUpdate = () => {
