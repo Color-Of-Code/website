@@ -1,23 +1,25 @@
 ---
 published: true
 path: "/glossary/programming-terms"
-date: "2018-12-26"
+date: "2020-02-02"
 title: "Programming Terms"
-tags: ["glossary", "programming", "terms", "TODO_cleanup"]
+tags: ["glossary", "programming", "terms"]
 ---
+
+## Programming terms
 
 I often had trouble reading complicated explanations about some terms and the list here tries to make a definition that can be understood by normal human beings without theoretical mathematics and other higher level skills.
 
- | Letter | Term            | Meaning                                                                                                                                                                                                                                                                                       | 
- | ------ | ----            | -------                                                                                                                                                                                                                                                                                       | 
- | "A"    | ACID            | Atomicity, Consistency, Isolation, Durability. If a Database follows ACID rules then the operation will success and data will be stored or the operation will fail and the database remains in a safe state. Concurrent operations are handled transparently by the database. [More](https://en.wikipedia.org/wiki/ACID) | 
- | "A"    | Amdahl's Law    | Law used to predict the maximum possible performance speedup when adapting programs to use more processors. [More](https://en.wikipedia.org/wiki/Amdahl%27s_law)                                                                                                                                                         | 
- | "C"    | Coupling        | Objects or components are tightly coupled if they highly depend on each other what hinders their reuse and extendabilty. [More](https://en.wikipedia.org/wiki/Coupling_%28computer_science%29)                                                                                                                           | 
- | "D"    | Demeter's Law   | [More](https://en.wikipedia.org/wiki/Law_of_Demeter)                                                                                                                                                                                                                                                                     | 
- | "D"    | DRY principle   | **D**on't **R**epeat **Y**ourself [More](https://en.wikipedia.org/wiki/Don't_repeat_yourself)]                                                                                                                                                                                                                           | 
- | "K"    | KISS principle  | **K**eep **I**t **S**imple, **S**tupid! Avoid unnecessary complexity. [More](https://en.wikipedia.org/wiki/KISS_principle)                                                                                                                                                                                               | 
- | "R"    | Reentrancy      | A routine is said to be reentrant if while one thread is running the code, another thread can enter and run also the routine safely. Usually involves not using static variables or calling only reentrant functions. [More](https://en.wikipedia.org/wiki/Reentrancy_(computing))                                   | 
- | "S"    | SOLID principle | **S**ingle responsibility, **O**pen/closed, **L**iskov substitution, **I**nterface segregation, **D**ependency inversion principles [More](https://en.wikipedia.org/wiki/SOLID)                                                                                                             | 
+ | Letter | Term  | Meaning  |
+ | ------ | ----  | -------  |
+ | "A"  | ACID  | Atomicity, Consistency, Isolation, Durability. If a Database follows ACID rules then the operation will success and data will be stored or the operation will fail and the database remains in a safe state. Concurrent operations are handled transparently by the database. [More](https://en.wikipedia.org/wiki/ACID) |
+ | "A"  | Amdahl's Law  | Law used to predict the maximum possible performance speedup when adapting programs to use more processors. [More](https://en.wikipedia.org/wiki/Amdahl%27s_law)  |
+ | "C"  | Coupling  | Objects or components are tightly coupled if they highly depend on each other what hinders their reuse and extendabilty. [More](https://en.wikipedia.org/wiki/Coupling_%28computer_science%29)  |
+ | "D"  | Demeter's Law   | or principle of least knowledge to avoid coupling [More](https://en.wikipedia.org/wiki/Law_of_Demeter)  |
+ | "D"  | DRY principle   | **D**on't **R**epeat **Y**ourself [More](https://en.wikipedia.org/wiki/Don't_repeat_yourself)]  |
+ | "K"  | KISS principle  | **K**eep **I**t **S**imple, **S**tupid! Avoid unnecessary complexity. [More](https://en.wikipedia.org/wiki/KISS_principle)  |
+ | "R"  | Reentrancy  | A routine is said to be reentrant if while one thread is running the code, another thread can enter and run also the routine safely. Usually involves not using static variables or calling only reentrant functions. [More](https://en.wikipedia.org/wiki/Reentrancy_(computing))  |
+ | "S"  | SOLID principle | **S**ingle responsibility, **O**pen/closed, **L**iskov substitution, **I**nterface segregation, **D**ependency inversion principles [More](https://en.wikipedia.org/wiki/SOLID)  |
 
 ### closure
 
@@ -45,7 +47,7 @@ A cryptosystem should be secure even if everything about the system, except the 
 
 ### lambda expression
 
-Description of a function by mean of a statement binding parameters to an expression. For example: (x,y) => x*y defines an anonymous function that returns the product of the two arguments. This is often used to define delegates in a more readable way.
+Description of a function by mean of a statement binding parameters to an expression. For example: `(x,y) => x*y` defines an anonymous function that returns the product of the two arguments. This is often used to define delegates in a more readable way.
 
 ### Liskov substitution principle
 
