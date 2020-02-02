@@ -114,7 +114,7 @@ base_color=lightgray,default:normal=lightgray,default:selected=black,green:marke
 
 Reconfigure AccountsService. To hide a user named XXX, create a file named
 
-```txt
+```bash
 /var/lib/AccountsService/users/XXX
 ```
 
@@ -165,7 +165,7 @@ To customize the active title bar background colors. (use :backdrop for inactive
 
 ## CPU stalls on boot
 
-```txt
+```
 INFO: rcu_sched self-detected stall on CPU
 ```
 
@@ -175,7 +175,7 @@ The culprit was, a setting in BIOS, AMD C1E Support was set to Enabled and setti
 
 Edit `/etc/sysctl.conf` or create a new file inside `/etc/sysctl.d`, for example `/etc/sysctl.d/10-ipv6-disable.conf`
 
-```conf
+```
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 1
@@ -296,7 +296,7 @@ xbindkeys -k
 
 File: `~/.xbindkeysrc`
 
-```conf
+```
 # disable ctrl + scroll wheel by binding it to /bin/true
 "/bin/true"
   Control + b:5 + release

@@ -20,7 +20,7 @@ tags: ["vcs", "git-annex", "git", "compile", "TODO_cleanup"]
 * cd to git-annex
 * patch the code to use git 64 bit
 
-```patch
+```diff
   Build/NullSoftInstaller.hs | 2 +-
   1 file changed, 1 insertion(+), 1 deletion(-)
 
@@ -57,13 +57,12 @@ Set path to cygwin, git
 
 Tests pass only if run as admin (as of my testing)....
 
-
 * https://git-annex.branchable.com/forum/Windows_installation_notes/
 * https://qa.nest-initiative.org/view/msysGit/job/msysgit-git-annex-assistant-test/
 
 Sample Build-log that is OK
 
-```txt
+```
 Started by remote host 66.228.36.95
 Building remotely on windows-7-pro-x86_64 (windows) in workspace c:\jenkins\workspace\msysgit-git-annex-assistant-test
   > c:/cygwin/bin/git.exe rev-parse --is-inside-work-tree # timeout=10

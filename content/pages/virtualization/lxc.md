@@ -44,13 +44,13 @@ lxc-console
 
 Templates can be found under:
 
-```txt
+```
 /usr/share/lxc/templates
 ```
 
 Small and efficient and secure template [lxc-alpine](http://www.alpinelinux.org/):
 
-```txt
+```
 alpine
 ```
 

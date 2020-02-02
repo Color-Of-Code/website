@@ -12,7 +12,7 @@ tags: ["os", "windows", "tweaks"]
 
 This allows to see all system settings in one window. Create a folder named
 
-```txt
+```
 All Settings.{ED7BA470-8E54-465E-825C-99712043E01C}
 ```
 
@@ -24,13 +24,13 @@ http://www.sevenforums.com/tutorials/197908-power-plan-specify-default-all-users
 
 Find out the GUIDs of power plans:
 
-```txt
+```bash
     powercfg /list
 ```
 
 In the local Local Group Policy Editor, Administrative templates, System, Power management, Select an active power plan
 
-```txt
+```bash
     gpedit.msc
 ```
 
