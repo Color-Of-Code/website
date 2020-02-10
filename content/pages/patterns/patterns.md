@@ -1,9 +1,9 @@
 ---
 published: true
 path: "/patterns/patterns"
-date: "2018-12-27"
+date: "2020-02-02"
 title: "Patterns"
-tags: ["software", "pattern", "TODO_cleanup"]
+tags: ["software", "pattern"]
 ---
 
 # Software Design Patterns
@@ -14,8 +14,19 @@ See also [Software Anti-Patterns](anti-patterns).
 
 | Architectural patterns  | Choice: How is the software system (as a whole) organized?  |
 | ----------------------- | ----------------------------------------------------------- |
-| Layers                                         | Separation of the system in layers, each layer knowing only of the layer above and under itself |
-|
+| Layers                  | Separation of the system in layers, each layer knowing only of the layer above and under itself |
+| MVC                     | Separation of the view (user interface) from the model (underlying data) and the controller (user interaction) |
+| [MVP](https://en.wikipedia.org/wiki/Model–view–presenter)    | Model View Presenter: all presentation logic is pushed to the presenter, mainly used for GUI development |
+| [MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)      | Model View ViewModel: The view model handles the view's display logic, is responsible for exposing the data objects from the model in such a way that the objects are easily managed and consumed |
+| Multitier architecture           | The presentation, the application processing, and the data management are logically separate processes |
+| Pipeline                                       | Chain of processing elements |
+| Implicit invocation                            | Event broadcasting, the caller doesn't know who is called |
+| Blackboard system                              | A common knowledge base, is iteratively updated by a diverse subsystems |
+| Peer-to-peer                                   | No central server, each peer is supplier and consumer |
+| Service-oriented architecture                  | Loose coupling of services within the system |
+| Naked objects                                  | Objects and their representation are not biased by adapters or proxies |
+
+### MVC
 
 ```uml
 [View] -down-> [Controller]
@@ -23,16 +34,14 @@ See also [Software Anti-Patterns](anti-patterns).
 [Model] -> [View]
 ```
 
- MVC   | Separation of the view (user interface) from the model (underlying data) and the controller (user interaction) |
- |
+### MVP
 
 ```uml
 [View] `<-down->` [Presenter]
 [Presenter] `<-down->` [Model]
 ```
 
-[MVP](https://en.wikipedia.org/wiki/Model–view–presenter)    | Model View Presenter: all presentation logic is pushed to the presenter, mainly used for GUI development |
-|
+### MVVM
 
 ```uml
 [View] `<-down->` [Data Binding]
@@ -40,15 +49,6 @@ See also [Software Anti-Patterns](anti-patterns).
 [ViewModel] `<-down->` [Model]
 ```
 
-[MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)      | Model View ViewModel: The view model handles the view's display logic, is responsible for exposing the data objects from the model in such a way that the objects are easily managed and consumed |
-| Multitier architecture                         | The presentation, the application processing, and the data management are logically separate processes |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------
-| Pipeline                                       | Chain of processing elements |
-| Implicit invocation                            | Event broadcasting, the caller doesn't know who is called |
-| Blackboard system                              | A common knowledge base, is iteratively updated by a diverse subsystems |
-| Peer-to-peer                                   | No central server, each peer is supplier and consumer |
-| Service-oriented architecture                  | Loose coupling of services within the system |
-| Naked objects                                  | Objects and their representation are not biased by adapters or proxies |
 
 | Creational patterns | Choice: How to create the objects?  |
 | -------------------- | -------------------------------------------- |
