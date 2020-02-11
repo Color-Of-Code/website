@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/glossary/database-terms"
-date: "2019-01-08"
+date: "2020-01-08"
 title: "Database Terms"
 tags: ["glossary", "database", "terms", "normalized"]
 ---
