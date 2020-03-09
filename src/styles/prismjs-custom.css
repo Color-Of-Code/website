@@ -24,10 +24,51 @@ pre[class*="language-"] {
   text-align: right;
   text-transform: uppercase;
   top: 0;
+  font-weight: bold;
 }
 
 .gatsby-highlight pre[class="language-csharp"]::before {
   content: "c#";
-  background: #f7df1e;
+  background: #e9b31e;
+  color: black;
+}
+.gatsby-highlight pre[class="language-cpp"]::before {
+  content: "c++";
+  background: #f3f71e;
+  color: black;
+}
+.gatsby-highlight pre[class="language-haskell"]::before {
+  content: "hs";
+  background: #af161e;
+  color: black;
+}
+.gatsby-highlight pre[class="language-sql"]::before {
+  content: "sql";
+  background: #9e171d;
+  color: black;
+}
+.gatsby-highlight pre[class="language-bash"]::before {
+  content: "bash";
+  background: #512cf3;
+  color: black;
+}
+.gatsby-highlight pre[class="language-json"]::before {
+  content: "json";
+  background: #2b529b;
+  color: black;
+}
+.gatsby-highlight pre[class="language-xml"]::before {
+  content: "xml";
+  background: #2b529b;
+  color: black;
+}
+.gatsby-highlight pre[class="language-javascript"]::before {
+  content: "js";
+  background: #bece34;
+  color: black;
+}
+.gatsby-highlight pre[class="language-js"]::before {
+  content: "js";
+  background: #bece34;
   color: black;
 }
