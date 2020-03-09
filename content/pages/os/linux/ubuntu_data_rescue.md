@@ -1,17 +1,17 @@
 ---
 published: true
 path: "/linux/ubuntu/data-rescue"
-date: "2018-12-24"
+date: "2020-03-01"
 title: "Ubuntu Data Rescue"
-tags: ["ubuntu", "data rescue", "linux", "TODO_cleanup"]
+tags: ["ubuntu", "data rescue", "linux"]
 ---
 
-# Ubuntu data rescue
+## Ubuntu data rescue
 
 * example 1: System does not boot anymore after an OS upgrade (kernel panic). Data is on a LVM.
 * example 2: System does not boot anymore (HDD errors). Data is on an ext3 partition.
 
-## Example 1
+### Example 1
 
 System does not boot anymore after an OS upgrade (kernel panic). Data is on a LVM.
 
@@ -34,38 +34,52 @@ Manual steps:
 
 Install LVM2 tools (now you need network access!)
 
-    apt install lvm2
+```bash
+apt install lvm2
+```
 
 Check if partitions are recognized
 
-    fdisk -lu
+```bash
+fdisk -lu
+```
 
 Once installed, run pvscan to scan all disks for physical volume. this to make sure your LVM harddisk is detected by Ubuntu
 
-    pvscan
+```bash
+pvscan
+```
 
 After that run vgscan to scan disks for volume groups
 
-    vgscan
+```bash
+vgscan
+```
 
 Activate all volume groups available.
 
-    vgchange -a y
+```bash
+vgchange -a y
+```
 
 Run lvscan to scan all disks for logical volume. You can see partitions inside the hard disk now active.
 
-    lvscan
+```bash
+lvscan
+```
 
 Mount the partition to any directory you want, usually to /mnt
 You can access the partition in the /mnt directory and can backup your data
 
 After booting in the new system check that the data is now all ok and call
 
-    apt update && apt upgrade
+```bash
+apt update && apt upgrade
+```
 
 Maybe several times until no error comes (some packages might be incompatible external ones or remain on the system and not get cleaned up correctly).
 
-## Example 2
+### Example 2
 
 References:
 
@@ -74,7 +88,7 @@ References:
 * http://www.linuxjournal.com/article/8874
 * https://quonn.wordpress.com/2010/12/01/how-to-mount-lvm-partition-on-ubuntu/
 
-## Example 3
+### Example 3
 
 Non LVM volume, a simple ext4 partition with disk errors. SMART values look ok but disk access is very slow on some sectors.
 
@@ -98,16 +112,19 @@ ddrescue -d --retrim -r 3 /dev/sdb disk-image-file.img rescue.log
 
 How to mount and use the disk image ((use the offset option if you made a full image and want a given partition)):
 
-	mount -o loop,ro disk-image-file.img mountpoint
-	# find out the offset of the partition you want to mount using fdisk
-	mount -o loop,ro,offset=x disk-image-file.img mountpoint
-
+```bash
+mount -o loop,ro disk-image-file.img mountpoint
+# find out the offset of the partition you want to mount using fdisk
+mount -o loop,ro,offset=x disk-image-file.img mountpoint
+```
 
 Repair the partition eventually using the appropriate checker for the partition format:
 
-	fsck.ext3 disk-image-file.img
-	fsck.ext4 disk-image-file.img
-	...
+```bash
+fsck.ext3 disk-image-file.img
+fsck.ext4 disk-image-file.img
+...
+```
 
 References:
 

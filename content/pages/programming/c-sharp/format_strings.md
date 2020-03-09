@@ -1,12 +1,12 @@
 ---
 published: true
 path: "/programming/c-sharp/string-format"
-date: "2018-12-27"
+date: "2020-02-27"
 title: "C# String formatting"
-tags: ["programming", "csharp", "format", "string", "TODO_cleanup"]
+tags: ["programming", "csharp", "format", "string"]
 ---
 
-# C# String formatting
+## C# String formatting
 
 **Formatting is bound to a type**, so depending on which type of object you pass to String.Format, you have different format specifiers.
 
@@ -40,17 +40,17 @@ Outputting `if (...) {` yields a `System.FormatException`. The correct way is to
 
 ## Generic numeric values (conventions)
 
-* 0    zero placeholder
-* #    digit placeholder
-* .    decimal point
-* ,    thousand separator
-* %    multiplies by 100, adds % sign
-* ‰    multiplies by 100, adds ‰ sign ('\u2030')
-* e    exponent placeholder
+* `0` zero placeholder
+* `#` digit placeholder
+* `.` decimal point
+* `,` thousand separator
+* `%` multiplies by 100, adds `%` sign
+* `‰` multiplies by 100, adds `‰` sign ('\u2030')
+* `e` exponent placeholder
 
 ## Integer types
 
-Integer patterns [Object := **1234** (Int32)]
+Integer patterns `[Object := **1234** (Int32)]`
 
 | Description      | Format        | US culture | DE culture |
 | ---------------- | ------------- | ---------- | ---------- |
@@ -63,39 +63,10 @@ Integer patterns [Object := **1234** (Int32)]
 | hexadecimal (lowercase) 4 digits (leading zeroes) | `{0:x4}` | 04d2 | 04d2  |
 | hexadecimal (uppercase) | `{0:X}` | 4D2  | 4D2  |
 | hexadecimal (uppercase) 5 digits (leading zeroes) | `{0:X5}` | 004D2 | 004D2  |
-
-**Gotcha 1:** `#` is a placeholder, not detecting fractional part!
- | `
-{0:#.##}
-`|`
-1234
-`|`
-1234
-`|
- | -> correct: use digit placeholders (if you want 2 fractional digits) | ` |
- | -------------------------------------------------------------------- | --- |
-{0:0.00}
-`|`
-1234.00
-`|`
-1234,00
-`|
- | **Gotcha 2:** with '#' digits are filled in from right to left! | ` |
- | --------------------------------------------------------------- | --- |
-{0:#-##-##}
-`|`
--12-34
-`|`
--12-34
-`|
- | **Gotcha 3:** ',' only specifies thousand separator shall be used but not where! | ` |
- | -------------------------------------------------------------------------------- | --- |
-{0:0,0}
-`|`
-1,234
-`|`
-1.234
-`|
+| **Gotcha 1:** `#` is a placeholder, not detecting fractional part! | `{0:#.##}`|`1234`|`1234`|
+| -> correct: use digit placeholders (if you want 2 fractional digits) | `{0:0.00}`|`1234.00`|`1234,00`|
+| **Gotcha 2:** with `#` digits are filled in from right to left! | `{0:#-##-##}`|`-12-34`|`-12-34`|
+| **Gotcha 3:** `,` only specifies thousand separator shall be used but not where! | `{0:0,0}`|`1,234`|`1.234`|
 
 ## Floating point types
 
@@ -105,17 +76,16 @@ TO BE DONE (visit us again later, ...)
 
 ## Enumerated types
 
-	g, G    display the enum as text if Flags attribute or single value
-	f, F    display the enum as text (finds a matching sum), if fails falls back to integer
-	d, D    decimal value display (no leading zeroes)
-	x, X    hexadecimal value display with at least 8 digits
-
+* `g`, `G` display the enum as text if Flags attribute or single value
+* `f`, `F` display the enum as text (finds a matching sum), if fails falls back to integer
+* `d`, `D` decimal value display (no leading zeroes)
+* `x`, `X` hexadecimal value display with at least 8 digits
 
 TO BE DONE: examples of output with Flags, ... (give us a visit later again, ...)
 
 ## Date/Time - Generic Patterns
 
-DateTime patterns [Object := **2009-10-24T13:47:32.0534529** (DateTime)]
+DateTime patterns `[Object := **2009-10-24T13:47:32.0534529** (DateTime)]`
 
 | Description                  | Format  | US culture                            | DE culture                         |
 | ---------------------------- | ------- | ------------------------------------- | ---------------------------------- |
@@ -134,106 +104,36 @@ DateTime patterns [Object := **2009-10-24T13:47:32.0534529** (DateTime)]
 | Round-trip date/time pattern | `{0:o}` | 2009-10-24T13:47:32.0534529           | 2009-10-24T13:47:32.0534529        |
 | sortable date string         | `{0:s}` | 2009-10-24T13:47:32                   | 2009-10-24T13:47:32                |
 | universal sortable           | `{0:u}` | 2009-10-24 13:47:32Z                  | 2009-10-24 13:47:32Z               |
-
-**Gotcha 1:** 'U' is broken! | `     |
-{0:U}
-`|Saturday, October 24, 2009 11:47:32 AM|Samstag, 24. Oktober 2009 11:47:32|
+| **Gotcha 1:** 'U' is broken! | `{0:U}` | Saturday, October 24, 2009 11:47:32 AM|Samstag, 24. Oktober 2009 11:47:32 |
 
 ## Date/Time - Custom Patterns
 
-DateTime custom patterns [Object := **2009-10-24T13:47:32.0534529** (DateTime)]
+DateTime custom patterns `[Object := **2009-10-24T13:47:32.0534529** (DateTime)]`
 
  | Description | Format | US culture | DE culture |
  | ----------- | ------ | ---------- | ---------- |
- | day (01-31) | `    |
-{0:dd}
-`|24|24|
- | day name (short) | ` |
- | ---------------- | --- |
-{0:ddd}
-`|Sat|Sa|
- | full day name | ` |
- | ------------- | --- |
-{0:dddd}
-`|Saturday|Samstag|
- | month (01-12) | ` |
- | ------------- | --- |
-{0:MM}
-`|10|10|
- | month name (short) | ` |
- | ------------------ | --- |
-{0:MMM}
-`|Oct|Okt|
- | full month name | ` |
- | --------------- | --- |
-{0:MMMM}
-`|October|Oktober|
- | 2 digits year | ` |
- | ------------- | --- |
-{0:yy}
-`|09|09|
- | 4 digits year | ` |
- | ------------- | --- |
-{0:yyyy}
-`|2009|2009|
- | Era AD/BC | ` |
- | --------- | --- |
-{0:gg}
-`|A.D.|n. Chr.|
- | 2 digit hour (00-11) | ` |
- | -------------------- | --- |
-{0:hh}
-`|01|01|
- | 2 digit hour (00-23) | ` |
- | -------------------- | --- |
-{0:HH}
-`|13|13|
- | AM/PM | ` |
- | ----- | --- |
-{0:tt}
-`|PM| |
- | Timezone offset, 2 digits | ` |
- | ------------------------- | --- |
-{0:zz}
-`|+02|+02|
- | Full timezone offset | ` |
- | -------------------- | --- |
-{0:zzz}
-`|+02:00|+02:00|
- | minutes (00-59) | ` |
- | --------------- | --- |
-{0:mm}
-`|47|47|
- | seconds (00-59) | ` |
- | --------------- | --- |
-{0:ss}
-`|32|32|
- | 1/100 seconds (00-99) | ` |
- | --------------------- | --- |
-{0:ff}
-`|05|05|
- | milliseconds (000-999) | ` |
- | ---------------------- | --- |
-{0:fff}
-`|053|053|
- | microseconds | ` |
- | ------------ | --- |
-{0:ffffff}
-`|053452|053452|
- |                                 |        |  |  | 
- |                                 |        |  |  | 
- | **Gotcha 1:** 'mm' are minutes! | `
-{0:dd/mm/yyyy}
-`|24/47/2009|24.47.2009|
- | -> correct: 'MM' | ` |
- | ---------------- | --- |
-{0:dd/MM/yyyy}
-`|24/10/2009|24.10.2009|
- | **Gotcha 2:** '/' is locale dependent | ` |
- | ------------------------------------- | --- |
-{0:dd/MM/yyyy}
-`|24/10/2009|24.10.2009|
- | -> correct: use apostrophe ' | ` |
- | ---------------------------- | --- |
-{0:dd'/'MM'/'yyyy}
-`|24/10/2009|24/10/2009|
+ | day (01-31) | `{0:dd}`|24|24|
+ | day name (short) | `{0:ddd}`|Sat|Sa|
+ | full day name | `{0:dddd}`|Saturday|Samstag|
+ | month (01-12) | `{0:MM}`|10|10|
+ | month name (short) | `{0:MMM}`|Oct|Okt|
+ | full month name | `{0:MMMM}`|October|Oktober|
+ | 2 digits year | `{0:yy}`|09|09|
+ | 4 digits year | `{0:yyyy}`|2009|2009|
+ | Era AD/BC | `{0:gg}`|A.D.|n. Chr.|
+ | 2 digit hour (00-11) | `{0:hh}`|01|01|
+ | 2 digit hour (00-23) | `{0:HH}`|13|13|
+ | AM/PM | `{0:tt}`|PM| |
+ | Timezone offset, 2 digits | `{0:zz}`|+02|+02|
+ | Full timezone offset | `{0:zzz}`|+02:00|+02:00|
+ | minutes (00-59) | `{0:mm}`|47|47|
+ | seconds (00-59) | `{0:ss}`|32|32|
+ | 1/100 seconds (00-99) | `{0:ff}`|05|05|
+ | milliseconds (000-999) | `{0:fff}`|053|053|
+ | microseconds | `{0:ffffff}`|053452|053452|
+ |                                 |        |  |  |
+ |                                 |        |  |  |
+ | **Gotcha 1:** `mm` are minutes! | `{0:dd/mm/yyyy}`|24/47/2009|24.47.2009|
+ | -> correct: `MM` | `{0:dd/MM/yyyy}`|24/10/2009|24.10.2009|
+ | **Gotcha 2:** `/` is locale dependent | `{0:dd/MM/yyyy}`|24/10/2009|24.10.2009|
+ | -> correct: use apostrophe `'` | `{0:dd'/'MM'/'yyyy}`|24/10/2009|24/10/2009|

@@ -1,12 +1,12 @@
 ---
 published: true
 path: "/patterns/anti-patterns"
-date: "2018-12-27"
+date: "2020-03-09"
 title: "Anti-Patterns"
-tags: ["software", "pattern", "anti", "TODO_cleanup"]
+tags: ["software", "pattern", "anti"]
 ---
 
-# Software Anti-Patterns
+## Software Anti-Patterns
 
 *Taken from Wikipedia, personal adaptations and additions made, shortened to be used as a small reference card, links back to wikipedia kept for details.*
 
