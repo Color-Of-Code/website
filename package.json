@@ -2,7 +2,7 @@
   "name": "color-of-code",
   "private": true,
   "description": "color-of-code.de",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Jaap de Haan <jaap.dehaan@freenet.de>",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
@@ -70,6 +70,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "gatsby-plugin-eslint": "^2.0.8",
     "markdown-link-check": "^3.8.0",
     "prettier": "^1.19.1"
