@@ -2,6 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
+const valueStyle = {
+  width: '8em',
+  display: 'inline-block',
+  textAlign: 'center',
+};
+
 const Counter = ({ initialvalue }) => {
   const [count, setCount] = useState(initialvalue);
 
@@ -10,7 +16,7 @@ const Counter = ({ initialvalue }) => {
 
   return (
     <span>
-      <strong style={{ flex: '1 1' }}>{count}</strong>
+      <span style={valueStyle}>{count}</span>
       <button onClick={handleDecrement}>-1</button>
       <button onClick={handleIncrement}>+1</button>
     </span>

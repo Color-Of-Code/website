@@ -8,7 +8,7 @@ tags: ["demo", "test", "react", "react-hooks"]
 
 ## Test
 
-Test inlining a react component inside markdown.
+Test inlining a react component inside markdown. This component uses the [`useState`](https://reactjs.org/docs/hooks-reference.html#usestate) hook.
 
 ### Embedded Counter component
 
@@ -21,15 +21,21 @@ import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Counter = ({ initialValue }) => {
-  const [count, setCount] = useState(initialValue);
+const valueStyle = {
+  width: '8em',
+  display: 'inline-block',
+  textAlign: 'center',
+};
+
+const Counter = ({ initialvalue }) => {
+  const [count, setCount] = useState(initialvalue);
 
   const handleIncrement = () => setCount(count + 1);
   const handleDecrement = () => setCount(count - 1);
 
   return (
     <span>
-      <strong style={{ flex: '1 1' }}>{count}</strong>
+      <span style={valueStyle}>{count}</span>
       <button onClick={handleDecrement}>-1</button>
       <button onClick={handleIncrement}>+1</button>
     </span>
@@ -37,11 +43,11 @@ const Counter = ({ initialValue }) => {
 };
 
 Counter.propTypes = {
-  initialValue: PropTypes.number,
+  initialvalue: PropTypes.number,
 };
 
 Counter.defaultProps = {
-  initialValue: 0,
+  initialvalue: 0,
 };
 
 export default Counter;
