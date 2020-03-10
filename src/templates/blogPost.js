@@ -21,7 +21,7 @@ function Template({
   const renderAst = new rehypeReact({
     createElement: React.createElement,
     components: {
-      'interactive-counter': Counter,
+      interactivecounter: Counter,
       hk: Hotkey,
     },
   }).Compiler;
