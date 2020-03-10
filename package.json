@@ -8,7 +8,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "babel-preset-gatsby": "^0.2.33",
     "d3": "^5.15.0",
-    "gatsby": "^2.19.34",
+    "gatsby": "^2.19.35",
     "gatsby-image": "^2.2.43",
     "gatsby-link": "^2.2.30",
     "gatsby-plugin-catch-links": "^2.1.27",
@@ -17,14 +17,14 @@
     "gatsby-plugin-offline": "^3.0.38",
     "gatsby-plugin-react-helmet": "^3.1.23",
     "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sharp": "^2.4.8",
+    "gatsby-plugin-sharp": "^2.4.9",
     "gatsby-plugin-sitemap": "^2.2.28",
     "gatsby-remark-copy-linked-files": "^2.1.39",
     "gatsby-remark-images": "^3.1.47",
     "gatsby-remark-prismjs": "^3.3.33",
     "gatsby-source-filesystem": "^2.1.51",
     "gatsby-transformer-remark": "^2.6.56",
-    "gatsby-transformer-sharp": "^2.3.17",
+    "gatsby-transformer-sharp": "^2.3.18",
     "lodash": "^4.17.15",
     "lodash.kebabcase": "^4.1.1",
     "mermaid": "^8.4.8",
@@ -44,7 +44,9 @@
   },
   "keywords": [
     "gatsby",
-    "color-of-code"
+    "color-of-code",
+    "blog",
+    "software development"
   ],
   "license": "MIT",
   "scripts": {
