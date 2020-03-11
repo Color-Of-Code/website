@@ -10,8 +10,8 @@ import '../styles/blog-charts.css';
 import rehypeReact from 'rehype-react';
 import Counter from '../components/counter';
 import Hotkey from '../components/hotkey';
-import Tag from '../components/tag';
 import SEO from '../components/seo';
+import BlogPostHeader from '../components/blog-post-header';
 
 function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -31,15 +31,11 @@ function Template({
       <SEO title={frontmatter.title} keywords={frontmatter.tags} />
       <div className="blog-post-container">
         <div className="blog-post">
-          <div className="blog-post-header">
-            <h1>{frontmatter.title}</h1>
-            <h2>{frontmatter.date}</h2>
-            <div className="blog-tags">
-              {frontmatter.tags.map(tag => {
-                return <Tag tag={tag} key={tag} />;
-              })}
-            </div>
-          </div>
+          <BlogPostHeader
+            title={frontmatter.title}
+            date={frontmatter.date}
+            keywords={frontmatter.tags}
+          ></BlogPostHeader>
           <div className="blog-post-content">{renderAst(htmlAst)}</div>
         </div>
       </div>

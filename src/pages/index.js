@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Link from 'gatsby-link';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import BlogPostHeader from '../components/blog-post-header';
 
 import '../styles/blog-listing.css';
 
@@ -12,25 +12,17 @@ function Index({ data }) {
   return (
     <Layout>
       <div className="blog-posts">
-        <p>
-          <b>
-            Work in progress: Content is being ported from the precedent site
-            into this site
-          </b>
-        </p>
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
             return (
               <div className="blog-post-preview" key={post.id}>
-                <div className="blog-post-header">
-                  <h1>
-                    <Link to={post.frontmatter.path}>
-                      {post.frontmatter.title}
-                    </Link>
-                  </h1>
-                  <h2>{post.frontmatter.date}</h2>
-                </div>
+                <BlogPostHeader
+                  link={post.frontmatter.path}
+                  title={post.frontmatter.title}
+                  date={post.frontmatter.date}
+                  keywords={post.frontmatter.tags}
+                ></BlogPostHeader>
                 <p>{post.excerpt}</p>
               </div>
             );
@@ -60,6 +52,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            tags
           }
         }
       }
