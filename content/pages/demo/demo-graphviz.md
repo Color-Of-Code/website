@@ -29,7 +29,7 @@ graph {
 
 #### Example 2: K6
 
-```dot-svg  
+```dot-svg
 graph {
     a -- b;
     b -- c;
@@ -75,7 +75,7 @@ digraph {
 
 #### Example 5: Showing A Path
 
-```dot-svg 
+```dot-svg
 graph {
     a -- b[color=red,penwidth=3.0];
     b -- c;
@@ -104,7 +104,7 @@ graph {
 
 Please note there are some quirks here, First the name of the subgraphs are important, to be visually separated they must be prefixed with cluster_ as shown below, and second only the DOT and FDP layout methods seem to support subgraphs (See the graph generation page for more information on the layout methods)
 
-```dot-svg                            
+```dot-svg
 digraph {
     subgraph cluster_0 {
         label="Subgraph A";
@@ -121,7 +121,7 @@ digraph {
 }
 ```
 
-Another Example of a Subgraph, In this example I group nodes together seperately from their edges, And also uses the graph attribute splines=line; to specify that edges should be drawn only as straight lines, no curves allowed.
+Another Example of a Subgraph, In this example I group nodes together separately from their edges, And also uses the graph attribute splines=line; to specify that edges should be drawn only as straight lines, no curves allowed.
 
 ```dot-svg
 graph {
@@ -149,7 +149,7 @@ graph {
 
 To make it easier to input large graph descriptions, One may group edges together with a set of braces, It may also help to lay the graph out left to right instead of top to bottom.
 
-```dot-svg 
+```dot-svg
 graph {
     rankdir=LR; // Left to Right, instead of Top to Bottom
     a -- { b c d };
