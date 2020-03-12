@@ -1,33 +1,55 @@
 ---
 published: true
 path: "/math/derivatives"
-date: "2018-12-27"
+date: "2020-03-12"
 title: "Derivatives"
 tags: ["math", "derivatives"]
 ---
-# Derivatives
+## Derivatives
+
+### Definition
+
+$$f'(x)= \lim_ {h \to 0} \frac{f(x+h) - f(x)}{h}$$
+
+### Formula
 
 * $c$ is a constant
 * $f$, $g$ are functions of a variable $x$
 
-## Basic properties
+### Basic properties
 
-### Product rule
+* Linearity
 
-$(f.g)'=f'.g + g'.f$
+$$(cf+g)'=cf'+g'$$
 
-### Quotient rule
+* Product
 
-$(\frac{f}{g})'=\frac{f'.g-g'.f}{g^2}$
+$$(f.g)'=f'.g + g'.f$$
 
-### Chain rule
+* Inverse (Quotient with $f=1$)
 
-$(f \circ g)'=f' \circ g . g'$
+$$(\frac{1}{g})'=\frac{-g'}{g^2}$$
 
-## Polynomials
+* Quotient
 
-$\frac{d}{dx}(c)=0$
+$$(\frac{f}{g})'=\frac{f'.g-g'.f}{g^2}$$
 
-$\frac{d}{dx}(x)=1$
+* Chain
 
-$\frac{d}{dx}(x^n)=n.x^{n-1}$
+$$(g \circ f)'=(g' \circ f) . f'$$
+
+### Usual functions
+
+| $f(x)$ | Domain $I$ | $f'(x)$ |
+| ---  | --- | --- |
+| $c$  | $\Bbb{R}$ | $0$ |
+| $x$  | $\Bbb{R}$ | $1$ |
+| $x^n$ ($n\in\Bbb{N^*}$) | $\Bbb{R}$ | $nx^{n-1}$ |
+| $\ln x$ | $]0,+\infty[$ | $1/x$ |
+| $e^x$  | $\Bbb{R}$ | $e^x$ |
+| $\cos x$  | $\Bbb{R}$ | $-\sin x$ |
+| $\sin x$  | $\Bbb{R}$ | $\cos x$ |
+| $\tan x$  | $]-\pi/2,+\pi/2[$ | $1+\tan^2 x = 1/\cos^2 x$ |
+| $\ch x$  | $\Bbb{R}$ | $\sh x$ |
+| $\sh x$  | $\Bbb{R}$ | $\ch x$ |
+| $\th x$  | $\Bbb{R}$ | $1/\ch^2 x = 1 - \th^2 x$ |

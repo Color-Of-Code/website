@@ -17,8 +17,7 @@ Test inlining a react component inside markdown. This component uses the [`useSt
 ### Source
 
 ```js
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const valueStyle = {
