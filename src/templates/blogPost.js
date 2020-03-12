@@ -8,10 +8,11 @@ import '../styles/blog-post.css';
 import '../styles/blog-charts.css';
 
 import rehypeReact from 'rehype-react';
+import BlogPostHeader from '../components/blog-post-header';
 import Counter from '../components/counter';
 import Hotkey from '../components/hotkey';
+import Quote from '../components/quote';
 import SEO from '../components/seo';
-import BlogPostHeader from '../components/blog-post-header';
 
 function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -23,6 +24,7 @@ function Template({
     components: {
       interactivecounter: Counter,
       hk: Hotkey,
+      quote: Quote,
     },
   }).Compiler;
 
