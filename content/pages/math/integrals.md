@@ -1,11 +1,11 @@
 ---
 published: true
 path: "/math/integrals"
-date: "2018-12-27"
+date: "2020-03-13"
 title: "Integrals"
 tags: ["math", "integrals"]
 ---
-# Integrals
+## Integrals
 
 * $a$, $b$, $c$, $\alpha$, $\beta$ are constants
 * $f$, $g$, $u$ are functions of a variable $x$
@@ -16,7 +16,9 @@ tags: ["math", "integrals"]
 
 1. $$ \int _a ^a f(x)dx = 0 $$
 2. $$ \int _b ^a f(x)dx = - \int _a ^b f(x)dx $$
+
 3. Chasles' theorem:
+
 $$ \int _a ^b f(x)dx + \int _b ^c f(x)dx = \int _a ^c f(x)dx $$
 
 ### Linearity
@@ -45,3 +47,18 @@ $$ \int x^{n}dx = \frac {1}{n+1} x^{n+1}+c $$
 $$ \int \frac {u'} {u} dx = ln |u| + c $$
 
 $$ \int \frac {-u'} {u^2} dx = \frac {1} {u} + c $$
+
+## Common primitive functions
+
+| $f(x)$ | Domain $I$ | $F(x)$ |
+| ---  | --- | --- |
+| $x^n$  | $\Bbb{R}$ | $\frac{x^{n+1}}{n+1}$ |
+| $1/x$  | $]0,+\infty[$ | $\ln x$ |
+| $\ln x$  | $]0,+\infty[$ | $x\ln x -x$ |
+| $e^x$  | $\Bbb{R}$ | $e^x$ |
+| $\cos x$  | $\Bbb{R}$ | $\sin x$ |
+| $\sin x$  | $\Bbb{R}$ | $-\cos x$ |
+| $\tan x$  | $\Bbb{R}$ | $-\ln \mid\cos x\mid$ |
+| $\sinh x$  | $\Bbb{R}$ | $\cosh x$ |
+| $\cosh x$  | $\Bbb{R}$ | $\sinh x$ |
+| $\tanh x$  | $\Bbb{R}$ | $\ln(\cosh x)$ |
