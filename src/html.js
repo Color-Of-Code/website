@@ -3,16 +3,17 @@ import PropTypes from 'prop-types';
 
 const MathJaxConfig = `
 window.MathJax = {
-  tex2jax: {
+  svg: {
+    fontCache: 'global'
+  },
+  tex: {
     inlineMath: [['$', '$'] ],
     displayMath: [['$$', '$$'] ],
     processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: {
-      equationNumbers: {autoNumber: 'AMS'},
-      extensions: ['AMSmath.js', 'AMSsymbols.js', 'color.js'],
-    },
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
   }
 };
 `;
@@ -40,9 +41,11 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
           <script dangerouslySetInnerHTML={{ __html: MathJaxConfig }} />
           <script
+            type="text/javascript"
+            id="MathJax-script"
             defer
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG"
-          />
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"
+          ></script>
         </body>
       </html>
     );
