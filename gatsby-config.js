@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Color Of Code',
-    description: 'Color Of Code, port of old contents in progress',
+    description: 'Color Of Code - website about software and programming',
     author: '@jdehaan',
     siteUrl: 'https://color-of-code.de',
   },
