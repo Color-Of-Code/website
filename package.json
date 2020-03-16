@@ -35,7 +35,7 @@
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
-    "rehype-react": "^4.0.1",
+    "rehype-react": "^5.0.0",
     "remark": "^11.0.2",
     "remark-math": "^2.0.0",
     "skyrta": "^0.1.8",
