@@ -21,7 +21,7 @@ class Hotkey extends React.Component {
   };
 
   render() {
-    var ks = this.state.value.split(' + ').map(item => item.trim());
+    var ks = this.state.value.split(' + ').map((item) => item.trim());
     return (
       <span style={hotkeyStyle}>
         {ks.map((k, i) => {

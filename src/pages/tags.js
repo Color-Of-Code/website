@@ -16,9 +16,9 @@ class SearchableTagList extends React.Component {
     };
   }
 
-  searchHandler = event => {
+  searchHandler = (event) => {
     let searchQuery = event.target.value.toLowerCase();
-    var filteredTags = this.state.allTags.filter(el => {
+    var filteredTags = this.state.allTags.filter((el) => {
       let searchValue = el.fieldValue.toLowerCase();
       return searchValue.indexOf(searchQuery) !== -1;
     });
@@ -35,7 +35,7 @@ class SearchableTagList extends React.Component {
           <input type="text" className="search" onChange={this.searchHandler} />
         </div>
         <div className="tags">
-          {tags.map(tag => (
+          {tags.map((tag) => (
             <span key={tag.fieldValue}>
               <Tag tag={tag.fieldValue} count={tag.totalCount} />
             </span>

@@ -10,7 +10,7 @@ const BlogPostHeader = ({ link, title, date, keywords }) => (
     </h1>
     <span className="blog-date">{date}</span>
     <div className="blog-tags">
-      {keywords.map(tag => {
+      {keywords.map((tag) => {
         return <Tag tag={tag} key={tag} />;
       })}
     </div>

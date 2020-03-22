@@ -1,11 +1,11 @@
 export function onInitialClientRender() {
-  var importScript = (function(oHead) {
+  var importScript = (function (oHead) {
     function loadError(oError) {
       throw new URIError(
         'The script ' + oError.target.src + ' is not accessible.'
       );
     }
-    return function(sSrc, fOnload) {
+    return function (sSrc, fOnload) {
       var oScript = document.createElement('script');
       oScript.type = 'text/javascript';
       oScript.onerror = loadError;
@@ -17,8 +17,8 @@ export function onInitialClientRender() {
     };
   })(document.head || document.getElementsByTagName('head')[0]);
 
-  importScript('/vendor/raphael/raphael.min.js', function() {
-    importScript('/vendor/flowchart/flowchart.min.js', function() {
+  importScript('/vendor/raphael/raphael.min.js', function () {
+    importScript('/vendor/flowchart/flowchart.min.js', function () {
       var flowchartElements = document.getElementsByClassName(
         'coc-remark-flowchart'
       );

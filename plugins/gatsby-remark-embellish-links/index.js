@@ -5,7 +5,7 @@ const defaultSites = require('./sites');
 //var urlExists = require('url-exists');
 
 module.exports = ({ markdownAST }, { sites } = {}) => {
-  visit(markdownAST, 'link', node => {
+  visit(markdownAST, 'link', (node) => {
     const linkMap = sites || defaultSites;
 
     for (var icon in linkMap) {
