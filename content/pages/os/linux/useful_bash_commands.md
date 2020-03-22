@@ -2,9 +2,14 @@
 published: true
 path: "/os/linux/bash_commands"
 date: "2020-03-22"
-title: "Ubuntu Tweaks"
+title: "Useful Bash Commands"
 tags: ["os", "bash", "commands", "linux"]
 ---
+
+## Keyboard/Terminal
+
+- Search in history: <hk keys="Ctrl + R"></hk>
+- Restore lost echo: `reset`
 
 ## Network
 
