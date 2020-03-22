@@ -6,7 +6,7 @@ title: "Patterns"
 tags: ["software", "pattern"]
 ---
 
-# Software Design Patterns
+## Software Design Patterns
 
 *Taken from Wikipedia, personal adaptations and additions made, shortened to be used as a small reference card, links back to wikipedia kept for details.*
 
@@ -16,7 +16,7 @@ See also [Software Anti-Patterns](anti-patterns).
 | ----------------------- | ----------------------------------------------------------- |
 | Layers                  | Separation of the system in layers, each layer knowing only of the layer above and under itself |
 | MVC                     | Separation of the view (user interface) from the model (underlying data) and the controller (user interaction) |
-| [MVP](https://en.wikipedia.org/wiki/Model–view–presenter)    | Model View Presenter: all presentation logic is pushed to the presenter, mainly used for GUI development |
+| [MVP](https://en.wikipedia.org/wiki/Model-view-presenter)    | Model View Presenter: all presentation logic is pushed to the presenter, mainly used for GUI development |
 | [MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)      | Model View ViewModel: The view model handles the view's display logic, is responsible for exposing the data objects from the model in such a way that the objects are easily managed and consumed |
 | Multitier architecture           | The presentation, the application processing, and the data management are logically separate processes |
 | Pipeline                                       | Chain of processing elements |

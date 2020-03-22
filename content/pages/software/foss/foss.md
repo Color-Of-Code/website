@@ -5,6 +5,7 @@ date: "2019-01-01"
 title: "List of FOSS"
 tags: ["software", "foss"]
 ---
+
 # Greatest Free and Open Source Software
 
 *Quite often people hear or use software that is free of charge (freeware). Here I want to present great software that is additionally Open Source. This additional requirement is important to me as I like to have insight in the software and be able to use parts of it for own purposes. Some people think that software that costs nothing is also not worth anything. I hope I can contribute to a mind change.*
@@ -29,7 +30,7 @@ tags: ["software", "foss"]
 | Name   | Description |
 | ------ | :------- |
 | audacity | ![Alt text](icons/audacity.png) https://www.audacityteam.org/ |
-|          | Great tool to record and edit sound files. It is fast and extensible. It supports a lot of formats and allows to filter or apply effects on sound tracks. Here is a list of features from the audacity wiki: http://wiki.audacityteam.org/index.php?title=Current_Features. |
+|          | Great tool to record and edit sound files. It is fast and extensible. It supports a lot of formats and allows to filter or apply effects on sound tracks. Here is a list of features from the audacity wiki: https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page. |
 | VLC      |   https://www.videolan.org/vlc/    |
 |          | A very nice, versatile and powerful video player.      |
 | UltraVNC |        https://www.uvnc.com             |

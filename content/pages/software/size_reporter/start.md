@@ -37,7 +37,7 @@ Example of output:
 
 ```
 Depth    Files    Dirs    Virtual   Size on   Last modification     Relative Path
-                          size (MB) disk (MB)   
+                          size (MB) disk (MB)
 3        9        0       1,091     1,113    2005-05-17 21:27:01    .\$hf_mig$\KB898461\update
 2        12       1       1,326     1,355    2005-05-17 21:27:01    .\$hf_mig$\KB898461
 ```
@@ -98,13 +98,13 @@ At the time of writing, junctions are skipped as we are interested in the physic
 
 Example: Generate a report of all junctions on C: to "junctions.csv"
 
-```
+```cmd
 SizeReporter.exe --list-junctions --junctions-file "junctions.csv" "C:" 1
 ```
 
 ## Installation
 
-The tool does not come with an installer, just download the zip and unpack it where you like and tun the executable.\\ 
+The tool does not come with an installer, just download the zip and unpack it where you like and tun the executable.\\
 
 * Download {{:product:size_reporter:size_reporter-1.1.0.zip|Size_Reporter-1.1.0.zip}} [21KB, 2011-02-22] and unpack it
 * Make sure you have the prerequisities installed (see below)
