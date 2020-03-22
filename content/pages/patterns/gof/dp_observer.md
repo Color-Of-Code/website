@@ -3,20 +3,19 @@ published: true
 path: "/patterns/gof-observer"
 date: "2019-01-02"
 title: "GoF: Observer pattern"
-tags: ["software", "pattern", "observer", "TODO_cleanup"]
+tags: ["software", "pattern", "observer", "GoF"]
 ---
-# Observer
+## Observer
 
-## Goal
+### Goal
 
 A subject object, maintains a list of its dependents, called observers, and notifies them automatically of any state changes.
 
-## UML
+### UML
 
-{{http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png|Observer pattern}}
-}
+<a title="Vanderjoe / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:W3sDesign_Observer_Design_Pattern_UML.jpg"><img width="512" alt="W3sDesign Observer Design Pattern UML" src="https://upload.wikimedia.org/wikipedia/commons/0/01/W3sDesign_Observer_Design_Pattern_UML.jpg"></a>
 
-## C#
+### C#
 
 2 alternatives ([More information here](http://msdn.microsoft.com/en-us/library/ee817669.aspx#observerpattern_topic3b)):
 
