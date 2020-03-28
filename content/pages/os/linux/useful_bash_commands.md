@@ -11,6 +11,20 @@ tags: ["os", "bash", "commands", "linux"]
 - Search in history: <hk keys="Ctrl + R"></hk>
 - Restore lost echo: `reset`
 
+### List logged in users
+
+```bash
+who -a
+```
+
+## Storage
+
+### List block devices
+
+```bash
+blkid
+```
+
 ## Network
 
 ### Scans
