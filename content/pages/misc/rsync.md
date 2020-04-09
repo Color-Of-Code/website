@@ -2,7 +2,7 @@
 published: true
 path: "/misc/rsync-flags"
 date: "2020-04-08"
-title: "Rsync Falgs"
+title: "Rsync Flags"
 tags: ["rsync", "flags", "log"]
 ---
 
