@@ -1,26 +1,24 @@
 html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    line-height: 1.45em;
-    font-size: 112.5%;
-    /* georgia, serif; */
-    box-sizing: border-box;
-    overflow-y: scroll;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.45em;
+  font-size: 112.5%;
+  box-sizing: border-box;
+  overflow-y: scroll;
 }
 
 body {
-    background-color: black;
-    margin: 0;
-    color: hsla(0, 0%, 100%, 0.8);
-    font-family: georgia, serif;
-    font-weight: normal;
-    word-wrap: break-word;
-    font-kerning: normal;
-    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  background-color: black;
+  margin: 0;
+  color: hsla(0, 0%, 100%, 0.8);
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
 article,
@@ -35,23 +33,23 @@ menu,
 nav,
 section,
 summary {
-    display: block;
+  display: block;
 }
 
 audio,
 canvas,
 progress,
 video {
-    display: inline-block;
+  display: inline-block;
 }
 
 audio:not([controls]) {
-    display: none;
-    height: 0;
+  display: none;
+  height: 0;
 }
 
 progress {
-    vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 [hidden],
@@ -71,16 +69,16 @@ a:hover {
 }
 
 abbr[title] {
-    border-bottom: none;
-    border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-    cursor: help;
-    text-decoration: none;
+  border-bottom: none;
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+  text-decoration: none;
 }
 
 b,
 strong {
-    font-weight: inherit;
-    font-weight: bolder;
+  font-weight: inherit;
+  font-weight: bolder;
 }
 
 dfn {
@@ -88,43 +86,43 @@ dfn {
 }
 
 h1 {
-    margin: 0.67em 0;
-    margin-bottom: 1.45rem;
-    margin-left: -1.0rem;
-    margin-right: 0;
-    margin-top: 0;
-    padding: 0;
-    color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-size: 2.25rem;
-    line-height: 1.1;
+  margin: 0.67em 0;
+  margin-bottom: 1.45rem;
+  margin-left: -1.0rem;
+  margin-right: 0;
+  margin-top: 0;
+  padding: 0;
+  color: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 2.25rem;
+  line-height: 1.1;
 }
 
 mark {
-    background-color: #ff0;
-    color: #eee;
+  background-color: #ff0;
+  color: #eee;
 }
 
 small {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sub {
-    bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 sup {
-    top: -0.5em;
+  top: -0.5em;
 }
 
 img {
@@ -143,25 +141,25 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace;
-    font-size: 1em;
+  font-family: monospace;
+  font-size: 1em;
 }
 
 figure {
-    margin: 0;
-    margin-bottom: 1.45rem;
-    padding: 0;
+  margin: 0;
+  margin-bottom: 1.45rem;
+  padding: 0;
 }
 
 hr {
-    box-sizing: content-box;
-    overflow: visible;
-    margin: 0;
-    margin-bottom: calc(1.45rem - 1px);
-    padding: 0;
-    background: hsla(0, 0%, 100%, 0.2);
-    border: none;
-    height: 1px;
+  box-sizing: content-box;
+  overflow: visible;
+  margin: 0;
+  margin-bottom: calc(1.45rem - 1px);
+  padding: 0;
+  background: hsla(0, 0%, 100%, 0.2);
+  border: none;
+  height: 1px;
 }
 
 button,
@@ -169,37 +167,37 @@ input,
 optgroup,
 select,
 textarea {
-    font: inherit;
-    margin: 0;
+  font: inherit;
+  margin: 0;
 }
 
 optgroup {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 button,
 input {
-    overflow: visible;
+  overflow: visible;
 }
 
 button,
 select {
-    text-transform: none;
+  text-transform: none;
 }
 
 [type='reset'],
 [type='submit'],
 button,
 html [type='button'] {
-    -webkit-appearance: button;
+  -webkit-appearance: button;
 }
 
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner,
 button::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
+  border-style: none;
+  padding: 0;
 }
 
 [type='button']:-moz-focusring,
@@ -212,12 +210,9 @@ button:-moz-focusring {
 fieldset {
     border: 1px solid silver;
     margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
     margin-bottom: 1.45rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
     padding: 0;
+    padding: 0.35em 0.625em 0.75em;
 }
 
 legend {
@@ -500,38 +495,37 @@ code {
 }
 
 kbd {
-    font-size: 0.85rem;
-    line-height: 1.45rem;
+  font-size: 0.85rem;
+  line-height: 1.45rem;
 }
 
 samp {
-    font-size: 0.85rem;
-    line-height: 1.45rem;
+  font-size: 0.85rem;
+  line-height: 1.45rem;
 }
 
 abbr {
-    border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-    cursor: help;
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
 }
 
 acronym {
-    border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-    cursor: help;
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
 }
 
 thead {
-    text-align: center;
+  text-align: center;
 }
 
 td,
 th {
-    text-align: left;
-    border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-    font-feature-settings: 'tnum';
-    -moz-font-feature-settings: 'tnum';
-    -ms-font-feature-settings: 'tnum';
-    -webkit-font-feature-settings: 'tnum';
-    padding: 0.2rem;
+  text-align: left;
+  font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
+  padding: 0.2rem;
 }
 
 th:first-child,
@@ -555,27 +549,27 @@ code {
 }
 
 pre code {
-    background: none;
-    line-height: 1.42;
+  background: none;
+  line-height: 1.42;
 }
 
 code::before,
 code::after,
 tt::before,
 tt::after {
-    letter-spacing: -0.2em;
-    content: ' ';
+  letter-spacing: -0.2em;
+  content: ' ';
 }
 
 pre code::before,
 pre code::after,
 pre tt::before,
 pre tt::after {
-    content: '';
+  content: '';
 }
 
 @media only screen and (max-width: 480px) {
-    html {
-        font-size: 100%;
-    }
+  html {
+      font-size: 100%;
+  }
 }
