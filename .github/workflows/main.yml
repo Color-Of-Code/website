@@ -10,14 +10,16 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Install node 10.x
+      - name: Install node 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 10.x
+          node-version: 12.x
 
       - name: Install via APT - Graphviz, Cargo
         run: |
-          sudo apt-get install -y graphviz cargo
+          sudo apt-get update
+          sudo apt-get autoremove
+          sudo apt-get install --no-install-recommends -y graphviz cargo
 
       - name: Install via Cargo - SvgBob
         run: |
