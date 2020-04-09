@@ -2,11 +2,25 @@ html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    line-height: 1.45em;
+    font-size: 112.5%;
+    /* georgia, serif; */
+    box-sizing: border-box;
+    overflow-y: scroll;
 }
 
 body {
     background-color: black;
     margin: 0;
+    color: hsla(0, 0%, 100%, 0.8);
+    font-family: georgia, serif;
+    font-weight: normal;
+    word-wrap: break-word;
+    font-kerning: normal;
+    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
 article,
@@ -58,8 +72,9 @@ a:hover {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
-    text-decoration: underline dotted;
+    border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+    cursor: help;
+    text-decoration: none;
 }
 
 b,
@@ -73,8 +88,18 @@ dfn {
 }
 
 h1 {
-    font-size: 2em;
     margin: 0.67em 0;
+    margin-bottom: 1.45rem;
+    margin-left: -1.0rem;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    color: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-size: 2.25rem;
+    line-height: 1.1;
 }
 
 mark {
@@ -103,7 +128,16 @@ sup {
 }
 
 img {
-    border-style: none;
+  border-style: none;
+  max-width: 100%;
+  margin-bottom: 1.45rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
 }
 
 svg:not(:root) {
@@ -114,18 +148,30 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
+    font-family: monospace;
     font-size: 1em;
 }
 
 figure {
     margin: 1em 40px;
+    margin-bottom: 1.45rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
 }
 
 hr {
     box-sizing: content-box;
-    height: 0;
     overflow: visible;
+    margin-bottom: calc(1.45rem - 1px);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    background: hsla(0, 0%, 100%, 0.2);
+    border: none;
+    height: 1px;
 }
 
 button,
@@ -177,6 +223,11 @@ fieldset {
     border: 1px solid silver;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
+    margin-bottom: 1.45rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
 }
 
 legend {
@@ -223,63 +274,16 @@ textarea {
     font: inherit;
 }
 
-html {
-    font: 112.5%/1.45em georgia, serif;
-    box-sizing: border-box;
-    overflow-y: scroll;
-}
-
 * {
     box-sizing: inherit;
 }
 
-*:before {
+*::before {
     box-sizing: inherit;
 }
 
-*:after {
+*::after {
     box-sizing: inherit;
-}
-
-body {
-    color: hsla(0, 0%, 100%, 0.8);
-    font-family: georgia, serif;
-    font-weight: normal;
-    word-wrap: break-word;
-    font-kerning: normal;
-    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-}
-
-img {
-    max-width: 100%;
-    margin-bottom: 1.45rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-}
-
-h1 {
-    margin-bottom: 1.45rem;
-    margin-left: -1.0rem;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-size: 2.25rem;
-    line-height: 1.1;
 }
 
 h2 {
@@ -287,10 +291,7 @@ h2 {
     margin-left: -1.0rem;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     color: inherit;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
@@ -304,10 +305,7 @@ h3 {
     margin-left: -0.9rem;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     color: inherit;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
@@ -321,10 +319,7 @@ h4 {
     margin-left: -0.8rem;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     color: inherit;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
@@ -338,10 +333,7 @@ h5 {
     margin-left: -0.7rem;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     color: inherit;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
@@ -355,10 +347,7 @@ h6 {
     margin-left: -0.6rem;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     color: inherit;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
@@ -372,10 +361,7 @@ hgroup {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 ul {
@@ -383,10 +369,7 @@ ul {
     margin-left: 1.45rem;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     list-style-position: outside;
     list-style-image: none;
 }
@@ -396,10 +379,7 @@ ol {
     margin-left: 1.45rem;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     list-style-position: outside;
     list-style-image: none;
 }
@@ -409,10 +389,7 @@ dl {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 dd {
@@ -420,10 +397,7 @@ dd {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 p {
@@ -431,21 +405,7 @@ p {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-}
-
-figure {
-    margin-bottom: 1.45rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 pre {
@@ -453,10 +413,6 @@ pre {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
     font-size: 0.85rem;
     line-height: 1.42;
     background: hsla(0, 0%, 100%, 0.04);
@@ -471,10 +427,7 @@ table {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     font-size: 1rem;
     line-height: 1.45rem;
     border-collapse: collapse;
@@ -484,26 +437,12 @@ table {
     width: 100%;
 }
 
-fieldset {
-    margin-bottom: 1.45rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-}
-
 blockquote {
     margin-bottom: 1.45rem;
     margin-left: 1.45rem;
     margin-right: 1.45rem;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 form {
@@ -511,10 +450,7 @@ form {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 noscript {
@@ -522,10 +458,7 @@ noscript {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 iframe {
@@ -533,24 +466,7 @@ iframe {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-}
-
-hr {
-    margin-bottom: calc(1.45rem - 1px);
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    background: hsla(0, 0%, 100%, 0.2);
-    border: none;
-    height: 1px;
+    padding: 0;
 }
 
 address {
@@ -558,10 +474,7 @@ address {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 b {
@@ -645,12 +558,6 @@ acronym {
     cursor: help;
 }
 
-abbr[title] {
-    border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-    cursor: help;
-    text-decoration: none;
-}
-
 thead {
     text-align: center;
 }
@@ -691,18 +598,18 @@ pre code {
     line-height: 1.42;
 }
 
-code:before,
-code:after,
-tt:before,
-tt:after {
+code::before,
+code::after,
+tt::before,
+tt::after {
     letter-spacing: -0.2em;
     content: ' ';
 }
 
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
+pre code::before,
+pre code::after,
+pre tt::before,
+pre tt::after {
     content: '';
 }
 
