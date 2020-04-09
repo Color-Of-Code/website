@@ -478,6 +478,9 @@ table {
     font-size: 1rem;
     line-height: 1.45rem;
     border-collapse: collapse;
+    border: #386892;
+    border-style: solid;
+    border-width: 1px;
     width: 100%;
 }
 
@@ -649,7 +652,7 @@ abbr[title] {
 }
 
 thead {
-    text-align: left;
+    text-align: center;
 }
 
 td,
@@ -660,10 +663,7 @@ th {
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
     -webkit-font-feature-settings: 'tnum';
-    padding-left: 0.96667rem;
-    padding-right: 0.96667rem;
-    padding-top: 0.725rem;
-    padding-bottom: calc(0.725rem - 1px);
+    padding: 0.2rem;
 }
 
 th:first-child,
