@@ -24,7 +24,7 @@
     "gatsby-remark-prismjs": "^3.4.2",
     "gatsby-source-filesystem": "^2.2.3",
     "gatsby-transformer-remark": "^2.7.2",
-    "gatsby-transformer-sharp": "^2.4.5",
+    "gatsby-transformer-sharp": "^2.4.6",
     "lodash": "^4.17.15",
     "lodash.kebabcase": "^4.1.1",
     "mermaid": "^8.5.0",
