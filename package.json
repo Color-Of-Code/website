@@ -8,7 +8,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "babel-preset-gatsby": "^0.3.2",
     "d3": "^5.15.1",
-    "gatsby": "^2.20.23",
+    "gatsby": "^2.20.26",
     "gatsby-image": "^2.3.3",
     "gatsby-link": "^2.3.3",
     "gatsby-plugin-catch-links": "^2.2.2",
