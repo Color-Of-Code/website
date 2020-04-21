@@ -8,6 +8,12 @@ tags: ["quotes", "miscellaneous", "finance"]
 
 ## Finance quotes
 
+<quote author="Albert Camus">
+Avoir de l'argent c'est se libérer de l'argent.
+
+Having money is a way of being free of money.
+</quote>
+
 <quote author="Unknown">
 The few who understand the system will either be so interested in its profits or be so dependent upon its favours that there will be no opposition from that class, while on the other hand, the great body of people, mentally incapable of comprehending the tremendous advantage that capital derives from the system, will bear its burdens without complaint, and perhaps without even suspecting that the system is inimical to their interests.
 </quote>
