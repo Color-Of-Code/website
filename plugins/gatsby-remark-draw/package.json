@@ -32,25 +32,25 @@
   "license": "MIT",
   "dependencies": {
     "skyrta": "^0.1.8",
-    "unist-util-visit": "^1.4.0"
+    "unist-util-visit": "^2.0.2"
   },
   "bugs": {
     "url": "https://github.com/rhanekom/gatsby-remark-draw/issues"
   },
   "homepage": "https://github.com/rhanekom/gatsby-remark-draw#readme",
   "devDependencies": {
-    "eslint": "^5.12.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest": "^22.4.3",
-    "mermaid": "^8.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.4.0",
+    "mermaid": "^8.5.0",
     "mermaid.cli": "^0.5.1",
-    "remark": "^10.0.1",
-    "remark-preset-lint-recommended": "^3.0.2",
-    "remark-validate-links": "^8.0.0"
+    "remark": "^12.0.0",
+    "remark-preset-lint-recommended": "^4.0.0",
+    "remark-validate-links": "^10.0.0"
   },
   "remarkConfig": {
     "plugins": [

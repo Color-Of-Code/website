@@ -6,23 +6,23 @@ A wrapper around some popular graph tools to generate diagrams from embedded cod
 
 This package currently supports:
 
--   [SvgBobRus][bobrus] for ASCII diagrams
--   [GraphViz][graphviz] for diagrams expressed in dot
--   [Mermaid][mermaid] for diagrams and flowcharts
+- [SvgBobRus][bobrus] for ASCII diagrams
+- [GraphViz][graphviz] for diagrams expressed in dot
+- [Mermaid][mermaid] for diagrams and flowcharts
 
 TODO:
 
--   ~~Enable options to be passed to executables~~
--   ~~Mermaid support~~
--   ~~Other GraphViz layout engines like `neato`~~
--   ~~Embed as img tag option~~
--   Tranform links to graph files
+- ~~Enable options to be passed to executables~~
+- ~~Mermaid support~~
+- ~~Other GraphViz layout engines like `neato`~~
+- ~~Embed as img tag option~~
+- Tranform links to graph files
 
 This package uses a simple (naive) mechanism - by default, read the code block, pass it the selected process and replace the current code block with the generated SVG wrapped in a div.  For styling purposes the class names are the following:
 
--   `remark-draw`
--   `remark-draw-dot` (for GraphViz graphs)
--   `remark-draw-svgbob` (for SvgBobRus graphs)
+- `remark-draw`
+- `remark-draw-dot` (for GraphViz graphs)
+- `remark-draw-svgbob` (for SvgBobRus graphs)
 
 In order to avoid conflicts with syntax highligters the language is postfixed with "-svg".
 
@@ -39,7 +39,7 @@ In your `gatsby-config.js` add this plugin under the `gatsby-transformer-remark`
 ```json
 resolve: "gatsby-transformer-remark",
       options: {
-		"strategy": "img",
+    "strategy": "img",
         "plugins": [
           "gatsby-remark-draw"
         ]
@@ -53,20 +53,20 @@ Since v1.0.8 options can now be passed through to the rendering engine to change
 
 ```json
 resolve: 'gatsby-remark-draw',
-	options: {
-		dot: {
-			edgeAttributes: {
-				'arrowtail': 'empty',
-				'arrowhead': 'empty'
-			}
-		},
-		bob: {
-			fontFamily: 'verdana'
-		},
-		mermaid: {
-			theme: 'forest'
-		}
-	}
+  options: {
+    dot: {
+      edgeAttributes: {
+        'arrowtail': 'empty',
+        'arrowhead': 'empty'
+      }
+    },
+    bob: {
+      fontFamily: 'verdana'
+    },
+    mermaid: {
+      theme: 'forest'
+    }
+  }
 }
 ```
 
@@ -120,8 +120,6 @@ will provide the following (rendered) SVG diagram:
 
 ![Mermaid output](doc/mermaid.png)
 
-
-
 ## Demo
 
 Demos can be found [here](https://rhanekom.github.io/gatsby-remark-draw-demo/).
@@ -135,4 +133,3 @@ Demos can be found [here](https://rhanekom.github.io/gatsby-remark-draw-demo/).
 [skyrta]: https://github.com/rhanekom/skyrta
 
 [mermaid]: https://github.com/knsv/mermaid
-

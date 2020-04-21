@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "remark-math": "^1.0.5",
-    "unist-util-visit": "^1.4.0"
+    "remark-math": "^2.0.1",
+    "unist-util-visit": "^2.0.2"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "cross-env": "^7.0.2"
   },
   "homepage": "https://github.com/hanai/gatsby-remark-mathjax#readme",
   "keywords": [
