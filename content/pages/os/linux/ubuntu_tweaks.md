@@ -1,12 +1,26 @@
 ---
 published: true
 path: "/os/linux/ubuntu/tweaks"
-date: "2018-12-24"
+date: "2020-04-27"
 title: "Ubuntu Tweaks"
-tags: ["os", "ubuntu", "tweaks", "linux"]
+tags: ["os", "ubuntu", "tweaks", "linux", "btrfs"]
 ---
 
 # Ubuntu Tweaks
+
+## BtrFS maintenance
+
+balance tree:
+
+```bash
+btrfs balance start -dusage=50 -dlimit=2 -musage=50 -mlimit=4 /
+```
+
+weekly scrub:
+
+```bash
+btrfs scrub start -B -d -c 2 -n 4 /
+```
 
 ## BtrFS snapshot settings
 
