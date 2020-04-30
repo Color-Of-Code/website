@@ -6,7 +6,7 @@
   "author": "Jaap de Haan <jaap.dehaan@freenet.de>",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
-    "babel-preset-gatsby": "^0.3.6",
+    "babel-preset-gatsby": "^0.4.0",
     "d3": "^5.16.0",
     "gatsby": "^2.21.7",
     "gatsby-image": "^2.4.0",
