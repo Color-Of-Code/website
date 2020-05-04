@@ -15,20 +15,20 @@ Analysis of other available projects
 
 ## Similar Remark plugins
 
-* https://github.com/rhanekom/gatsby-remark-draw
-* https://github.com/konsumer/gatsby-remark-graph
-* https://github.com/hanai/gatsby-remark-mathjax
+- https://github.com/rhanekom/gatsby-remark-draw
+- https://github.com/konsumer/gatsby-remark-graph
+- https://github.com/hanai/gatsby-remark-mathjax
 
 ## Interesting links
 
-* https://blog.nteract.io/designing-the-nteract-data-explorer-f4476d53f897
-* https://emeeks.github.io/semiotic/#/semiotic/
+- https://blog.nteract.io/designing-the-nteract-data-explorer-f4476d53f897
+- https://emeeks.github.io/semiotic/#/semiotic/
 
 ## Rendering
 
 ### Slides
 
-* https://revealjs.com/#/
+- https://revealjs.com/#/
 
 ### svg
 
