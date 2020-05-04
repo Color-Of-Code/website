@@ -7,7 +7,7 @@ import '../styles/tags.css';
 
 const AllTags = ({ text }) => (
   <span className="search-tag">
-    <FaTags />
+    <FaTags className="tag" />
     &nbsp;
     <Link to={'/tags'}>{text}</Link>
   </span>

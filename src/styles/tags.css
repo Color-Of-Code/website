@@ -22,3 +22,9 @@ span.search-tag a {
     color: white;
     text-decoration: none;
 }
+
+svg.tag {
+  color: lightsteelblue;
+  background: inherit;
+  border-radius: initial;
+}

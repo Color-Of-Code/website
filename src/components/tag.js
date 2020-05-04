@@ -10,7 +10,7 @@ function Tag({ tag, count }) {
   const showCount = count !== 0;
   return (
     <span className="search-tag">
-      <FaTag />
+      <FaTag className="tag" />
       &nbsp;
       {showCount ? (
         <Link to={`/tags/${kebabCase(tag)}/`}>

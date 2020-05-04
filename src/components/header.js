@@ -74,7 +74,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          <FaHome />
+          <FaHome className="tag" />
           &nbsp; Home
         </Link>
         &nbsp;
@@ -85,7 +85,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          <FaTags />
+          <FaTags className="tag" />
           &nbsp; All tags
         </Link>
         &nbsp;
@@ -96,7 +96,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          <FaInfoCircle />
+          <FaInfoCircle className="tag" />
           &nbsp; Terms and Conditions
         </Link>
       </div>

@@ -44,3 +44,12 @@ a i {
     color: cadetblue;
     margin-right: 4px;
 }
+
+svg {
+  background: whitesmoke;
+  border-radius: 8px;
+}
+
+mjx-container > svg {
+  background: transparent;
+}
