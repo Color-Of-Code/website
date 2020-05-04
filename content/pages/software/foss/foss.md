@@ -24,6 +24,8 @@ tags: ["software", "foss"]
 |          | If you need a tool for vector graphics, give it at least a try. I needed some time to get into efficient workflows to create images, the settings are quite overwhelming. |
 | povray   | ![Alt text](icons/povray.png) https://www.povray.org   |
 |          | Raytracing is what you like, then povray is a powerful raytracer that renders scenes very nicely, with a high degree of physical correctness. However it doesn't come with any decent scene editor, so google for some editors and use it as an engine only.  |
+| gthumb   | ![Alt text](icons/povray.png) https://wiki.gnome.org/Apps/Gthumb   |
+|          | gThumb is an image viewer and browser for the GNOME Desktop. It also includes an importer tool for transferring photos from cameras.  |
 
 ## Multimedia
 
@@ -107,12 +109,21 @@ tags: ["software", "foss"]
 |  mercurial  |  https://www.mercurial-scm.org/ |
 |    |  If you want a distributed version control system built upon subversion.  |
 
+## Development
+
+| Name   | Description |
+| ------ | :------- |
+| papyrus     | https://www.eclipse.org/papyrus/        |
+|            | Eclipse Papyrus is an industrial-grade open source Model-Based Engineering tool. Eclipse Papyrus has notably been used successfuly in industrial projects and is the base platform for several industrial modeling tools. |                              |
+| vscode     | https://code.visualstudio.com/        |
+|            | Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). |                              |
+
 ## Backup
 
 | Name   | Description |
 | ------ | :------- |
-| rsync | Low level file sync |
-| bup | |
-| borg | |
+| rsync     | Low level file sync |
+| bup       | |
+| borg      | |
 | duplicati | |
-| restic | |
+| restic    | |
