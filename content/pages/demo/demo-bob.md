@@ -8,6 +8,8 @@ tags: ["demo", "test", "bob"]
 
 # Test
 
+**NOTE**: disabled installation of svg bob at the moment (not used)
+
 ## remark-draw
 
 ### bob
@@ -16,7 +18,7 @@ tags: ["demo", "test", "bob"]
 
 Copied directly from the [SvgBobRus repo](https://github.com/ivanceras/svgbobrus).
 
-```bob-svg
+```disabled-bob-svg
 Svgbob is a diagramming model
 which uses a set of typing characters
 to approximate the intended shape.

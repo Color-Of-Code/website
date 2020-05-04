@@ -13,15 +13,9 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Install via APT - Graphviz, Cargo
+      - name: Install via APT - Graphviz
         run: |
-          sudo apt-get update
-          sudo apt-get autoremove
-          sudo apt-get install --no-install-recommends -y graphviz cargo
-
-      - name: Install via Cargo - SvgBob
-        run: |
-          sudo cargo install svgbob_cli
+          sudo apt-get install --no-install-recommends -y graphviz
 
       - name: Setup Node Package Cache
         uses: actions/cache@v1
