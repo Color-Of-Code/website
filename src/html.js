@@ -44,7 +44,7 @@ export default class HTML extends React.Component {
             type="text/javascript"
             id="MathJax-script"
             defer
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"
+            src="/vendor/mathjax/tex-svg-full.js"
           ></script>
         </body>
       </html>
