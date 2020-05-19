@@ -29,6 +29,12 @@ https://docs.microsoft.com/en-us/powershell/module/addsadministration/set-adacco
 PS C:\> Set-ADAccountPassword -Identity <user>
 ```
 
+Using smbpasswd (from `samba-common-bin`)
+
+```
+smbpasswd -U <user> -r <IP address of DC>
+```
+
 ### Fix trust relationship
 
 Requires a domain admin account
