@@ -16,7 +16,12 @@ But the open source driver is available (with some missing features)
 
 ```
 Open Source AMD Radeon Ubuntu Driver
-The Open Source AMD Radeon Ubuntu Driver is already installed on your system by default and out of the box. They're integrated into Mesa and the Linux kernel. There is nothing further you need to do in order to start using your AMD Radeon card. In this scenario you may not be on the bleeding edge in terms of the latest AMD Radeon driver version, but your system will benefit from an increased stability and painless automatic driver updates.
+The Open Source AMD Radeon Ubuntu Driver is already installed on your system by default
+and out of the box. They're integrated into Mesa and the Linux kernel. There is nothing
+further you need to do in order to start using your AMD Radeon card. In this scenario
+you may not be on the bleeding edge in terms of the latest AMD Radeon driver version,
+but your system will benefit from an increased stability and painless automatic driver
+updates.
 ```
 
 * https://wiki.archlinux.org/index.php/AMDGPU
@@ -41,7 +46,10 @@ dmesg | grep -i amdgpu
 To get the name and current status of connectors, you can use the following shell oneliner:
 
 ```bash
-$ for p in /sys/class/drm/*/status; do con=${p%/status}; echo -n "${con#*/card?-}: "; cat $p; done
+$ for p in /sys/class/drm/*/status; do \
+    con=${p%/status}; echo -n "${con#*/card?-}: "; \
+    cat $p; \
+  done
 DVI-I-1: connected
 HDMI-A-1: disconnected
 VGA-1: disconnected
