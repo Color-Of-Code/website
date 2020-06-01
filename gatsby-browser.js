@@ -10,7 +10,11 @@ require('./src/styles/prismjs-custom.css');
 
 // MathJax will process all math equations when the location changed.
 exports.onRouteUpdate = () => {
-  if (window.MathJax !== undefined) {
-    window.MathJax.typeset();
+  try {
+    if (window.MathJax !== undefined) {
+      window.MathJax.typeset();
+    }
+  } catch (error) {
+    console.error(error);
   }
 };
