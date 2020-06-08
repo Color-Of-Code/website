@@ -14,7 +14,7 @@
     "gatsby-link": "^2.4.3",
     "gatsby-plugin-catch-links": "^2.3.3",
     "gatsby-plugin-favicon": "^3.1.6",
-    "gatsby-plugin-manifest": "^2.4.9",
+    "gatsby-plugin-manifest": "^2.4.10",
     "gatsby-plugin-offline": "^3.2.7",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-robots-txt": "^1.5.1",
