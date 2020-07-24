@@ -76,6 +76,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
     "gatsby-plugin-eslint": "^2.0.8",
+    "husky": "^4.2.5",
     "markdown-link-check": "^3.8.1",
     "prettier": "^2.0.5",
     "stylelint": "^13.6.1",
