@@ -31,7 +31,7 @@
     "lodash.kebabcase": "^4.1.1",
     "mermaid": "^8.6.3",
     "mermaid.cli": "^0.5.1",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
