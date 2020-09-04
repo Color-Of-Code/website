@@ -2,11 +2,11 @@
 published: true
 path: "/hardware/pc/linux"
 date: "2020-09-01"
-title: "Main PC"
+title: "PC Build 2020"
 tags: ["hardware", "pc", "linux"]
 ---
 
-# main PC
+# PC Build 2020
 
 ## Requirements
 
@@ -48,7 +48,9 @@ NOTES:
 * The cooler was modified to make both FANs work in pull mode (not enough place due to tall RAM)
 * Initially with BIOS v1407, RAM was instable and POST unsuccessful
 * Bios update (v2606) required to clear the RTC RAM (shortcut 2 pins on the mainboard) otherwise the system didn't POST at all
-* With BIOS v2606, the RAM performs well at the XMP profile settings (14-14-14-34 timings)
+* With BIOS v2606, the RAM performs well at the XMP profile settings (14-14-14-34- timings, 1.35v)
+* There are still sporadic POST issues ([Hint 1](https://www.reddit.com/r/ASUS/comments/et9q38/prime_x570_pro_wont_post_but_only_randomly/), [Hint2](https://rog.asus.com/forum/showthread.php?117380-Intermittent-No-Display-and-No-POST-on-ASUS-X570-P/page1), [Hint 3](https://www.overclockers.com/forums/showthread.php/795714-Not-sure-if-its-Asus-DOCP-or-my-ram-with-reboot-halting))
+* Disabled FAST boot and reduced DRAM voltage from 1.35v to 1.34v manual setting, XMP stored value is 1.35v
 
 ## Software
 
@@ -61,10 +63,21 @@ NOTES:
 
 * ZFS is still experimental on linux and repair tools availibility are low.
 * LVM is not setup because I do not intend to make any changes to the main system storage.
-* The FAN sensor values are not yet readable from the vanilla linux kernel + modules in 20.04.1 LTS (super IO chip not fully supported)
+* The FAN sensor values are not yet readable from the vanilla linux kernel + modules in 20.04.1 LTS (super IO chip [NCT6798D](https://github.com/lm-sensors/lm-sensors/issues/197) not fully supported)
 * CPU FAN + temperature is readable
+
+The problems with the sensors are related to the hwmon driver [nct6775](https://github.com/lm-sensors/lm-sensors/issues/220).
+
+```
+nct6775: Found NCT6798D or compatible chip at 0x2e:0x290
+ACPI Warning: SystemIO range 0x0000000000000295-0x0000000000000296 conflicts with OpRegion 0x0000000000000290-0x0000000000000299 (\AMW0.SHWM) (20190509/utaddress-204)
+ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+```
+
+A [workaround](https://bugzilla.kernel.org/show_bug.cgi?id=204807) could be using the boot parameter `acpi_enforce_resources=lax` (but it's risky)
 
 ## Tests
 
 * CPU stress tests went ok
-* RAM stess tests not performed yet
+* RAM tests performed with DRAM voltage at 1.35v (1 pass PassMark free OK) but there are POST issues
+* RAM tests performed with DRAM voltage at 1.34v (1 pass PassMark free OK + 4 Passes in a row OK)
