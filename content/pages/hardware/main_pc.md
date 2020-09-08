@@ -26,7 +26,7 @@ Thoughts
 
 | Component  | Size(s) | Description |
 | ----       | ----   |  ----        |
-| Mainboard  | X570   | ASUS Prime X570-P |
+| Motherboard  | X570   | ASUS Prime X570-P |
 | CPU        | 3950X  | AMD Ryzen™ 9 3950X boxed |
 | CPU Cooler | NH-D15 | Noctua NH-D15 SE-AM4 |
 | Case       | Define R6 | Fractal Design Define R6 USB-C Black Midi-Tower |
@@ -40,17 +40,17 @@ NOTES:
 
 * I had to suffer to buy RGB memory because the shop I bought it only had that one on stock. The version without RGB is F4-3200C14D-32GTZ.
 * There was not much benefit in taking PCIe 4.0 SSD, that M.2 module is really fast
-* The adapter was needed to make the USB-C port work (no Key A connector on the mainboard) to connect the cable from case
+* The adapter was needed to make the USB-C port work (no Key A connector on the motherboard) to connect the cable from case
 * Another bunch of SATA disks will come into the system at a later time (from previous rig once tests are complete)
 
 ## Installation, known issues
 
 * The cooler was modified to make both FANs work in pull mode (not enough place due to tall RAM)
 * Initially with BIOS v1407, RAM was instable and POST unsuccessful
-* Bios update (v2606) required to clear the RTC RAM (shortcut 2 pins on the mainboard) otherwise the system didn't POST at all
+* Bios update (v2606) required to clear the RTC RAM (shortcut 2 pins on the motherboard) otherwise the system didn't POST at all
 * With BIOS v2606, the RAM performs well at the XMP profile settings (14-14-14-34- timings, 1.35v)
 * There are still sporadic POST issues ([Hint 1](https://www.reddit.com/r/ASUS/comments/et9q38/prime_x570_pro_wont_post_but_only_randomly/), [Hint2](https://rog.asus.com/forum/showthread.php?117380-Intermittent-No-Display-and-No-POST-on-ASUS-X570-P/page1), [Hint 3](https://www.overclockers.com/forums/showthread.php/795714-Not-sure-if-its-Asus-DOCP-or-my-ram-with-reboot-halting))
-* Disabled FAST boot and reduced DRAM voltage from 1.35v to 1.34v manual setting, XMP stored value is 1.35v
+* Disabled FAST boot (seems to help POST RAM checks to pass)
 
 ## Software
 
@@ -74,10 +74,18 @@ ACPI Warning: SystemIO range 0x0000000000000295-0x0000000000000296 conflicts wit
 ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
 ```
 
-A [workaround](https://bugzilla.kernel.org/show_bug.cgi?id=204807) could be using the boot parameter `acpi_enforce_resources=lax` (but it's risky)
+A [workaround](https://bugzilla.kernel.org/show_bug.cgi?id=204807) could be using the boot parameter `acpi_enforce_resources=lax` (but it's risky).
+Added output of my `acpidump -b` to that ticket.
 
 ## Tests
+
+Basic tests to ensure correct cooling, CPU operation and DRAM stability
 
 * CPU stress tests went ok
 * RAM tests performed with DRAM voltage at 1.35v (1 pass PassMark free OK) but there are POST issues
 * RAM tests performed with DRAM voltage at 1.34v (1 pass PassMark free OK + 4 Passes in a row OK)
+* Running PC with Fast Boot disabled and DRAM voltage at 1.35v
+
+## Benchmarks
+
+* https://en.wikipedia.org/wiki/Phoronix_Test_Suite
