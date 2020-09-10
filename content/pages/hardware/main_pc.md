@@ -88,4 +88,17 @@ Basic tests to ensure correct cooling, CPU operation and DRAM stability
 
 ## Benchmarks
 
-* https://en.wikipedia.org/wiki/Phoronix_Test_Suite
+Results: [OpenBenchmarking.org](https://openbenchmarking.org/)
+
+* [Phoronix Test Suite](https://en.wikipedia.org/wiki/Phoronix_Test_Suite)
+* [Linpack Extreme](https://www.ngohq.com/linpack-xtreme.html)
+* [TFM Tyler's Frame Machine](https://github.com/Tylemagne/TFM)
+* [Unigine](https://benchmark.unigine.com/)
+* [Hyperfine](https://github.com/sharkdp/hyperfine)
+* [IOZone](http://www.iozone.org/)
+* [Bonnie++](https://doc.coker.com.au/projects/bonnie/)
+* sysbench
+* fio
+* netperf
+* hardinfo
+* LLCbench
