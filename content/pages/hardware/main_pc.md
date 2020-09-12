@@ -90,15 +90,110 @@ Basic tests to ensure correct cooling, CPU operation and DRAM stability
 
 Results: [OpenBenchmarking.org](https://openbenchmarking.org/)
 
-* [Phoronix Test Suite](https://en.wikipedia.org/wiki/Phoronix_Test_Suite)
+* [pts: Phoronix Test Suite](https://en.wikipedia.org/wiki/Phoronix_Test_Suite)
 * [Linpack Extreme](https://www.ngohq.com/linpack-xtreme.html)
 * [TFM Tyler's Frame Machine](https://github.com/Tylemagne/TFM)
-* [Unigine](https://benchmark.unigine.com/)
+* [Unigine](https://benchmark.unigine.com/)  (part of pts)
 * [Hyperfine](https://github.com/sharkdp/hyperfine)
 * [IOZone](http://www.iozone.org/)
 * [Bonnie++](https://doc.coker.com.au/projects/bonnie/)
-* sysbench
-* fio
+* sysbench (part of pts)
+* fio (part of pts)
 * netperf
 * hardinfo
 * LLCbench
+
+## Linpack extreme
+
+Tests mainly CPU/Memory/Cooling stability.
+
+Processor: AMD Ryzen 9 3950X 16-Core @ 3.50GHz (16 Cores / 32 Threads), Motherboard: ASUS PRIME X570-P (2606 BIOS), Chipset: AMD Starship/Matisse, Memory: 2 x 16384 MB DDR4-3200MT/s F4-3200C14-16GTZR, Disk: 1000GB Samsung SSD 970 EVO Plus 1TB, Graphics: MSI NVIDIA NVA8 1GB, Audio: NVIDIA HD Audio, Monitor: TOSHIBA-TV, Network: Realtek RTL8111/8168/8411
+
+OS: Ubuntu 20.04, Kernel: 5.4.0-47-generic (x86_64), Desktop: GNOME Shell 3.36.4, Display Server: X Server 1.20.8, Display Driver: modesetting 1.20.8, OpenGL: 3.3 Mesa 20.0.8, Compiler: GCC 9.3.0, File-System: ext4, Screen Resolution: 1920x1080
+
+Benchmark:
+
+```
+Current date/time: Fri Sep 11 17:42:33 2020
+
+CPU frequency:    4.365 GHz
+Number of CPUs: 1
+Number of cores: 16
+Number of threads: 16
+
+Parameters are set to:
+
+Number of tests: 1
+Number of equations to solve (problem size) : 20000
+Leading dimension of array                  : 20000
+Number of trials to run                     : 1
+Data alignment value (in Kbytes)            : 4
+
+Maximum memory requested that can be used=3200404096, at the size=20000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+20000  20000  4      14.714     362.5091 2.588746e-10 2.291607e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+20000  20000  4       362.5091 362.5091
+
+Residual checks PASSED
+```
+
+Stress test:
+
+```
+Linpack Xtreme v1.1.3 by Regeneration
+
+Current date/time: Fri Sep 11 17:44:33 2020
+
+CPU frequency:    4.315 GHz
+Number of CPUs: 1
+Number of cores: 16
+Number of threads: 32
+
+Parameters are set to:
+
+Number of tests: 1
+Number of equations to solve (problem size) : 22611
+Leading dimension of array                  : 22611
+Number of trials to run                     : 20
+Data alignment value (in Kbytes)            : 4
+
+Maximum memory requested that can be used=4090514884, at the size=22611
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+22611  22611  4      60.533     127.3300 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.983     128.4979 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.095     128.2595 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.940     128.5910 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.365     127.6842 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.800     128.8918 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.109     128.2299 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.867     128.7473 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.998     128.4654 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.988     128.4871 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.838     128.8094 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.998     128.4664 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.005     128.4515 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.009     128.4432 3.636039e-10 2.527392e-02   pass
+22611  22611  4      59.780     128.9350 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.304     127.8149 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.361     127.6928 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.219     127.9941 3.636039e-10 2.527392e-02   pass
+22611  22611  4      61.212     125.9193 3.636039e-10 2.527392e-02   pass
+22611  22611  4      60.350     127.7167 3.636039e-10 2.527392e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+22611  22611  4       128.1714 128.9350
+
+Residual checks PASSED
+```
