@@ -103,6 +103,34 @@ Results: [OpenBenchmarking.org](https://openbenchmarking.org/)
 * hardinfo
 * LLCbench
 
+## Phoronix Test Suite
+
+### pmbench
+
+[2 x 16384 MB DDR4-3200MT/s F4-3200C14-16GTZR](https://openbenchmarking.org/result/2009125-NE-PMBENCH2069)
+
+```
+    Percentile Classification Of Current Benchmark Run
+    MEMORY
+        pmbench
+            1 - 50%:          88th
+            2 - 50%:          89th
+            4 - 50%:          94th
+            8 - 50%:          84th
+            1 - 100% Reads:   88th
+            2 - 100% Reads:   88th
+            4 - 100% Reads:   75th
+            8 - 100% Reads:   69th
+            1 - 100% Writes:  65th
+            2 - 100% Writes:  73rd
+            4 - 100% Writes:  73rd
+            8 - 100% Writes:  66th
+            1 - 8.R.2.W:      85th
+            2 - 8.R.2.W:      75th
+            4 - 8.R.2.W:      93rd
+            8 - 8.R.2.W:      76th
+```
+
 ## Linpack extreme
 
 Tests mainly CPU/Memory/Cooling stability.
