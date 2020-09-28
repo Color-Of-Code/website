@@ -53,3 +53,9 @@ https://www.reddit.com/r/zfs/comments/5yuo44/single_drive_zfs_pools_on_desktop_c
 * `zfs list -r -t snapshot -o name,creation backup1/family` list snapshots for a given data set
 * `zfs list -o space` disk space accounting check
 * `zfs list -ro space backup1/family` disk space accounting check for a given data set
+
+### Features
+
+Use the dedup flag with care as it has a huge RAM impact but [people are working on it](https://openzfs.org/w/images/8/8d/ZFS_dedup.pdf).
+
+Hints: https://constantin.glez.de/2011/07/27/zfs-to-dedupe-or-not-dedupe/

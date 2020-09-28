@@ -24,17 +24,18 @@ Thoughts
 
 ## Components
 
-| Component  | Size(s) | Description |
-| ----       | ----   |  ----        |
+| Component    | Size(s) | Description |
+| ----         | ----   |  ----        |
 | Motherboard  | X570   | ASUS Prime X570-P |
-| CPU        | 3950X  | AMD Ryzen™ 9 3950X boxed |
-| CPU Cooler | NH-D15 | Noctua NH-D15 SE-AM4 |
-| Case       | Define R6 | Fractal Design Define R6 USB-C Black Midi-Tower |
-| PSU        | 750W  | 750W Seasonic Focus PX - 80 Plus Platinum |
-| RAM        | 32GB  | 32GB GSkill Trident Z RGB DDR4 - 3200 (2x 16GB)  F4-3200C14D-32GTZR |
-| Storage    | 1TB   | Samsung 970 EVO Plus - M.2 2280 M.2 (PCIe 3.0) SSD |
-| Adapter    | USB-C | Delock 66432: Adapter for the internal USB-3.0 (19 pin header) to USB Key A |
-| Graphic    | TBD   | unclear, at the moment an old PCIe 2.0 passive card is in use (later, RTX 2070S, RTX 2080?)  |
+| CPU          | 3950X  | AMD Ryzen™ 9 3950X boxed |
+| CPU Cooler   | NH-D15 | Noctua NH-D15 SE-AM4 |
+| Case         | Define R6 | Fractal Design Define R6 USB-C Black Midi-Tower |
+| PSU          | 750W  | 750W Seasonic Focus PX - 80 Plus Platinum |
+| RAM          | 32GB  | 32GB GSkill Trident Z RGB DDR4 - 3200 (2x 16GB)  F4-3200C14D-32GTZR |
+| Storage      | 1TB   | Samsung 970 EVO Plus - M.2 2280 M.2 (PCIe 3.0) SSD |
+| Storage      | 8TB   | Western Digital WDC WD8004FRYZ-01VAEB0 (01.01H01) SATA III 6G |
+| Adapter      | USB-C | Delock 66432: Adapter for the internal USB-3.0 (19 pin header) to USB Key A |
+| Graphic      | TBD   | unclear, at the moment an old PCIe 2.0 passive card is in use (later, RTX 2070S, RTX 2080?)  |
 
 NOTES:
 
@@ -51,6 +52,7 @@ NOTES:
 * With BIOS v2606, the RAM performs well at the XMP profile settings (14-14-14-34- timings, 1.35v)
 * There are still sporadic POST issues ([Hint 1](https://www.reddit.com/r/ASUS/comments/et9q38/prime_x570_pro_wont_post_but_only_randomly/), [Hint2](https://rog.asus.com/forum/showthread.php?117380-Intermittent-No-Display-and-No-POST-on-ASUS-X570-P/page1), [Hint 3](https://www.overclockers.com/forums/showthread.php/795714-Not-sure-if-its-Asus-DOCP-or-my-ram-with-reboot-halting))
 * Disabled FAST boot (seems to help POST RAM checks to pass)
+* Issue in getting [SMART over NVMe to work in gnome-disk](https://gitlab.gnome.org/GNOME/gnome-disk-utility/-/issues/50), due to a missing upstream feature in `udisks` (See [#386](https://github.com/storaged-project/udisks/issues/386), [#433](https://github.com/storaged-project/udisks/issues/433))
 
 ## Software
 
