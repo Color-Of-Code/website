@@ -62,7 +62,10 @@ Hints: https://constantin.glez.de/2011/07/27/zfs-to-dedupe-or-not-dedupe/
 
 Deduplication was activated for funani, pictures and videos as these data sets have many redundant copies of files.
 
-To see the status of deduplication, look at the DDT entries
+To see the status of deduplication, look at the DDT entries either:
+
+* using `zdb -DDD backup1`
+* using `zpool status -D backup1`
 
 ```
 $ zpool status -D backup1
@@ -104,17 +107,7 @@ After running data copy actions for a while:
 
 ```
 $ zpool status -D backup1
-  pool: backup1
- state: ONLINE
-  scan: scrub repaired 0B in 0 days 00:02:00 with 0 errors on Sat Sep 26 22:47:29 2020
-config:
-
-	NAME                                   STATE     READ WRITE CKSUM
-	backup1                                ONLINE       0     0     0
-	  ata-WDC_WD8004FRYZ-01VAEB0_VDK269PK  ONLINE       0     0     0
-
-errors: No known data errors
-
+...
  dedup: DDT entries 3636080, size 466B on disk, 150B in core
 
 bucket              allocated                       referenced
@@ -132,6 +125,47 @@ refcnt   blocks   LSIZE   PSIZE   DSIZE   blocks   LSIZE   PSIZE   DSIZE
 ```
 
 * 3636080 * 150 = 545412000 bytes = 520MB in RAM.
+
+After even more copying
+
+```
+$ zpool status -D backup1
+...
+ dedup: DDT entries 6804407, size 481B on disk, 155B in core
+
+bucket              allocated                       referenced
+______   ______________________________   ______________________________
+refcnt   blocks   LSIZE   PSIZE   DSIZE   blocks   LSIZE   PSIZE   DSIZE
+------   ------   -----   -----   -----   ------   -----   -----   -----
+     1    2,63M    335G    335G    335G    2,63M    335G    335G    335G
+     2    3,03M    388G    388G    388G    7,06M    904G    904G    904G
+     4     836K    105G    105G    105G    3,72M    477G    477G    477G
+     8    16,0K   2,00G   2,00G   2,00G     139K   17,3G   17,3G   17,3G
+    16        3    298K    298K    300K       59   5,79M   5,79M   5,82M
+    64        1   11,5K   11,5K     12K       72    828K    828K    864K
+   128        1    128K    128K    128K      205   25,6M   25,6M   25,6M
+   256        1   11,5K   11,5K     12K      332   3,73M   3,73M   3,89M
+   16K        1    128K    128K    128K    31,1K   3,89G   3,89G   3,89G
+ Total    6,49M    829G    829G    829G    13,6M   1,70T   1,70T   1,70T
+```
+
+* 6804407 * 155 = 1054683085 bytes = 1005MB in RAM.
+* 13,6M blocks in 6,49M block's worth of space = 2,09x DEDUP rate (as reported by `zpool list`)
+
+Deduplication is handled at pool level.
+
+* `DSIZE` On disk size, size actually used on disk (can be N x `PSIZE` if `copies` is enabled)
+* `LSIZE` logical size, size of all blocks in use
+* `PSIZE` physical size, size the would be needed to store the data elsewhere
+
+```
+$ zfs list -r backup1/family -o name,used,available,refer,mountpoint,dedup,sync
+NAME                              USED  AVAIL     REFER  MOUNTPOINT                                    DEDUP      SYNC
+backup1/family/funani            80,7G  2,50T     80,7G  /mnt/backup1/family/funani                       on  standard
+backup1/family/funani_nodedup     936G  2,50T      936G  /mnt/backup1/family/funani_nodedup              off  standard
+backup1/family/pictures          1,63T  2,50T     1,63T  /mnt/backup1/family/pictures                     on  standard
+backup1/family/pictures_nodedup  1,86T  2,50T     1,86T  /mnt/backup1/family/pictures_nodedup            off  standard
+```
 
 With `zdb` some more insight in block handling can be analyzed (command takes long to complete):
 
