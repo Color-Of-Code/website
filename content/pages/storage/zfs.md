@@ -131,26 +131,26 @@ After even more copying
 ```
 $ zpool status -D backup1
 ...
- dedup: DDT entries 6804407, size 481B on disk, 155B in core
+ dedup: DDT entries 7435530, size 488B on disk, 157B in core
 
 bucket              allocated                       referenced
 ______   ______________________________   ______________________________
 refcnt   blocks   LSIZE   PSIZE   DSIZE   blocks   LSIZE   PSIZE   DSIZE
 ------   ------   -----   -----   -----   ------   -----   -----   -----
-     1    2,63M    335G    335G    335G    2,63M    335G    335G    335G
-     2    3,03M    388G    388G    388G    7,06M    904G    904G    904G
-     4     836K    105G    105G    105G    3,72M    477G    477G    477G
-     8    16,0K   2,00G   2,00G   2,00G     139K   17,3G   17,3G   17,3G
-    16        3    298K    298K    300K       59   5,79M   5,79M   5,82M
+     1    2,63M    336G    336G    336G    2,63M    336G    336G    336G
+     2    3,41M    436G    436G    436G    7,98M   1021G   1021G   1021G
+     4    1,03M    132G    132G    132G    4,72M    605G    605G    605G
+     8    22,3K   2,78G   2,78G   2,78G     202K   25,2G   25,2G   25,2G
+    16      191   23,8M   23,8M   23,8M    3,43K    438M    438M    438M
     64        1   11,5K   11,5K     12K       72    828K    828K    864K
    128        1    128K    128K    128K      205   25,6M   25,6M   25,6M
    256        1   11,5K   11,5K     12K      332   3,73M   3,73M   3,89M
-   16K        1    128K    128K    128K    31,1K   3,89G   3,89G   3,89G
- Total    6,49M    829G    829G    829G    13,6M   1,70T   1,70T   1,70T
+   32K        1    128K    128K    128K    36,1K   4,51G   4,51G   4,51G
+ Total    7,09M    906G    906G    906G    15,6M   1,94T   1,94T   1,94T
 ```
 
-* 6804407 * 155 = 1054683085 bytes = 1005MB in RAM.
-* 13,6M blocks in 6,49M block's worth of space = 2,09x DEDUP rate (as reported by `zpool list`)
+* 7435530 * 157 = 1167378210 bytes = 1113MB RAM.
+* 15,6M blocks in 7,09M block's worth of space = 2,20x DEDUP rate (as reported by `zpool list`)
 
 Deduplication is handled at pool level.
 
@@ -161,10 +161,10 @@ Deduplication is handled at pool level.
 ```
 $ zfs list -r backup1/family -o name,used,available,refer,mountpoint,dedup,sync
 NAME                              USED  AVAIL     REFER  MOUNTPOINT                                    DEDUP      SYNC
-backup1/family/funani            80,7G  2,50T     80,7G  /mnt/backup1/family/funani                       on  standard
-backup1/family/funani_nodedup     936G  2,50T      936G  /mnt/backup1/family/funani_nodedup              off  standard
-backup1/family/pictures          1,63T  2,50T     1,63T  /mnt/backup1/family/pictures                     on  standard
-backup1/family/pictures_nodedup  1,86T  2,50T     1,86T  /mnt/backup1/family/pictures_nodedup            off  standard
+backup1/family/funani            89,3G  2,42T     89,3G  /mnt/backup1/family/funani                       on  standard
+backup1/family/funani_nodedup     936G  2,42T      936G  /mnt/backup1/family/funani_nodedup              off  standard
+backup1/family/pictures          1,86T  2,42T     1,86T  /mnt/backup1/family/pictures                     on  standard
+backup1/family/pictures_nodedup  1,86T  2,42T     1,86T  /mnt/backup1/family/pictures_nodedup            off  standard
 ```
 
 With `zdb` some more insight in block handling can be analyzed (command takes long to complete):
