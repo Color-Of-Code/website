@@ -1,9 +1,9 @@
 ---
 published: true
 path: "/shortcuts/gimp"
-date: "2018-12-27"
+date: "2020-10-10"
 title: "GIMP shortcuts"
-tags: ["keyboard", "shortcuts", "gimp", "TODO_cleanup"]
+tags: ["keyboard", "shortcuts", "gimp"]
 ---
 
 # GIMP

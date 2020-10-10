@@ -3,7 +3,7 @@ published: true
 path: "/shortcuts/visio"
 date: "2018-12-27"
 title: "Visio shortcuts"
-tags: ["keyboard", "shortcuts", "visio", "TODO_cleanup"]
+tags: ["keyboard", "shortcuts", "visio"]
 ---
 
 # Visio keyboard shortcuts
