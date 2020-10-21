@@ -32,6 +32,11 @@ pre[class*="language-"] {
   background: #e9b31e;
   color: black;
 }
+.gatsby-highlight pre[class="language-c"]::before {
+  content: "c";
+  background: #f3f71e;
+  color: black;
+}
 .gatsby-highlight pre[class="language-cpp"]::before {
   content: "c++";
   background: #f3f71e;
