@@ -65,7 +65,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.12.1",
-    "@hot-loader/react-dom": "^16.13.0",
+    "@hot-loader/react-dom": "^17.0.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.11.0",
