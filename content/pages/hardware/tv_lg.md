@@ -15,7 +15,7 @@ Anschlüsse:
 ```yaml
 HDMI-1: Set Top Box, Kabelreceiver
 HDMI-2: DVD Player
-HDMI-3: -
+HDMI-3: PC (Bei Bedarf)
 HDMI-4: Spielkonsole
 
 LAN: Angeschlossen am Switch zum Router
