@@ -25,6 +25,8 @@ BNC: Kabel signal durch die Set Top Box kopiert
 
 ![Verkabelung](verkabelung.png)
 
+Bild bei https://app.diagrams.net/ erstellt
+
 ## CEC
 
 Steuert das automatischen ein und ausschalten wenn man einen anderen Gerät ein oder ausshaltet.
