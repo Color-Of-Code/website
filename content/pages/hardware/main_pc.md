@@ -10,8 +10,8 @@ tags: ["hardware", "pc", "linux"]
 
 ## Requirements
 
-* reduce noise (prio 1)
-* reduce power (prio 2)
+* reduce noise (priority 1)
+* reduce power (priority 2)
 * optimized in processing videos
 * code compilation
 
