@@ -9,23 +9,6 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-favicons',
-      options: {
-        logo: './src/images/logo.png',
-        appName: 'ColorOfCode',
-        background: '#000',
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          yandex: false,
-          windows: false
-        }
-      }
-    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
