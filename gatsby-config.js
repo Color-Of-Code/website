@@ -3,51 +3,38 @@ module.exports = {
     title: 'Color Of Code',
     description: 'Color Of Code - website about software and programming',
     author: '@jdehaan',
-    siteUrl: 'https://color-of-code.de',
+    siteUrl: 'https://color-of-code.de'
   },
   plugins: [
     'gatsby-plugin-eslint',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-plugin-favicon',
+      resolve: 'gatsby-plugin-favicons',
       options: {
         logo: './src/images/logo.png',
-        // WebApp Manifest Configuration
-        appName: null, // Inferred with your package.json
-        appDescription: null,
-        developerName: null,
-        developerURL: null,
-        dir: 'auto',
-        lang: 'en-US',
+        appName: 'ColorOfCode',
         background: '#000',
-        theme_color: '#000',
-        display: 'standalone',
-        orientation: 'any',
-        start_url: '/?homescreen=1',
-        version: '1.0',
         icons: {
-          android: false,
-          appleIcon: false,
-          appleStartup: false,
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
           coast: false,
           favicons: true,
-          firefox: false,
-          opengraph: false,
-          twitter: false,
           yandex: false,
-          windows: false,
-        },
-      },
+          windows: false
+        }
+      }
     },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
+    'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -59,16 +46,16 @@ module.exports = {
         background_color: '#000',
         theme_color: '#000',
         display: 'minimal-ui',
-        icon: 'src/images/logo.png', // This path is relative to the root of the site.
-      },
+        icon: 'src/images/logo.png' // This path is relative to the root of the site.
+      }
     },
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/content/pages`,
-      },
+        path: `${__dirname}/content/pages`
+      }
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -79,11 +66,11 @@ module.exports = {
             // see more details on https://github.com/adrai/flowchart.js
             options: {
               fill: 'white',
-              'line-color': 'black',
-            },
+              'line-color': 'black'
+            }
           },
           {
-            resolve: 'gatsby-remark-plantuml',
+            resolve: 'gatsby-remark-plantuml'
           },
           {
             resolve: 'gatsby-remark-draw',
@@ -91,23 +78,23 @@ module.exports = {
               dot: {
                 edgeAttributes: {
                   arrowtail: 'empty',
-                  arrowhead: 'empty',
-                },
+                  arrowhead: 'empty'
+                }
               },
               bob: {
-                fontFamily: 'verdana',
+                fontFamily: 'verdana'
               },
               mermaid: {
                 theme: 'forest',
-                backgroundColor: 'transparent',
-              },
-            },
+                backgroundColor: 'transparent'
+              }
+            }
           },
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: '${__dirname}/static/files',
-            },
+              destinationDir: '${__dirname}/static/files'
+            }
           },
           {
             resolve: 'gatsby-remark-images',
@@ -115,8 +102,8 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 480,
-            },
+              maxWidth: 480
+            }
           },
           {
             resolve: 'gatsby-remark-prismjs',
@@ -151,17 +138,17 @@ module.exports = {
               showLineNumbers: false,
               // If setting this to true, the parser won't handle and highlight inline
               // code used in markdown i.e. single backtick code like `this`.
-              noInlineHighlight: false,
-            },
+              noInlineHighlight: false
+            }
           },
           {
-            resolve: 'gatsby-remark-embellish-links',
-          },
-        ],
-      },
-    },
+            resolve: 'gatsby-remark-embellish-links'
+          }
+        ]
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ],
+  ]
 };
