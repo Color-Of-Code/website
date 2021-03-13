@@ -14,7 +14,7 @@ const NotFoundPage = ({ data }) => (
     <Img fluid={data.file.childImageSharp.fluid} />
     <div
       style={{
-        float: 'right',
+        float: 'right'
       }}
     >
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
@@ -23,7 +23,7 @@ const NotFoundPage = ({ data }) => (
 );
 
 NotFoundPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 export default NotFoundPage;

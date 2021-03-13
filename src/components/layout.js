@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={(data) => (
+    render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
 
@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
             margin: '0 auto',
             maxWidth: 960,
             padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
+            paddingTop: 0
           }}
         >
           {children}
@@ -38,7 +38,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

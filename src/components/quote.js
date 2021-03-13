@@ -7,17 +7,17 @@ const quoteBoxStyle = {
   borderRadius: '10px',
   padding: '10px',
   marginBottom: '0.5em',
-  fontFamily: 'Comic Sans MS',
+  fontFamily: 'Comic Sans MS'
 };
 const quoteStyle = {
   textAlign: 'center',
   fontSize: '1.2rem',
-  color: 'white',
+  color: 'white'
 };
 const authorStyle = {
   textAlign: 'right',
   fontSize: '0.9rem',
-  color: 'yellow',
+  color: 'yellow'
 };
 
 const Quote = ({ author, children }) => {
@@ -31,7 +31,7 @@ const Quote = ({ author, children }) => {
 
 Quote.propTypes = {
   children: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired
 };
 
 Quote.defaultProps = {};

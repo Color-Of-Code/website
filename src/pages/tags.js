@@ -12,18 +12,18 @@ class SearchableTagList extends React.Component {
     super(props);
     this.state = {
       allTags: props.tags,
-      displayedTags: props.tags,
+      displayedTags: props.tags
     };
   }
 
-  searchHandler = (event) => {
+  searchHandler = event => {
     let searchQuery = event.target.value.toLowerCase();
-    var filteredTags = this.state.allTags.filter((el) => {
+    var filteredTags = this.state.allTags.filter(el => {
       let searchValue = el.fieldValue.toLowerCase();
       return searchValue.indexOf(searchQuery) !== -1;
     });
     this.setState({
-      displayedTags: filteredTags,
+      displayedTags: filteredTags
     });
   };
 
@@ -35,7 +35,7 @@ class SearchableTagList extends React.Component {
           <input type="text" className="search" onChange={this.searchHandler} />
         </div>
         <div className="tags">
-          {tags.map((tag) => (
+          {tags.map(tag => (
             <span key={tag.fieldValue}>
               <Tag tag={tag.fieldValue} count={tag.totalCount} />
             </span>
@@ -50,9 +50,9 @@ const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
     site: {
-      siteMetadata: { title },
-    },
-  },
+      siteMetadata: { title }
+    }
+  }
 }) => (
   <Layout>
     <div className="tags">
@@ -67,9 +67,9 @@ SearchableTagList.propTypes = {
   tags: PropTypes.arrayOf(
     PropTypes.shape({
       fieldValue: PropTypes.string.isRequired,
-      totalCount: PropTypes.number.isRequired,
+      totalCount: PropTypes.number.isRequired
     }).isRequired
-  ),
+  )
 };
 
 TagsPage.propTypes = {
@@ -78,16 +78,16 @@ TagsPage.propTypes = {
       group: PropTypes.arrayOf(
         PropTypes.shape({
           fieldValue: PropTypes.string.isRequired,
-          totalCount: PropTypes.number.isRequired,
+          totalCount: PropTypes.number.isRequired
         }).isRequired
-      ),
+      )
     }),
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }),
-    }),
-  }).isRequired,
+        title: PropTypes.string.isRequired
+      })
+    })
+  }).isRequired
 };
 
 export default TagsPage;

@@ -14,11 +14,11 @@ const AllTags = ({ text }) => (
 );
 
 AllTags.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.string
 };
 
 AllTags.defaultProps = {
-  text: '',
+  text: ''
 };
 
 export default AllTags;

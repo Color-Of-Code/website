@@ -25,12 +25,12 @@ function Tag({ tag, count }) {
 
 Tag.propTypes = {
   tag: PropTypes.string,
-  count: PropTypes.number,
+  count: PropTypes.number
 };
 
 Tag.defaultProps = {
   tag: '',
-  count: 0,
+  count: 0
 };
 
 export default Tag;

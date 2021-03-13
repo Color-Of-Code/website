@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const valueStyle = {
   width: '8em',
   display: 'inline-block',
-  textAlign: 'center',
+  textAlign: 'center'
 };
 
 const Counter = ({ initialvalue }) => {
@@ -23,11 +23,11 @@ const Counter = ({ initialvalue }) => {
 };
 
 Counter.propTypes = {
-  initialvalue: PropTypes.number,
+  initialvalue: PropTypes.number
 };
 
 Counter.defaultProps = {
-  initialvalue: 0,
+  initialvalue: 0
 };
 
 export default Counter;

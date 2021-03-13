@@ -41,7 +41,7 @@ const Tags = ({ pageContext, data }) => {
 
 Tags.propTypes = {
   pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired
   }).isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -51,13 +51,13 @@ Tags.propTypes = {
           node: PropTypes.shape({
             frontmatter: PropTypes.shape({
               path: PropTypes.string.isRequired,
-              title: PropTypes.string.isRequired,
-            }),
-          }),
+              title: PropTypes.string.isRequired
+            })
+          })
         }).isRequired
-      ),
-    }),
-  }).isRequired,
+      )
+    })
+  }).isRequired
 };
 
 export default Tags;

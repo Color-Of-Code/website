@@ -15,7 +15,7 @@ import Quote from '../components/quote';
 import SEO from '../components/seo';
 
 function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, htmlAst } = markdownRemark;
@@ -24,8 +24,8 @@ function Template({
     components: {
       interactivecounter: Counter,
       hk: Hotkey,
-      quote: Quote,
-    },
+      quote: Quote
+    }
   }).Compiler;
 
   return (
@@ -46,7 +46,7 @@ function Template({
 }
 
 Template.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 export default Template;

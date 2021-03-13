@@ -9,14 +9,14 @@ const Header = () => (
   <div
     style={{
       background: '#2d2d2d',
-      marginBottom: '0.5rem',
+      marginBottom: '0.5rem'
     }}
   >
     <div
       style={{
         margin: '0 auto',
         maxWidth: 960,
-        padding: '0.2rem 1.0rem',
+        padding: '0.2rem 1.0rem'
       }}
     >
       <div
@@ -27,35 +27,35 @@ const Header = () => (
           marginTop: '0px',
           maxWidth: 960,
           float: 'left',
-          paddingRight: '1.45rem',
+          paddingRight: '1.45rem'
         }}
       >
         <img
           src={logo}
           alt="Logo"
           style={{
-            margin: '0px',
+            margin: '0px'
           }}
         />
       </div>
       <div
         style={{
           margin: '0px',
-          fontSize: '1em',
+          fontSize: '1em'
         }}
       >
         <Link
           to="/"
           style={{
             color: 'white',
-            textDecoration: 'none',
+            textDecoration: 'none'
           }}
         >
           <img
             src={colorOfCode}
             alt="Color-Of-Code"
             style={{
-              margin: '0px',
+              margin: '0px'
             }}
           />
         </Link>
@@ -64,14 +64,14 @@ const Header = () => (
         style={{
           margin: '0px',
           padding: '0px',
-          fontSize: '1.0rem',
+          fontSize: '1.0rem'
         }}
       >
         <Link
           to="/"
           style={{
             color: 'white',
-            textDecoration: 'none',
+            textDecoration: 'none'
           }}
         >
           <FaHome className="tag" />
@@ -82,7 +82,7 @@ const Header = () => (
           to="/tags"
           style={{
             color: 'white',
-            textDecoration: 'none',
+            textDecoration: 'none'
           }}
         >
           <FaTags className="tag" />
@@ -93,7 +93,7 @@ const Header = () => (
           to="/impressum/"
           style={{
             color: 'white',
-            textDecoration: 'none',
+            textDecoration: 'none'
           }}
         >
           <FaInfoCircle className="tag" />

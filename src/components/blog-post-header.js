@@ -10,7 +10,7 @@ const BlogPostHeader = ({ link, title, date, keywords }) => (
     </h1>
     <span className="blog-date">{date}</span>
     <div className="blog-tags">
-      {keywords.map((tag) => {
+      {keywords.map(tag => {
         return <Tag tag={tag} key={tag} />;
       })}
     </div>
@@ -21,12 +21,12 @@ BlogPostHeader.propTypes = {
   date: PropTypes.string.isRequired,
   keywords: PropTypes.arrayOf(PropTypes.string),
   link: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 BlogPostHeader.defaultProps = {
   keywords: [],
-  link: null,
+  link: null
 };
 
 export default BlogPostHeader;

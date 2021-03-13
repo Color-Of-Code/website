@@ -3,25 +3,25 @@ import PropTypes from 'prop-types';
 
 const hotkeyStyle = {
   fontSize: 'medium',
-  whiteSpace: 'nowrap',
+  whiteSpace: 'nowrap'
 };
 
 const hotkeyButtonStyle = {
   marginRight: '2px',
-  borderRadius: '15px',
+  borderRadius: '15px'
 };
 
 class Hotkey extends React.Component {
   static defaultProps = {
-    keys: '',
+    keys: ''
   };
 
   state = {
-    value: String(this.props.keys),
+    value: String(this.props.keys)
   };
 
   render() {
-    var ks = this.state.value.split(' + ').map((item) => item.trim());
+    var ks = this.state.value.split(' + ').map(item => item.trim());
     return (
       <span style={hotkeyStyle}>
         {ks.map((k, i) => {
@@ -37,11 +37,11 @@ class Hotkey extends React.Component {
 }
 
 Hotkey.propTypes = {
-  keys: PropTypes.string,
+  keys: PropTypes.string
 };
 
 Hotkey.defaultProps = {
-  keys: '',
+  keys: ''
 };
 
 export default Hotkey;
