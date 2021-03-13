@@ -30,14 +30,14 @@ jobs:
         env:
           HUSKY_SKIP_INSTALL: 1
 
-      - name: Lint
-        run: npm run lint
-
       - name: Build
         if: github.ref == 'refs/heads/master'
         run: npm run build
         env:
           GATSBY_TELEMETRY_DISABLED: 1
+
+      - name: Lint
+        run: npm run lint
 
       - name: Upload
         if: github.ref == 'refs/heads/master'
