@@ -1,9 +1,26 @@
 {
-  "printWidth": 80,
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "parser": "babel",
-  "semi": true
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss",
+        "singleQuote": true
+      }
+    },
+    {
+      "files": ["*.js"],
+      "options": {
+        "parser": "babel",
+        "singleQuote": true,
+        "trailingComma": "none",
+        "arrowParens": "avoid"
+      }
+    },
+    {
+      "files": ["*.json"],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
 }

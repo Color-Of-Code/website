@@ -54,9 +54,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
     "clean": "rm -rf .cache public",
-    "lint": "eslint ./src ./plugins",
+    "lint": "eslint ./src ./plugins --max-warnings 0",
     "lint-fix": "eslint --fix ./src ./plugins",
     "format": "prettier --config ./.prettierrc --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
@@ -83,6 +84,11 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-prettier": "^1.2.0"
+  },
+  "resolutions": {
+    "graphql": "^15.4.0",
+    "graphql-compose": "^7.25.0",
+    "webpack": "^5.24.2"
   },
   "repository": {
     "type": "git",

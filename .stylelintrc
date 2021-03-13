@@ -1,20 +1,39 @@
 {
-  "plugins": ["stylelint-prettier"],
+  "plugins": ["stylelint-scss", "stylelint-prettier"],
   "extends": [
     "stylelint-config-standard",
+    "stylelint-config-sass-guidelines",
     "stylelint-config-prettier"
   ],
   "rules": {
     "max-nesting-depth": null,
     "no-descending-specificity": null,
     "prettier/prettier": true,
-    "selector-class-pattern": "^[a-z][a-zA-Z0-9-]*$",
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]*$",
     "selector-max-compound-selectors": 4,
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        "ignorePseudoClasses": ["global"]
-      }
+        ignorePseudoClasses: [
+          "export",
+          "import",
+          "global",
+          "local",
+          "external",
+        ],
+      },
+    ],
+    "selector-type-no-unknown": [
+      true,
+      {
+        ignoreTypes: ["from"],
+      },
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        ignoreSelectors: [":export", /^:import/],
+      },
     ]
   }
 }
