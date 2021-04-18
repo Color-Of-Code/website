@@ -1,20 +1,25 @@
 ---
 published: true
 path: "/vcs/git/git-annex/compile"
-date: "2019-01-02"
+date: "2021-04-17"
 title: "Git-Annex: Compile"
-tags: ["vcs", "git-annex", "git", "compile", "TODO_cleanup"]
+tags: ["vcs", "git-annex", "git", "compile"]
 ---
-# Building git annex 64 bit version under windows
 
-## Prerequisites
+## Introduction
+
+Git-Annex can be used to synchronize bigger files across networks that might not be very reliable or fast.
+
+## Building git annex 64 bit version under windows
+
+### Prerequisites
 
 * cygwin 64 bit: gcc rsync git wget ssh gnupg
 * git for windows 64bit
 * Haskell 64 bit
 * NullSoftInstaller for building the setup
 
-## Get the source
+### Get the source
 
 * clone git-annex (git://git-annex.branchable.com/) git-annex
 * cd to git-annex
@@ -39,7 +44,7 @@ index 7af6bab..25282e1 100644
   -- git-annex-webapp, since it is itself treated as an executable file.
 ```
 
-## Get the source dependencies
+### Get the source dependencies
 
 * eventually set http_proxy=http://proxy....
 * cabal update --verbose=3

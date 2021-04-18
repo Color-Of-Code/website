@@ -1,12 +1,15 @@
 ---
 published: true
 path: "/storage/synology-backup"
-date: "2019-01-01"
+date: "2020-12-20"
 title: "Synology backup"
-tags: ["storage", "synology", "nas", "backup", "TODO_cleanup"]
+tags: ["storage", "synology", "nas", "backup"]
 ---
 
-# Daten - Backup
+## Backup script
+
+Backup via shell Skript vom host zur NAS.
+## Daten - Backup
 
 Wenn die Synology an ist, kann auf dem Backup (Nur Lesend) an diesem zugegriffen werden:
 
