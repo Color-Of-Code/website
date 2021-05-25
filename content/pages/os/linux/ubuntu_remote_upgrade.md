@@ -2,7 +2,7 @@
 published: true
 path: "/os/linux/ubuntu/remote-upgrade"
 date: "2021-05-25"
-title: "Ubuntu Tweaks"
+title: "Ubuntu Remote Upgrade"
 tags: ["os", "ubuntu", "upgrade", "linux", "release", "screen", "ssh"]
 ---
 
