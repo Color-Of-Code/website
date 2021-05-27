@@ -9,7 +9,7 @@
     "acorn": "^8.2.4",
     "babel-preset-gatsby": "^1.6.0",
     "d3": "^6.7.0",
-    "gatsby": "^3.6.0",
+    "gatsby": "^3.6.1",
     "gatsby-link": "^3.6.0",
     "gatsby-plugin-catch-links": "^3.6.0",
     "gatsby-plugin-image": "^1.6.0",
