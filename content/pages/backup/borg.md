@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/backup/borg"
-date: "2021-05-26"
+date: "2021-05-27"
 title: "Backup with Borg"
 tags: ["backup", "borg", "incremental", "client", "server"]
 ---
@@ -83,7 +83,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_borg
 copy the SSH public key to the borg server
 
 ```bash
-ssh-copy-id borg@<server> -i ~/.ssh/id_borg
+ssh-copy-id -i ~/.ssh/id_borg borg@<server>
 ```
 
 ### Configure server SSH access restrictions
@@ -122,11 +122,24 @@ The key can be found here: `~/.config/borg/keys`
 Backup example daily:
 
 ```bash
+# with heuristic compression, uses lzma if data compresses well
 borg create \
   --verbose --filter AME \
   --list --stats --show-rc \
   --compression auto,lzma --exclude-caches \
-  $BORG_REPOS::'{hostname}-daily-{now}' \
+  $BORG_REPOS::'daily-{utcnow:%Y\-%m\-%d_%H:%M:%S}' \
+  /path1 \
+  /pathN
+```
+
+```bash
+# no compression for data formats where it is clear that compression
+# will not be that useful (like backup of bare git repositories)
+borg create \
+  --verbose --filter AME \
+  --list --stats --show-rc \
+  --compression none --exclude-caches \
+  $BORG_REPOS::'daily-{utcnow:%Y\-%m\-%d_%H:%M:%S}' \
   /path1 \
   /pathN
 ```
@@ -136,6 +149,10 @@ borg create \
 - repositories not created with the `append-only` option are not append only
 - the `append-only` restriction only applies to the client connecting using that key.
 - any other client not having the restriction with automatically start pruning (!!BE CAREFUL!!)
+  - [Documentation](https://github.com/borgbackup/borg/blob/master/docs/usage/notes.rst#append-only-mode-forbid-compaction)
+  - See [append-only mode is confusing #3504](https://github.com/borgbackup/borg/issues/3504)
+  - See [audit an append-only mode repo to make sure the client was well behaved #2251](https://github.com/borgbackup/borg/issues/2251)
+- compression can be specified and is applied on the chunks but does not apply to existing chunks, these need to be forcibly retransferred with another compression method applied if absolutely wanted.
 
 ## Recover data
 
