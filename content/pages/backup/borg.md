@@ -122,26 +122,41 @@ The key can be found here: `~/.config/borg/keys`
 Backup example daily:
 
 ```bash
-# with heuristic compression, uses lzma if data compresses well
+# with heuristic compression, uses lzma if data compresses well (but is roughly 4x as slow)
 borg create \
   --verbose --filter AME \
   --list --stats --show-rc \
   --compression auto,lzma --exclude-caches \
-  $BORG_REPOS::'daily-{utcnow:%Y\-%m\-%d_%H:%M:%S}' \
+  $BORG_REPOS::'daily-{utcnow:%Y-%m-%d_%H:%M:%S}' \
   /path1 \
   /pathN
 ```
 
+In order to automate the backup task it can sound good to use some environment
+variables to avoid the interaction. A better approach would be an ansible script
+run once and deleted after the backup completed or some secret management server
+like hashi corp Vault (in that case the use of BORG_PASSCOMMAND is indicated).
+That would avoid to keep the password at rest visible. But the misuse if the
+client is compromised can be performed on the data itself and the backup integrity
+is ensured through the use of append-only.
+
 ```bash
-# no compression for data formats where it is clear that compression
-# will not be that useful (like backup of bare git repositories)
+SERVER=<fqdn>
+REPOS=<reposname>
+PATH_TO_BACKUP=<absolute path>
+
+export BORG_RSH="ssh -i ~/.ssh/id_borg"
+export BORG_REPOS=borg@$SERVER:$REPOS
+export BORG_PASSPHRASE='***'
+
+# use lz4 compression and log into file
 borg create \
   --verbose --filter AME \
   --list --stats --show-rc \
-  --compression none --exclude-caches \
-  $BORG_REPOS::'daily-{utcnow:%Y\-%m\-%d_%H:%M:%S}' \
-  /path1 \
-  /pathN
+  --compression lz4 \
+  $BORG_REPOS::'daily-{utcnow:%Y-%m-%d_%H:%M:%S}' \
+  $PATH_TO_BACKUP \
+  2>> "borg_backup_${REPOS}_$(date --iso-8601).log"
 ```
 
 ## Pitfalls
