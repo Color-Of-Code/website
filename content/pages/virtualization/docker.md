@@ -9,6 +9,8 @@ tags: ["virtualization", "linux", "docker", "container"]
 
 ### Ubuntu 20.04 setup
 
+#### Install docker
+
 Install basic support tools:
 
 ```bash
@@ -19,6 +21,23 @@ Configure to restart docker on boot:
 
 ```bash
 sudo systemctl enable --now docker
+```
+
+#### Install docker-compose
+
+Download docker compose and make it executable (here 1.29.2, change accordingly)
+
+```bash
+# Releases: https://github.com/docker/compose/releases
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+#### Check versions
+
+```bash
+docker --version
+docker-compose --version
 ```
 
 ### Permissions
