@@ -8,7 +8,7 @@ tags: ["license", "agreement", "freeware"]
 
 # FREEWARE SOFTWARE LICENSE AGREEMENT
 
-*Copyright 2010-2019 Jaap de Haan, https://www.color-of-code.de*
+*Copyright 2010-2021 Jaap de Haan, https://www.color-of-code.de*
 
 ## NOTICE TO USER
 
