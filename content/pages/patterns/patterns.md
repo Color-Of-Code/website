@@ -1,9 +1,9 @@
 ---
 published: true
 path: "/patterns/patterns"
-date: "2020-02-02"
+date: "2021-06-29"
 title: "Patterns"
-tags: ["software", "pattern"]
+tags: ["software", "pattern", "oop", "functional"]
 ---
 
 ## Software Design Patterns
@@ -62,7 +62,6 @@ See also [Software Anti-Patterns](anti-patterns).
 | Multiton                                       | Ensure a class has only named instances, and provide global point of access to them |
 | Resource acquisition is initialization         | Ensure that resources are properly released by tying them to the lifespan of suitable objects |
 
-
 | Structural patterns  | Choice: What relationship have the objects?  |
 | -------------------- | -------------------------------------------- |
 | Adapter or Wrapper                             | Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces. |
@@ -105,3 +104,24 @@ See also [Software Anti-Patterns](anti-patterns).
 | Lock                                           | One thread puts a "lock" on a resource, preventing other threads from accessing or modifying it |
 | Double checked locking                         | "double-checked locking optimization". Reduce the overhead of acquiring a lock by first testing the locking criterion (the 'lock hint') in an unsafe manner; only if that succeeds does the actual lock proceed((In some language/hardware combinations, can be unsafe. It can therefore sometimes be considered an anti-pattern)) |
 | Read write lock                                | Allows concurrent read access to an object but requires exclusive access for write operations |
+
+## Functional programming principles
+
+* functions are things
+* composition everywhere
+* types are NOT classes
+
+Patterns:
+
+* Strive for totality (total functions cover the domain)
+* Use static types for domain modelling and documentation
+* Parametrize everything (values, functions, ...)
+* Function types are interfaces
+* Partial application (e.g. when working with lists, dependency injection)
+* Hollywood principle: continuations ("Dont't call us, we'll call you")
+* Chaining callbacks with continuations
+* Use bind to chain options or tasks or error handlers (monadic bind)
+* If you write own generic type add a `map` to it (functor)
+* simplify aggregation code with monoids
+* convert non monoids to monoids
+* convert expensive monoids to cheap monoids (using monoid to incrementally update)
