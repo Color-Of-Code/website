@@ -9,9 +9,11 @@ pre[class*="language-"] {
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
+
 .gatsby-highlight pre[class*="language-"] {
   -webkit-overflow-scrolling: touch;
 }
+
 .gatsby-highlight pre[class*="language-"]::before {
   background: #000;
   border-radius: 0 0 0.25rem 0.25rem;
@@ -32,11 +34,13 @@ pre[class*="language-"] {
   color: #000;
   content: "c#";
 }
+
 .gatsby-highlight pre[class="language-c"]::before {
   background: #f3f71e;
   color: #000;
   content: "c";
 }
+
 .gatsby-highlight pre[class="language-cpp"]::before {
   background: #f3f71e;
   color: #000;
