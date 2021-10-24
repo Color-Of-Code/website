@@ -13,10 +13,11 @@ pre[class*="language-"] {
   -webkit-overflow-scrolling: touch;
 }
 .gatsby-highlight pre[class*="language-"]::before {
-  background: black;
+  background: #000;
   border-radius: 0 0 0.25rem 0.25rem;
-  color: white;
+  color: #fff;
   font-size: 12px;
+  font-weight: bold;
   letter-spacing: 0.025rem;
   padding: 0.1rem 0.5rem;
   position: absolute;
@@ -24,56 +25,62 @@ pre[class*="language-"] {
   text-align: right;
   text-transform: uppercase;
   top: 0;
-  font-weight: bold;
 }
 
 .gatsby-highlight pre[class="language-csharp"]::before {
-  content: "c#";
   background: #e9b31e;
-  color: black;
+  color: #000;
+  content: "c#";
 }
 .gatsby-highlight pre[class="language-c"]::before {
-  content: "c";
   background: #f3f71e;
-  color: black;
+  color: #000;
+  content: "c";
 }
 .gatsby-highlight pre[class="language-cpp"]::before {
-  content: "c++";
   background: #f3f71e;
-  color: black;
+  color: #000;
+  content: "c++";
 }
+
 .gatsby-highlight pre[class="language-haskell"]::before {
-  content: "hs";
   background: #af161e;
-  color: black;
+  color: #000;
+  content: "hs";
 }
+
 .gatsby-highlight pre[class="language-sql"]::before {
-  content: "sql";
   background: #9e171d;
-  color: black;
+  color: #000;
+  content: "sql";
 }
+
 .gatsby-highlight pre[class="language-bash"]::before {
-  content: "bash";
   background: #512cf3;
-  color: black;
+  color: #000;
+  content: "bash";
 }
+
 .gatsby-highlight pre[class="language-json"]::before {
+  background: #2b529b;
+  color: #000;
   content: "json";
-  background: #2b529b;
-  color: black;
 }
+
 .gatsby-highlight pre[class="language-xml"]::before {
-  content: "xml";
   background: #2b529b;
-  color: black;
+  color: #000;
+  content: "xml";
 }
+
 .gatsby-highlight pre[class="language-javascript"]::before {
-  content: "js";
   background: #bece34;
-  color: black;
+  color: #000;
+  content: "js";
 }
+
 .gatsby-highlight pre[class="language-js"]::before {
-  content: "js";
   background: #bece34;
-  color: black;
+  color: #000;
+  content: "js";
 }

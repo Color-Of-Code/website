@@ -1,48 +1,48 @@
-div.blog-post-preview {
-    border-bottom: 2px solid #e6e6e6;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
+.blog-post-preview {
+  border-bottom: 2px solid #e6e6e6;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
 }
 
-div.blog-tags {
-  margin-left: 10em;
+.blog-tags {
   margin-bottom: 1rem;
+  margin-left: 10em;
   text-align: right;
 }
 
-h1>* {
-    font-size: 1.2rem;
-    text-decoration-line: none;
+h1 > * {
+  font-size: 1.2rem;
+  text-decoration-line: none;
 }
 
 .blog-date {
-    font-size: 0.8rem;
-    font-weight: 100;
+  font-size: 0.8rem;
+  font-weight: 100;
 }
 
 .blog-title {
-    margin-bottom: 0.2em;
+  margin-bottom: 0.2em;
 }
 
-div.blog-post-content h1 {
-    font-size: 1.7rem;
-    font-weight: 500;
+.blog-post-content h1 {
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
-div.blog-post-content h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
+.blog-post-content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-div.blog-post-content h3 {
-    font-size: 1.3rem;
-    font-weight: 300;
+.blog-post-content h3 {
+  font-size: 1.3rem;
+  font-weight: 300;
 }
 
 a i {
-    color: cadetblue;
-    margin-right: 4px;
+  color: cadetblue;
+  margin-right: 4px;
 }
 
 svg {
