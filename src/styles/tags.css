@@ -4,16 +4,13 @@ li.search-tag {
 
 span.search-tag {
   background-color: #2d2d2d;
-  border: none;
+  border: 0;
   border-radius: 16px;
   color: #fff;
   display: inline-block;
   font-size: 0.9em;
   margin: 1px;
-  padding-bottom: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 4px;
+  padding: 4px 10px 2px;
   text-align: center;
   text-decoration: none;
 }
@@ -26,5 +23,5 @@ span.search-tag a {
 svg.tag {
   background: inherit;
   border-radius: initial;
-  color: lightsteelblue;
+  color: #b0c4de;
 }
