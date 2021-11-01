@@ -8,10 +8,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install node 12.x
+      - name: Install node 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.x
 
       - name: Install via APT - Graphviz
         run: |
