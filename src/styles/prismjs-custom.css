@@ -6,8 +6,8 @@ pre[class*="language-"] {
 
 /* display language */
 .gatsby-highlight {
-  position: relative;
   -webkit-overflow-scrolling: touch;
+  position: relative;
 }
 
 .gatsby-highlight pre[class*="language-"] {
