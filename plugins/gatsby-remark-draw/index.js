@@ -32,7 +32,7 @@ module.exports = ({ markdownAST, pathPrefix }, pluginOptions = {}) => {
         const image = {
           type: 'image',
           title: 'remark-draw image',
-          url: path.join('/', pathPrefix, fileName),
+          url: path.join('/', pathPrefix, fileName)
         };
 
         parent.children.splice(index, 1, image);

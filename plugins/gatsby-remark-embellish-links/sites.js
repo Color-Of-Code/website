@@ -7,5 +7,5 @@ module.exports = {
   'fas fa-external-link-alt': /https?:/,
   'fas fa-envelope': /mailto:/,
   // final fallback
-  'fas fa-link': /\./,
+  'fas fa-link': /\./
 };

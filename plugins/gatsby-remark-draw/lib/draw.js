@@ -9,11 +9,11 @@ module.exports = class Draw {
     this.languages.set('dot-svg', { language: 'dot', generator: skyrta });
     this.languages.set('mermaid-svg', {
       language: 'mermaid',
-      generator: skyrta,
+      generator: skyrta
     });
     this.languages.set('plantuml-svg', {
       language: 'plantuml',
-      generator: null,
+      generator: null
     }); // TODO: add generator
 
     this.className = className || this.defaultClassName;

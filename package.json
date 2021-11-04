@@ -58,7 +58,7 @@
     "serve": "gatsby serve",
     "clean": "rm -rf .cache public",
     "lint": "run-s lint:j*",
-    "lint:javascript": "eslint ./src --max-warnings 0",
+    "lint:javascript": "eslint ./src ./plugins --max-warnings 0",
     "lint:css": "stylelint src/**/*.css --config .stylelintrc",
     "lint-fix": "eslint --fix ./src",
     "format": "prettier --config ./.prettierrc --write \"src/**/*.js\"",
