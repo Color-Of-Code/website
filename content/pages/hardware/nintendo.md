@@ -1,12 +1,19 @@
 ---
 published: true
 path: "/hardware/nintendo"
-date: "2020-11-10"
+date: "2021-12-19"
 title: "Nintendo"
 tags: ["hardware", "nintendo"]
 ---
 
 # Nintendo
+
+## Infos
+
+- [Account passwort ändern (Verlust/Defekt/Diebstahl)](https://www.nintendo.de/Hilfe/Nintendo-Switch/Das-Andern-Ihres-Nintendo-Account-Passworts-1378980.html)
+- [Unterschiede Hauptkonsole & nicht Hauptkonsole erklärt](https://www.nintendo.de/Hilfe/Nintendo-Switch/Was-unterscheidet-eine-Hauptkonsole-von-einer-Nicht-Hauptkonsole--1442569.html)
+- [Transfer Spiele/Daten zwischen Konsolen](https://www.nintendo.de/Hilfe/Nintendo-Switch/Transfer-von-digitalen-Spielen-Nintendo-Accounts-zwischen-Nintendo-Switch-Konsolen-1441167.html)
+- [Spielestand Speicherung](https://www.nintendo.de/Hilfe/Nintendo-Switch/FAQ-zur-Datenverwaltung-1508495.html)
 
 ## Nintendo-Account
 
@@ -85,6 +92,12 @@ Vorteile gegenüber lokaler Konto:
 
 Sie können mit Ihrem Nintendo-Account My Nintendo-Punkte verdienen, indem Sie Apps auf Ihren Smart-Geräten spielen, digitale Spiele für Nintendo Switch, Wii U und Systeme der Nintendo 3DS-Familie und physische Spiele für Nintendo Switch kaufen.
 My Nintendo-Punkte können für My Nintendo-Belohnungen wie digitale Inhalte und Spielerabatte eingelöst werden.
+
+## Fragen
+
+- Was passiert wenn die Konsole kaputt geht? Spielestand verloren, Spiele können erneut heruntergeladen werden
+- Zweitkonsole: Spielestand Sicherung? Immer lokal + eventuel in der Cloud, NSO notwendig dafür
+- Zweitkonsole: Sind die im Eshop gekaufte Spiele spielbar? Ja aber es muss eine Verbindung im Internet da sein
 
 ## Übersicht
 
