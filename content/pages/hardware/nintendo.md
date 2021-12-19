@@ -14,6 +14,7 @@ tags: ["hardware", "nintendo"]
 - [Unterschiede Hauptkonsole & nicht Hauptkonsole erklärt](https://www.nintendo.de/Hilfe/Nintendo-Switch/Was-unterscheidet-eine-Hauptkonsole-von-einer-Nicht-Hauptkonsole--1442569.html)
 - [Transfer Spiele/Daten zwischen Konsolen](https://www.nintendo.de/Hilfe/Nintendo-Switch/Transfer-von-digitalen-Spielen-Nintendo-Accounts-zwischen-Nintendo-Switch-Konsolen-1441167.html)
 - [Spielestand Speicherung](https://www.nintendo.de/Hilfe/Nintendo-Switch/FAQ-zur-Datenverwaltung-1508495.html)
+- [Speicherdaten übertragen](https://www.nintendo.de/Hilfe/Nintendo-Switch/Ubertragen-von-Speicherdaten-auf-eine-Nintendo-Switch-Konsole-in-der-Nahe-1549113.html)
 
 ## Nintendo-Account
 
