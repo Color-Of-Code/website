@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/database/mysql-queries"
-date: "2019-03-25"
+date: "2021-12-25"
 title: "MySQL queries"
 tags: ["mysql", "database", "queries"]
 ---
@@ -31,3 +31,19 @@ SELECT DISTINCT TABLE_NAME
     WHERE COLUMN_NAME IN ('$COLUMN_NAME1', '$COLUMN_NAME2')
         AND TABLE_SCHEMA='$DB_NAME';
 ```
+
+## Performance IN vs EXISTS
+
+Change
+
+```sql
+outer_expr IN (SELECT inner_expr FROM ... WHERE subquery_where)
+```
+
+into
+
+```sql
+EXISTS (SELECT 1 FROM ... WHERE subquery_where AND outer_expr=inner_expr)
+```
+
+See https://dev.mysql.com/doc/refman/8.0/en/subquery-optimization-with-exists.html
