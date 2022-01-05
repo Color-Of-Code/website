@@ -242,7 +242,7 @@ textarea {
 
 ::-webkit-input-placeholder {
   color: inherit;
-  opacity: 54%;
+  opacity: 0.54;
 }
 
 ::-webkit-file-upload-button {
