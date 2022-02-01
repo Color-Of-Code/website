@@ -13,7 +13,7 @@ Links: https://oeis.org/
 
 Functions from the natural numbers to the complex numbers
 
-$$\{ f(n) = c \vert n \isin \mathbb{N}, c \isin \mathbb{C} \}$$
+$$\{ f(n) = c \vert n \in \mathbb{N}, c \in \mathbb{C} \}$$
 
 ### Definition: Multiplicative Function
 
@@ -43,11 +43,11 @@ $$I(n) = \begin{cases}
 
 * Unit
 
-$$u(n) = 1 \quad \forall n \isin \mathbb{N}$$
+$$u(n) = 1 \quad \forall n \in \mathbb{N}$$
 
 * Natural number
 
-$$N(n) = n \quad \forall n \isin \mathbb{N}$$
+$$N(n) = n \quad \forall n \in \mathbb{N}$$
 
 * Euler totient $\phi$
 
@@ -59,7 +59,7 @@ $\phi$ is multiplicative
 
 * Möbius function $\mu$
 
-$\mu(1) = 1$. $n \isin \mathbb{N}$. If $n$ is divisible by a square $m^2$ for some natural number $m$, then $\mu(n) = 0$. Note that this immediately implies that if $n$ is divisible by a prime to a power greater than 1, then $\mu(n) = 0$ since the square of that prime also divides it.
+$\mu(1) = 1$. $n \in \mathbb{N}$. If $n$ is divisible by a square $m^2$ for some natural number $m$, then $\mu(n) = 0$. Note that this immediately implies that if $n$ is divisible by a prime to a power greater than 1, then $\mu(n) = 0$ since the square of that prime also divides it.
 
 If no square divides $n$, then if the number of primes dividing $n$:
 
@@ -92,4 +92,4 @@ $$\sum _{n=1} ^{ \infty } \frac{f(n)}{n^s}$$
 
 ### Euler product
 
-$$\sum _{n=1} ^{ \infty } \frac{1}{n^s} = \prod _{ p \isin \mathbb{P}} \frac{1}{1 - p^{-s}}$$
+$$\sum _{n=1} ^{ \infty } \frac{1}{n^s} = \prod _{ p \in \mathbb{P}} \frac{1}{1 - p^{-s}}$$
