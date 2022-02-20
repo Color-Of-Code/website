@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/storage/zfs"
-date: "2020-09-27"
+date: "2022-02-20"
 title: "ZFS on linux"
 tags: ["storage", "zfs", "backup", "linux"]
 ---
@@ -48,6 +48,7 @@ https://www.reddit.com/r/zfs/comments/5yuo44/single_drive_zfs_pools_on_desktop_c
 * `zfs set mountpoint=/mnt/backup1 backup1` define the default mount point
 * `zfs create backup1/family` create a data set
 * `zfs snapshot backup1/family@20200925` create a snapshot of the data set
+* `zfs snapshot -r backup1@2022.02.20-14.30.00` create a snapshot recursively for each data set on the pool `backup1`
 * `zfs list` list the data sets
 * `zfs list -t snapshot` list snapshots
 * `zfs list -r -t snapshot -o name,creation backup1/family` list snapshots for a given data set
