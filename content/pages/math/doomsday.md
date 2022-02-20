@@ -29,7 +29,7 @@ Depending on the method other values can be used. These are used here consistent
 ### Remembering the month numbers
 
 |  Month  | Number  |
-| --- | --- | --- |
+| --- | --- |
 | January  | 1 |
 | February  | 2 |
 | March  | 3 |
