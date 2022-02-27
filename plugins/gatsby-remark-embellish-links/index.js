@@ -2,7 +2,7 @@
 
 const visit = require('unist-util-visit');
 const defaultSites = require('./sites');
-//var urlExists = require('url-exists');
+//var urlExists = require('url-exists-deep');
 
 module.exports = ({ markdownAST }, { sites } = {}) => {
   visit(markdownAST, 'link', node => {
