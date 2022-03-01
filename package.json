@@ -95,11 +95,6 @@
     "stylelint-scss": "^4.1.0",
     "trim": "^1.0.1"
   },
-  "resolutions": {
-    "graphql": "^15.4.0",
-    "graphql-compose": "^7.25.0",
-    "webpack": "^5.24.2"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Color-Of-Code/website"
