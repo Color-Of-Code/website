@@ -4,6 +4,22 @@
   "description": "color-of-code.de",
   "version": "1.3.0",
   "author": "Jaap de Haan <jaap.dehaan@freenet.de>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "rm -rf .cache public",
+    "lint": "run-s lint:j*",
+    "lint:javascript": "eslint ./src ./plugins --max-warnings 0",
+    "lint:css": "stylelint src/**/*.css --config .stylelintrc",
+    "lint-fix": "eslint --fix ./src",
+    "preinstall": "npx npm-force-resolutions",
+    "format": "prettier --config ./.prettierrc --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "md:link-check": "find ./content -name \\*.md -exec markdown-link-check -c .markdown-link-check.json {} \\;"
+  },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@mermaid-js/mermaid-cli": "^8.14.0",
@@ -50,21 +66,6 @@
     "blog",
     "software development"
   ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "rm -rf .cache public",
-    "lint": "run-s lint:j*",
-    "lint:javascript": "eslint ./src ./plugins --max-warnings 0",
-    "lint:css": "stylelint src/**/*.css --config .stylelintrc",
-    "lint-fix": "eslint --fix ./src",
-    "format": "prettier --config ./.prettierrc --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "md:link-check": "find ./content -name \\*.md -exec markdown-link-check -c .markdown-link-check.json {} \\;"
-  },
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/eslint-parser": "^7.17.0",
@@ -101,5 +102,13 @@
   },
   "bugs": {
     "url": "https://github.com/Color-Of-Code/website/issues"
+  },
+  "resolutions": {
+    "immer": "9.0.12",
+    "ansi-html": "https://registry.yarnpkg.com/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
+    "ansi-regex": "5.0.1",
+    "nth-check": "2.0.1",
+    "glob-parent": "6.0.2",
+    "browserslist": "4.19.3"
   }
 }
