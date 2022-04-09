@@ -88,7 +88,7 @@ h1 {
   line-height: 1.1;
   margin: 0 0 1.45rem -1rem;
   padding: 0;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 mark {
@@ -273,7 +273,7 @@ h2 {
   margin-bottom: 1.45rem;
   margin-left: -1rem;
   padding: 0;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 h3 {
@@ -287,7 +287,7 @@ h3 {
   margin-bottom: 1.45rem;
   margin-left: -0.9rem;
   padding: 0;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 h4 {
@@ -301,7 +301,7 @@ h4 {
   margin-bottom: 1.45rem;
   margin-left: -0.8rem;
   padding: 0;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 h5 {
@@ -315,7 +315,7 @@ h5 {
   margin-bottom: 1.45rem;
   margin-left: -0.7rem;
   padding: 0;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 h6 {
@@ -329,7 +329,7 @@ h6 {
   margin-bottom: 1.45rem;
   margin-left: -0.6rem;
   padding: 0;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 hgroup {
