@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { FaTag } from 'react-icons/fa';
-import kebabCase from 'lodash.kebabcase';
+import kebabCase from 'lodash/kebabCase';
 
 import '../styles/tags.css';
 
