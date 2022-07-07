@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/glossary/database-joins"
-date: "2020-02-10"
+date: "2022-07-01"
 title: "Database Joins"
 tags: ["glossary", "database", "join", "inner", "outer"]
 ---
@@ -79,6 +79,13 @@ A common use for a cross join is to create obtain all combinations of items, suc
 
 In MySQL you should use `LEFT OUTER JOIN` or `RIGHT OUTER JOIN`. There is no just `OUTER JOIN`.
 
-If you need `FULL OUTER JOIN` in MySql you can use `UNION` of `LEFT JOIN` and `RIGHT JOIN`
+If you need `FULL OUTER JOIN` in MySQL you can use `UNION` of `LEFT JOIN` and `RIGHT JOIN`
 
 MySQL also known about a `STRAIGHT_JOIN` which can be used to influence the order of operation inside the server (performance optimization)
+
+`NATURAL` can be used as a shortcut to avoid specifying all `USING` clauses if all matching column names have to be used
+
+```text
+The NATURAL [LEFT] JOIN of two tables is defined to be semantically equivalent to
+an INNER JOIN or a LEFT JOIN with a USING clause that names all columns that exist in both tables.
+```
