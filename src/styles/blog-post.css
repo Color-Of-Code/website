@@ -50,6 +50,7 @@ svg {
   border-radius: 8px;
 }
 
-.mjx-container > svg {
+/* stylelint-disable-next-line selector-class-pattern */
+.MathJax svg {
   background: transparent;
 }
