@@ -16,7 +16,8 @@
   text-decoration: none;
 }
 
-svg.tag {
+.tag svg,
+.search-tag svg {
   background: inherit;
   border-radius: initial;
   color: #b0c4de;

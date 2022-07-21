@@ -68,35 +68,38 @@ const Header = () => (
         }}
       >
         <Link
+          className="tag"
           to="/"
           style={{
             color: 'white',
             textDecoration: 'none'
           }}
         >
-          <FaHome className="tag" />
+          <FaHome />
           &nbsp; Home
         </Link>
         &nbsp;
         <Link
+          className="tag"
           to="/tags"
           style={{
             color: 'white',
             textDecoration: 'none'
           }}
         >
-          <FaTags className="tag" />
+          <FaTags />
           &nbsp; All tags
         </Link>
         &nbsp;
         <Link
+          className="tag"
           to="/impressum/"
           style={{
             color: 'white',
             textDecoration: 'none'
           }}
         >
-          <FaInfoCircle className="tag" />
+          <FaInfoCircle />
           &nbsp; Terms and Conditions
         </Link>
       </div>

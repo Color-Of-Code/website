@@ -62,13 +62,6 @@ a:hover {
   outline-width: 0;
 }
 
-abbr[title] {
-  border-bottom: 0;
-  border-bottom: 1px dotted hsl(0deg 0% 0% / 50%);
-  cursor: help;
-  text-decoration: none;
-}
-
 b,
 strong {
   font-weight: inherit;
@@ -176,13 +169,6 @@ select {
   text-transform: none;
 }
 
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
-
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner,
@@ -228,26 +214,6 @@ textarea {
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
-}
-
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
 }
 
 * {
