@@ -259,22 +259,22 @@ Class08 <--> C2: Cool label
 #### gitGraph
 
 ```mermaid-svg
-gitGraph:
-options
-{
-    "nodeSpacing": 150,
-    "nodeRadius": 10
-}
-end
-commit
-branch newbranch
-checkout newbranch
-commit
-commit
-checkout master
-commit
-commit
-merge newbranch
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true}} }%%
+gitGraph
+  commit id: "feat(api): ..."
+  commit id: "a"
+  commit id: "b"
+  commit id: "fix(client): .extra long label.."
+  branch c2
+  commit id: "feat(modules): ..."
+  commit id: "test(client): ..."
+  checkout main
+  commit id: "fix(api): ..."
+  commit id: "ci: ..."
+  branch b1
+  commit
+  branch b2
+  commit
 ```
 
 ## remark-flowchart
