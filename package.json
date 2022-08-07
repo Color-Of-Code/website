@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
-    "@mermaid-js/mermaid-cli": "^8.14.0",
+    "@mermaid-js/mermaid-cli": "^9.1.4",
     "acorn": "^8.8.0",
     "babel-preset-gatsby": "^2.20.0",
     "d3": "^7.4.4",
