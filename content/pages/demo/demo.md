@@ -112,9 +112,9 @@ graph {
 }
 ```
 
-#### Example 6: Subgraphs
+#### Example 6: Sub-graphs
 
-Please note there are some quirks here, First the name of the subgraphs are important, to be visually separated they must be prefixed with cluster_ as shown below, and second only the DOT and FDP layout methods seem to support subgraphs (See the graph generation page for more information on the layout methods)
+Please note there are some quirks here, First the name of the sub-graphs are important, to be visually separated they must be prefixed with cluster_ as shown below, and second only the DOT and FDP layout methods seem to support sub-graphs (See the graph generation page for more information on the layout methods)
 
 ```dot-svg
 digraph {
@@ -133,7 +133,7 @@ digraph {
 }
 ```
 
-Another Example of a Subgraph, In this example I group nodes together seperately from their edges, And also uses the graph attribute splines=line; to specify that edges should be drawn only as straight lines, no curves allowed.
+Another Example of a sub-graph, In this example I group nodes together separately from their edges, And also uses the graph attribute splines=line; to specify that edges should be drawn only as straight lines, no curves allowed.
 
 ```dot-svg
 graph {
