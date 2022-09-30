@@ -85,6 +85,14 @@ const TermsAndConditions = () => (
             </a>
           </td>
         </tr>
+        <tr>
+          <td>Exercism</td>
+          <td>
+            <a href="https://exercism.org/profiles/jdehaan">
+              Functional programming and code quality
+            </a>
+          </td>
+        </tr>
       </table>
     </p>
 
