@@ -1,9 +1,9 @@
 ---
 published: true
 path: "/patterns/patterns"
-date: "2021-06-29"
+date: "2022-09-02"
 title: "Patterns"
-tags: ["software", "pattern", "oop", "functional"]
+tags: ["software", "pattern", "oop", "functional", "unit-test"]
 ---
 
 ## Software Design Patterns
