@@ -105,6 +105,21 @@ See also [Software Anti-Patterns](anti-patterns).
 | Double checked locking                         | "double-checked locking optimization". Reduce the overhead of acquiring a lock by first testing the locking criterion (the 'lock hint') in an unsafe manner; only if that succeeds does the actual lock proceed((In some language/hardware combinations, can be unsafe. It can therefore sometimes be considered an anti-pattern)) |
 | Read write lock                                | Allows concurrent read access to an object but requires exclusive access for write operations |
 
+| Unit Test patterns | Choice: Better choices for implementing or organizing tests? |
+| -------------------- | -------------------------------------------- |
+| AAA, Arrange/Act/Assert | AAA is a pattern for organizing unit tests. Arrange: Perform the setup and initialization required for the test. Act: Take action(s) required for the test. Assert: Verify the outcome(s) of the test. |
+| [GWT, Given/When/Then](https://martinfowler.com/bliki/GivenWhenThen.html) | Behavior Driven Development point of view. Given: describe the state of the world before you begin (pre-conditions). When: the behavior you're specifying. Then: section describes the expected changes. |
+| Result test | checks the returned value |
+| State test | checks the state of the object under test. i.e. a length for a vector, state variable on the object |
+| Unit test | Test using a single component in complete isolation. |
+| Integration test | Test using a working environment, not a single component in isolation. |
+| E2E (End to End) test | Test a driver simulating user interaction and triggering communication from the front-end to the backend and back. |
+| Stub | A stub is an object that provides (canned) hardcoded values to method calls. It always returns the same output regardless of the input. |
+| Spy | A spy lets us verify what functions were called, with what arguments, when, and how often. |
+| Mock | A mock is similar to a stub, but the behaviour of the mocked interface can be changed dynamically based on scenarios. It is also similar to a spy as it allows us to verify that a method was called. However, the assertion is in the verify method in a mock. |
+| Fake | A Fake is an object with a concrete implementation that works similarly to the actual implementation. It is a simplified version of production code. |
+| Double | Generic term for Fake, Mock or Stub |
+
 ## Functional programming principles
 
 * functions are things
