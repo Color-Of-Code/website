@@ -16,7 +16,7 @@ I often had trouble reading complicated explanations about some terms and the li
  | "A"  | Amdahl's Law  | Law used to predict the maximum possible performance speedup when adapting programs to use more processors. [More](https://en.wikipedia.org/wiki/Amdahl%27s_law)  |
  | "C"  | Coupling  | Objects or components are tightly coupled if they highly depend on each other what hinders their reuse and extendabilty. [More](https://en.wikipedia.org/wiki/Coupling_%28computer_science%29)  |
  | "D"  | Demeter's Law   | or principle of least knowledge to avoid coupling [More](https://en.wikipedia.org/wiki/Law_of_Demeter)  |
- | "D"  | DRY principle   | **D**on't **R**epeat **Y**ourself [More](https://en.wikipedia.org/wiki/Don't_repeat_yourself)]  |
+ | "D"  | DRY principle   | **D**on't **R**epeat **Y**ourself [More](https://en.wikipedia.org/wiki/Don't_repeat_yourself)  |
  | "K"  | KISS principle  | **K**eep **I**t **S**imple, **S**tupid! Avoid unnecessary complexity. [More](https://en.wikipedia.org/wiki/KISS_principle)  |
  | "R"  | Reentrancy  | A routine is said to be reentrant if while one thread is running the code, another thread can enter and run also the routine safely. Usually involves not using static variables or calling only reentrant functions. [More](https://en.wikipedia.org/wiki/Reentrancy_(computing))  |
  | "S"  | SOLID principle | **S**ingle responsibility, **O**pen/closed, **L**iskov substitution, **I**nterface segregation, **D**ependency inversion principles [More](https://en.wikipedia.org/wiki/SOLID)  |
