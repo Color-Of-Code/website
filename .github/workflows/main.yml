@@ -26,7 +26,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Setup packages
-        run: npm ci --prefer-offline --no-audit
+        run: npm ci --prefer-offline --no-audit --legacy-peer-deps
         env:
           HUSKY_SKIP_INSTALL: 1
 
