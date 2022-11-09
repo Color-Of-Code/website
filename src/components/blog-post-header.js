@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tag from './tag';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby-link';
 
 const BlogPostHeader = ({ link, title, date, keywords }) => (
   <div className="blog-post-header">
