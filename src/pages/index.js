@@ -42,7 +42,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       filter: { frontmatter: { published: { ne: false } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {

@@ -93,7 +93,7 @@ TagsPage.propTypes = {
 export default TagsPage;
 
 export const pageQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
@@ -103,7 +103,7 @@ export const pageQuery = graphql`
       limit: 2000
       filter: { frontmatter: { published: { ne: false } } }
     ) {
-      group(field: frontmatter___tags) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }
