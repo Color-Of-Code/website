@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: 'never',
   siteMetadata: {
     title: 'Color Of Code',
     description: 'Color Of Code - website about software and programming',
