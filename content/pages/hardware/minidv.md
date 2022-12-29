@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/hardware/minidv"
-date: "2022-07-07"
+date: "2022-12-29"
 title: "Mini DV Rescue"
 tags: ["hardware", "minidv", "dv", "rescue", "linux"]
 ---
