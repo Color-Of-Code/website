@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/os/linux/ubuntu/remote-upgrade"
-date: "2021-05-25"
+date: "2023-01-22"
 title: "Ubuntu Remote Upgrade"
 tags: ["os", "ubuntu", "upgrade", "linux", "release", "screen", "ssh"]
 ---
@@ -12,6 +12,9 @@ tags: ["os", "ubuntu", "upgrade", "linux", "release", "screen", "ssh"]
 
 Running a remote release upgrade can be dangerous, VPN, SSH can be updated or break during the upgrade
 process and leave a not bootable system as a result... This post shows how to mitigate the risks.
+
+NOTE that this may also require to have alternative ports accessible (like port 1022) over the network,
+which might be blocked due to security policies applied at the network level.
 
 ## Proxy settings
 
