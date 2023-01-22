@@ -1,19 +1,25 @@
 ---
 published: true
 path: "/programming/c-sharp/exception-handling"
-date: "2018-12-24"
+date: "2023-01-14"
 title: "C# Exception handling"
-tags: ["programming", "csharp", "exception", "handling", "TODO_cleanup"]
+tags: ["programming", "csharp", "exception", "handling"]
 ---
+
 # C# Exception Handling
 
 ## Can I ignore exceptions?
 
-No. Exceptions are thrown by the .NET framework in many places, FileNotFoundException, FormatException on conversions, ... A ThreadInterruptedException may occur anywhen. On function calls you might cause a StackOverflowException, on memory allocation you might get an OutOfMemoryException. If you want or not, you will have to deal with exceptions.
+No. Exceptions are thrown by the .NET framework in many places, FileNotFoundException, FormatException on conversions, ...
+A ThreadInterruptedException may occur at any time. On function calls you might cause a StackOverflowException, on memory allocation
+you might get an OutOfMemoryException. If you want or not, you will have to deal with exceptions.
 
 ## Exceptions vs Return values
 
-Exceptions are better than return values because they allow to decouple the normal code from the exceptional failure scenarios. They also allow to handle the exception anywhere on the stack. Return values would require to pass around the value or test for it after each call. In practice it happens often enough that return codes are just ignored. You cannot ignore exceptions. Return values won't help you to release resources in case of exceptions, you just leave handles open or could even leak unmanaged resources!
+Exceptions are better than return values because they allow to decouple the normal code from the exceptional failure scenarios.
+They also allow to handle the exception anywhere on the stack. Return values would require to pass around the value or test for
+it after each call. In practice it happens often enough that return codes are just ignored. You cannot ignore exceptions. Return
+values won't help you to release resources in case of exceptions, you just leave handles open or could even leak unmanaged resources!
 
 ## Keywords: try catch finally throw using
 
@@ -37,12 +43,12 @@ is syntactic sugar for:
 // C# 3.0
 ResourceType resource = expression;
 try {
-		statement;
+    statement;
 }
 finally {
-		if (resource != null) ((IDisposable)resource).Dispose();
-		// or if resource is a value type
-		//((IDisposable)resource).Dispose();
+    if (resource != null) ((IDisposable)resource).Dispose();
+        // or if resource is a value type
+        //((IDisposable)resource).Dispose();
 }
 ```
 
@@ -51,12 +57,14 @@ finally {
 ResourceType resource = expression;
 IDisposable d = (IDisposable)resource;
 try {
-	statement;
+    statement;
 }
 finally {
-	if (d != null) d.Dispose();
+    if (d != null) d.Dispose();
 }
 ```
+
+NOTE: do not confuse `using` with [`static using` statements for imports](https://learn.microsoft.com/en-us/archive/msdn-magazine/2014/may/csharp-a-csharp-6-0-language-preview#static-using-statements)
 
 ## How to rethrow
 
@@ -64,10 +72,10 @@ There is an problem with this code:
 
 ```csharp
 try {
-	// Some code
+    // Some code
 }
 catch (SomeException ex) {
-	throw ex;
+    throw ex;
 }
 ```
 
@@ -76,38 +84,36 @@ The code above destroys the whole callstack information by throwing the exceptio
 The following code rethrows the exception correctly.
 
 ```csharp
-	try {
-	    // Some code
-	}
-	catch (SomeException ex) {
-	    throw;
-	}
+    try {
+        // Some code
+    }
+    catch (SomeException ex) {
+        throw;
+    }
 ```
-
 
 In some situations, if you need to add a reinterpretation layer to the exception, never forget to use the constructor taking the original exception as an inner exception. This way you keep trace of all information in a hierachical way.
 
 ```csharp
-	try {
-	    // Some code
-	}
-	catch (SomeException ex) {
-	    throw new ReinterpretedException("message", ex);
-	}
+    try {
+        // Some code
+    }
+    catch (SomeException ex) {
+        throw new ReinterpretedException("message", ex);
+    }
 ```
 
 ## Do's and don'ts while implementing code dealing with exceptions
 
+- Never catch an exception if you really intend to handle it
 
-*  Never catch an exception if you really intend to handle it
+- Never throw exceptions of the base Exception class
 
-*  Never throw exceptions of the base Exception class
+- Never use exceptions instead as a replacement for control flow (performance impact)
 
-*  Never use exceptions instead as a replacement for control flow (performance impact)
+- Always catch specific exceptions never items of the base Exception class unless you rethrow
 
-*  Always catch specific exceptions never items of the base Exception class unless you rethrow
-
-*  Know the difference between throw; and throw ex;
+- Know the difference between throw; and throw ex;
 
 ## How to implement own exceptions
 
@@ -118,26 +124,24 @@ The name of your exception class shall end with "Exception" (naming convention)
 Implement at least the four constructors:
 
 ```csharp
-	[Serializable]
-	public class CustomException : Exception {
-	    public CustomException()
-	        : base() { }
-	    
-	    public CustomException(string message)
-	        : base(message) { }
-	    
-	    public CustomException(string message, Exception innerException)
-	        : base(message, innerException) { }
-	    
-	    protected CustomException(SerializationInfo info, StreamingContext context)
-	        : base(info, context) { }
-	}
+    [Serializable]
+    public class CustomException : Exception {
+        public CustomException()
+            : base() { }
+
+        public CustomException(string message)
+            : base(message) { }
+
+        public CustomException(string message, Exception innerException)
+            : base(message, innerException) { }
+
+        protected CustomException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
 ```
 
 ## Guarantees for exception handling
 
-* No guarantee: No care taken to treat exceptions appropriately
-
-* Basic guarantee: Ensure class invariants are not broken and no resources are leaked
-
-* Strong guarantee: Basic guarantee + either an method modifies an object successfully or not at all.
+- *No guarantee*: No care taken to treat exceptions appropriately
+- *Basic guarantee*: Ensure class invariants are not broken and no resources are leaked
+- *Strong guarantee*: Basic guarantee + either an method modifies an object successfully or not at all.
