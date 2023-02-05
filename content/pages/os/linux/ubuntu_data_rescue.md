@@ -8,8 +8,8 @@ tags: ["ubuntu", "data rescue", "linux"]
 
 ## Ubuntu data rescue
 
-* example 1: System does not boot anymore after an OS upgrade (kernel panic). Data is on a LVM.
-* example 2: System does not boot anymore (HDD errors). Data is on an ext3 partition.
+- example 1: System does not boot anymore after an OS upgrade (kernel panic). Data is on a LVM.
+- example 2: System does not boot anymore (HDD errors). Data is on an ext3 partition.
 
 ### Example 1
 
@@ -83,10 +83,10 @@ Maybe several times until no error comes (some packages might be incompatible ex
 
 References:
 
-* http://certifiedgeek.weebly.com/blog/ubuntu-data-recovery-adventure-unknown-filesystem-type-linux_raid_member-lvm2_member
-* https://bosnadev.com/2014/12/29/pro-tip-repair-ubuntu-system-live-cd/
-* http://www.linuxjournal.com/article/8874
-* https://quonn.wordpress.com/2010/12/01/how-to-mount-lvm-partition-on-ubuntu/
+- http://certifiedgeek.weebly.com/blog/ubuntu-data-recovery-adventure-unknown-filesystem-type-linux_raid_member-lvm2_member
+- https://bosnadev.com/2014/12/29/pro-tip-repair-ubuntu-system-live-cd/
+- http://www.linuxjournal.com/article/8874
+- https://quonn.wordpress.com/2010/12/01/how-to-mount-lvm-partition-on-ubuntu/
 
 ### Example 3
 
@@ -128,5 +128,5 @@ fsck.ext4 disk-image-file.img
 
 References:
 
-* https://help.ubuntu.com/community/DataRecovery
-* https://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html
+- https://help.ubuntu.com/community/DataRecovery
+- https://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html
