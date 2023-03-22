@@ -1,15 +1,19 @@
 {
-  "plugins": ["stylelint-scss", "stylelint-prettier"],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-prettier"
+  ],
   "extends": [
     "stylelint-config-standard-scss",
     "stylelint-config-standard",
-    "stylelint-config-sass-guidelines",
-    "stylelint-config-prettier"
+    "stylelint-config-sass-guidelines"
   ],
   "rules": {
+    "at-rule-no-unknown": null,
     "max-nesting-depth": null,
     "no-descending-specificity": null,
     "prettier/prettier": true,
+    "scss/at-rule-no-unknown": true,
     "selector-class-pattern": "^[a-z][a-zA-Z0-9-]*$",
     "selector-max-compound-selectors": 4,
     "selector-pseudo-class-no-unknown": [
@@ -27,13 +31,18 @@
     "selector-type-no-unknown": [
       true,
       {
-        "ignoreTypes": ["from"]
+        "ignoreTypes": [
+          "from"
+        ]
       }
     ],
     "property-no-unknown": [
       true,
       {
-        "ignoreSelectors": [":export", /^:import/],
+        "ignoreSelectors": [
+          ":export",
+          "/^:import/"
+        ]
       }
     ]
   }
