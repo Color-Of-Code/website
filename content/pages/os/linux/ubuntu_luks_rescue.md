@@ -64,21 +64,21 @@ Open a terminal with Ctrl+Alt+T
 
 Assuming a drive which is partitioned this way:
 
-* /dev/nvme0p1: EFI partition
-* /dev/nvme0p2: unencrypted boot partition
-* /dev/nvme0p3: encrypted LVM partition
+* /dev/nvme0n1p1: EFI partition
+* /dev/nvme0n1p2: unencrypted boot partition
+* /dev/nvme0n1p3: encrypted LVM partition
 
 Mount the required partitions:
 
 ```bash
-cryptsetup luksOpen /dev/nvme0p3 nvme0p3_crypt
+cryptsetup luksOpen /dev/nvme0n1p3 nvme0n1p3_crypt
 # At the prompt enter the password
 
 # fetch the LVM info
 vgchange -ay
 
 mount /dev/mapper/ubuntu-vg-root /mnt
-mount /dev/nvme0p2 /mnt/boot
+mount /dev/nvme0n1p2 /mnt/boot
 
 # Mount the dynamic stuff needed to run the initramfs tool
 mount -t proc proc /mnt/proc
@@ -114,3 +114,6 @@ If you see any error message, you need to go deeper into it and solve that.
 
 If everything went well you should end up with a system booting again as you were used to.
 
+### References
+
+* https://askubuntu.com/questions/567730/gave-up-waiting-for-root-device-ubuntu-vg-root-doesnt-exist
