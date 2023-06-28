@@ -78,7 +78,7 @@ cryptsetup luksOpen /dev/nvme0p3 nvme0p3_crypt
 vgchange -ay
 
 mount /dev/mapper/ubuntu-vg-root /mnt
-mount /dev/nvme0p3 /mnt/boot
+mount /dev/nvme0p2 /mnt/boot
 
 # Mount the dynamic stuff needed to run the initramfs tool
 mount -t proc proc /mnt/proc
