@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/software/list-foss"
-date: "2020-05-01"
+date: "2023-08-21"
 title: "List of FOSS"
 tags: ["software", "foss"]
 ---
@@ -44,6 +44,10 @@ tags: ["software", "foss"]
 |           | ffmpeg based video transcoder aiming at ensuring a correct transcoded result for target devices |
 | losslesscut | https://github.com/mifi/lossless-cut |
 |             | A lossless video cutting tool that supports many formats (including TS - transport streams) |
+| openshot    | https://www.openshot.org/ |
+|             | Easy to use, quick to learn, and surprisingly powerful video editor. |
+| shotcut     | https://shotcut.org/ |
+|             | Free, open source, cross-platform video editor. |
 
 ## Virtualization
 
@@ -53,6 +57,8 @@ tags: ["software", "foss"]
 |      | VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. Not only is VirtualBox an extremely feature rich, high performance product for enterprise customers, it is also the only professional solution that is freely available as Open Source Software under the terms of the GNU General Public License (GPL) version 2. |
 | Docker | https://www.docker.com/ |
 |      | Application virtualization software: "Docker provides a simple and powerful developer experience, workflows and collaboration for creating applications."  |
+| Podman | https://podman.io/ |
+|      | Manage containers, pods, and images with Podman. Seamlessly work with containers and Kubernetes from your local environment.  |
 
 ## Internet
 
