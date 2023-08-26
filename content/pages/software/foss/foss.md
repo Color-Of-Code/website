@@ -1,7 +1,7 @@
 ---
 published: true
 path: "/software/list-foss"
-date: "2023-08-21"
+date: "2023-08-25"
 title: "List of FOSS"
 tags: ["software", "foss"]
 ---
@@ -48,6 +48,8 @@ tags: ["software", "foss"]
 |             | Easy to use, quick to learn, and surprisingly powerful video editor. |
 | shotcut     | https://shotcut.org/ |
 |             | Free, open source, cross-platform video editor. |
+| flowblade   | http://jliljebl.github.io/flowblade/ |
+|             | Flowblade supports all the media that in general can be accessed in a Linux system when the FFMPEG library is working as the backend. |
 
 ## Virtualization
 
@@ -97,6 +99,8 @@ tags: ["software", "foss"]
 | ------    | :------- |
 | KeePass   |  https://keepass.info      |
 |           | A nice and feature rich password safe tool. Helps to organize passwords and associated data as well as to transfer safely the data into web formulars    |
+| KeePassXC |  https://keepassxc.org/      |
+|           | Similar to KeePass but written in C++. I prefer it over KeePass as it tends to be more reactive and creates less friction on use under Linux.   |
 | VeraCrypt   |  https://www.veracrypt.fr/en/Home.html      |
 |     | VeraCrypt is a free open source disk encryption software for Windows, Mac OSX and Linux. Brought to you by IDRIX (https://www.idrix.fr) and based on TrueCrypt 7.1a. |
 | GnuPG  | https://gnupg.org/ |
