@@ -31,7 +31,6 @@ jobs:
           HUSKY_SKIP_INSTALL: 1
 
       - name: Build
-        if: github.ref == 'refs/heads/master'
         run: npm run build
         env:
           GATSBY_TELEMETRY_DISABLED: 1
