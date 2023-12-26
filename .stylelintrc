@@ -5,8 +5,7 @@
   ],
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-standard",
-    "stylelint-config-sass-guidelines"
+    "stylelint-config-standard"
   ],
   "rules": {
     "at-rule-no-unknown": null,
