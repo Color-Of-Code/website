@@ -12,22 +12,8 @@ const TermsAndConditions = () => (
     <p>
       <table>
         <tr>
-          <td>Name</td>
-          <td>
-            <a href="mailto:jaap.dehaan@color-of-code.de">Jaap de Haan</a>
-          </td>
-        </tr>
-        <tr>
-          <td>Addresse</td>
-          <td>Tilsiterweg 2, 71111 Waldenbuch (Germany)</td>
-        </tr>
-        <tr>
-          <td>Telefon</td>
-          <td>+49 (0)7157-4338</td>
-        </tr>
-        <tr>
           <td>HTTPS</td>
-          <td>https://color-of-code.de</td>
+          <td>https://github.com/Color-Of-Code/website</td>
         </tr>
         <tr>
           <td>Stack Exchange</td>

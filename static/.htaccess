@@ -1,8 +1,0 @@
-ErrorDocument 404 /404.html
-
-RewriteEngine On 
-RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://color-of-code.de/$1 [R,L]
-
-DirectoryIndex index.html
-

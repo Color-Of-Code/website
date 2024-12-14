@@ -1,14 +1,14 @@
 ---
 published: true
 path: "/legal/license"
-date: "2018-12-26"
+date: "2024-12-14"
 title: "Color of Code: License"
 tags: ["license", "agreement", "freeware"]
 ---
 
 # FREEWARE SOFTWARE LICENSE AGREEMENT
 
-*Copyright 2010-2021 Jaap de Haan, https://www.color-of-code.de*
+*Copyright 2010-2024 Jaap de Haan
 
 ## NOTICE TO USER
 
@@ -46,14 +46,7 @@ The Licensee will not have any proprietary rights in and to the Software. The Li
 
 The Software can be copied and distributed under the condition that original license agreement and disclaimer of warranty will stay intact and the Licensee will not charge money or fees for the Software product, except to cover distribution costs.
 If you distribute the software as part of a publication (magazine, periodical, ...), either
-send one copy of the printed issue to following address, free of charge:
-
-    Jaap de Haan
-    Tilsiter Weg 2
-    71111 Waldenbuch
-    Germany
-
-or send an electronic version of the issue to jaap.dehaan@color-of-code.de, free of charge
+send an electronic version of the issue to ColorOfCode@googlemail.com, free of charge
 
 
 ### 5. DISCLAIMER OF WARRANTY

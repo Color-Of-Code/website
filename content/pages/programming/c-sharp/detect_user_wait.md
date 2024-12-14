@@ -102,5 +102,4 @@ namespace Util
 
 ### References
 
-* Comments and questions please to me: [jaap.dehaan@color-of-code.de](jaap.dehaan@color-of-code.de)
 * The problem as question on [Stack Overflow](https://stackoverflow.com/questions/1404658/find-out-programmatically-if-a-process-is-demanding-user-input)

@@ -4,7 +4,7 @@ module.exports = {
     title: 'Color Of Code',
     description: 'Color Of Code - website about software and programming',
     author: '@jdehaan',
-    siteUrl: 'https://color-of-code.de'
+    siteUrl: 'https://github.com/Color-Of-Code/website'
   },
   plugins: [
     'gatsby-plugin-eslint',

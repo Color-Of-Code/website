@@ -22,8 +22,6 @@ If you ...
 * are not used to the .NET framework and want to mimic the C API in .NET
 * wonder how to port some parts of the code but want a working result right now
 
-Then you should give the Stdc library a try! ([[jaap.dehaan@color-of-code.de|Contact me]])
-
 Even a tool to convert (in a sloppy mode) C files to C# files to start porting with is already available, thought it is still under heavy development.
 
 Availability: See https://github.com/Color-Of-Code/stdc.NET
@@ -76,7 +74,7 @@ There could be an alternative implementation using extensions or a base class so
         printf ("\t  n  \t    2^n\n");
         printf ("\t================\n");
         for (n=0; n<=N; n++) {
-            printf ("\t%3d \t %6d\n", n, val); 
+            printf ("\t%3d \t %6d\n", n, val);
             val = 2*val;
         }
     }
