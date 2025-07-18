@@ -54,9 +54,6 @@ module.exports = {
             }
           },
           {
-            resolve: 'gatsby-remark-plantuml'
-          },
-          {
             resolve: 'gatsby-remark-draw',
             options: {
               dot: {
