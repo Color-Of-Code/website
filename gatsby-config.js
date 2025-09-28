@@ -7,7 +7,6 @@ module.exports = {
     siteUrl: 'https://github.com/Color-Of-Code/website'
   },
   plugins: [
-    'gatsby-plugin-eslint',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
     {

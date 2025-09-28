@@ -23,7 +23,7 @@ export function onInitialClientRender() {
         'coc-remark-flowchart'
       );
       var flowchartElementsCount = flowchartElements.length;
-      var elements = new Array();
+      var elements = [];
       for (var i = 0; i < flowchartElementsCount; i++) {
         elements.push(flowchartElements[i]);
       }

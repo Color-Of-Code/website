@@ -61,7 +61,7 @@ Analysis of other available projects
 * https://github.com/mdaines/viz.js
 * https://github.com/klorenz/graphviz2svg
 * https://www.npmjs.com/package/d3-graphviz
-* https://github.com/rhanekom/skyrta
+* https://github.com/rhanekom/skyrta (not maintained)
 
 ### Dagre
 

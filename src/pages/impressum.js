@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const TermsAndConditions = () => (
   <Layout>
-    <SEO title="Terms and Conditions" />
+    <Seo title="Terms and Conditions" />
     <h1>Terms and Conditions / Impressum</h1>
     <h2>Contact information</h2>
     <p>

@@ -13,7 +13,7 @@ body {
   font-kerning: normal;
   font-weight: normal;
   margin: 0;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 article,
@@ -355,7 +355,7 @@ pre {
   margin-bottom: 1.45rem;
   overflow: auto;
   padding: 1.45rem;
-  word-wrap: normal;
+  overflow-wrap: normal;
 }
 
 table {

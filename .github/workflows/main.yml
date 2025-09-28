@@ -35,5 +35,9 @@ jobs:
         env:
           GATSBY_TELEMETRY_DISABLED: 1
 
-      - name: Lint
-        run: npm run lint
+      - name: Lint Code
+        run: npm run lint:code
+
+      - name: Lint Styles
+        run: npm run lint:styles
+
